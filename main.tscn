@@ -23,7 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://kpo8f5l72l8c" path="res://3DAssets/Paintings/PaintingRed.glb" id="18_nfr30"]
 [ext_resource type="PackedScene" uid="uid://ce2krsu87puid" path="res://3DAssets/Paintings/PaintingYellow.glb" id="19_fpqgu"]
 [ext_resource type="PackedScene" uid="uid://yl7a25fc7e24" path="res://3DAssets/Autopsy1/AutopsyRoom1.glb" id="23_6ln0o"]
-[ext_resource type="PackedScene" path="res://3DAssets/Autopsy1/Scalpel.glb" id="23_7khgu"]
+[ext_resource type="PackedScene" uid="uid://b2fw4uvwrl0sl" path="res://3DAssets/Autopsy1/Scalpel.glb" id="23_7khgu"]
 [ext_resource type="PackedScene" uid="uid://dimfj4fsss73l" path="res://3DAssets/Autopsy1/Autopsy1Door.glb" id="24_36aba"]
 [ext_resource type="PackedScene" uid="uid://cx3wiphunm6gr" path="res://3DAssets/Autopsy1/Autopsy2CielingLight.glb" id="25_7tdgx"]
 [ext_resource type="PackedScene" uid="uid://ce21j0c1x6a2b" path="res://3DAssets/Autopsy1/Autopsy-Table.glb" id="26_0ggdj"]
@@ -672,7 +672,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.120863, 4.06354, 0)
 shape = SubResource("BoxShape3D_p3dxe")
 
 [node name="Autopsy-Table2" parent="Autopsy1" instance=ExtResource("26_0ggdj")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -2.32992, 0.0863407, 6.8087)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -2.54342, -0.0677931, 7.02129)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/Autopsy-Table2"]
 
