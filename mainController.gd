@@ -6,7 +6,10 @@ extends Node
 
 #Inventory Items
 var officeKey = false
+#bookKey 1 is from file cabinet, 2 is actual key for it
 var bookKey = false
+var bookKey2 = false
+var fingerKey = false
 
 #Passwords
 @export var portrait1Pass = "Darwin"
@@ -39,9 +42,10 @@ func _on_player_pass_input(objectID, inputString):
 
 func _on_player_item_check(objectID):
 	if (objectID == 2):
-		if bookKey:
-			player.descUI.text = "Flipping open the book, nestled deep between the pages is a key. It’s dingy and rusty, but looks as though it holds some importance."
-			officeKey = true
+		if bookKey2:
+			player.descUI.text = '"In Cold Blood,” This must be where that key belongs! Flipping open the book, nestled deep in the pages of the thick carved book is a plump bloody heart, wrapped in a plastic bag.'
+		elif bookKey:
+			player.descUI.text = '"In Cold Blood" this must be it! This isn’t even a real book. It’s locked, it sounds like there’s something inside. *slosh*'
 		else:
 			pass
 	if (objectID == 3):
@@ -52,10 +56,15 @@ func _on_player_item_check(objectID):
 	if (objectID == 4):
 		$Office/OmniLight3D.visible = !$Office/OmniLight3D.visible
 		player.descUI.visible = false
+	if (objectID == 5):
+		if fingerKey:
+			player.descUI.text = "It worked! A log book? Maybe I can find something about myself."
+		else:
+			pass
 
 #INDEX:
 #1 - FileCabinet2
 #2 - "Cold Blood" Book
 #3 - OfficeDoor
 #4 - Lamp
-#5 - 
+#5 - OfficeSafe
