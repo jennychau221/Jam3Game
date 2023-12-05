@@ -1,0 +1,712 @@
+[gd_scene load_steps=61 format=3 uid="uid://cq81es0qf4r30"]
+
+[ext_resource type="PackedScene" uid="uid://tn2wk1umidam" path="res://3DAssets/Room.glb" id="1_5ojr2"]
+[ext_resource type="Script" path="res://mainController.gd" id="1_hc5gj"]
+[ext_resource type="PackedScene" uid="uid://dedx8qi1mi3ro" path="res://3DAssets/Furniture/BankersBox.glb" id="2_ycq7u"]
+[ext_resource type="PackedScene" uid="uid://sdlbghw8naru" path="res://3DAssets/Furniture/FilingCabinet.glb" id="3_ndaiv"]
+[ext_resource type="PackedScene" uid="uid://dp40hmcf5io0h" path="res://3DAssets/Door.glb" id="3_y6jh3"]
+[ext_resource type="PackedScene" uid="uid://bgdc72q5e1ebp" path="res://3DAssets/Clutter/Clock.glb" id="4_rx2rl"]
+[ext_resource type="PackedScene" uid="uid://dshunq587y1pd" path="res://3DAssets/Clutter/Pot.glb" id="5_b3i3n"]
+[ext_resource type="PackedScene" uid="uid://clr46v8y7x4m5" path="res://3DAssets/Clutter/MorgueNote.glb" id="6_lummi"]
+[ext_resource type="PackedScene" uid="uid://bx7afhnaunn7s" path="res://3DAssets/Clutter/Bottle.glb" id="7_2j0gq"]
+[ext_resource type="PackedScene" uid="uid://vbo6rwc2t03u" path="res://3DAssets/Paintings/Diploma.glb" id="8_rsgle"]
+[ext_resource type="PackedScene" uid="uid://bfoet0b2b7771" path="res://3DAssets/Furniture/Bookshelf.glb" id="9_6tuxl"]
+[ext_resource type="PackedScene" uid="uid://dc6n7vmmst1lr" path="res://3DAssets/Paintings/Portrait2.glb" id="9_yu8rj"]
+[ext_resource type="PackedScene" uid="uid://ctat851kiklmt" path="res://3DAssets/Paintings/Portrait1.glb" id="10_whjv3"]
+[ext_resource type="PackedScene" uid="uid://w3aoamjb8y47" path="res://3DAssets/Furniture/Desk.glb" id="11_8af68"]
+[ext_resource type="PackedScene" uid="uid://babve30t3mdgc" path="res://3DAssets/Furniture/Lamp.glb" id="11_crpoq"]
+[ext_resource type="PackedScene" uid="uid://5hmscpay5p0o" path="res://3DAssets/Paintings/PaintingGoya.glb" id="11_rdtv5"]
+[ext_resource type="PackedScene" uid="uid://bm27v6xyl1a2i" path="res://3DAssets/Paintings/PaintingBoecklin.glb" id="12_p806y"]
+[ext_resource type="PackedScene" uid="uid://bd6r8sffjatsu" path="res://characters/player.tscn" id="14_jctlq"]
+[ext_resource type="PackedScene" uid="uid://b2yhigo2fhkok" path="res://3DAssets/Paintings/PaintingBlue.glb" id="16_wu05h"]
+[ext_resource type="PackedScene" uid="uid://cjl6f1vrx7vj3" path="res://3DAssets/Paintings/PaintingGreen.glb" id="17_euy3x"]
+[ext_resource type="PackedScene" uid="uid://kpo8f5l72l8c" path="res://3DAssets/Paintings/PaintingRed.glb" id="18_nfr30"]
+[ext_resource type="PackedScene" uid="uid://ce2krsu87puid" path="res://3DAssets/Paintings/PaintingYellow.glb" id="19_fpqgu"]
+[ext_resource type="PackedScene" uid="uid://yl7a25fc7e24" path="res://3DAssets/Autopsy1/AutopsyRoom1.glb" id="23_6ln0o"]
+[ext_resource type="PackedScene" path="res://3DAssets/Autopsy1/Scalpel.glb" id="23_7khgu"]
+[ext_resource type="PackedScene" uid="uid://dimfj4fsss73l" path="res://3DAssets/Autopsy1/Autopsy1Door.glb" id="24_36aba"]
+[ext_resource type="PackedScene" uid="uid://cx3wiphunm6gr" path="res://3DAssets/Autopsy1/Autopsy2CielingLight.glb" id="25_7tdgx"]
+[ext_resource type="PackedScene" uid="uid://ce21j0c1x6a2b" path="res://3DAssets/Autopsy1/Autopsy-Table.glb" id="26_0ggdj"]
+[ext_resource type="PackedScene" uid="uid://dy67svh0n83dj" path="res://3DAssets/Autopsy1/shelve.glb" id="27_33gcu"]
+[ext_resource type="PackedScene" uid="uid://cod0qc3xs5tyg" path="res://3DAssets/Autopsy1/Sink.glb" id="28_nd8q5"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_3y1ub"]
+data = PackedVector3Array(3.9822, 0, -4.0201, 3.9822, 2.5741, -2.03, 3.9822, 0, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 4.6039, -4.0201, 3.9822, 4.6039, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 0, -4.0201, 3.9822, 4.6039, -4.0201, -3.9822, 0, -4.0201, -3.9822, 4.6039, 4.0201, -3.9822, 4.6039, -4.0201, -3.9822, 0, -4.0201, -3.9822, 0, 4.0201, -3.9822, 4.6039, 4.0201, 3.9822, 0, -4.0201, -3.9822, 4.6039, -4.0201, 3.9822, 4.6039, -4.0201, 3.9822, 0, -4.0201, -3.9822, 0, -4.0201, -3.9822, 4.6039, -4.0201, -3.9822, 0, 4.0201, 3.9822, 4.6039, 4.0201, -3.9822, 4.6039, 4.0201, -3.9822, 0, 4.0201, 3.9822, 0, 4.0201, 3.9822, 4.6039, 4.0201, 3.9822, 0, -0.2757, 3.9822, 4.6039, 4.0201, 3.9822, 0, 4.0201, 3.9822, 4.6039, 4.0201, 3.9822, 2.5741, -0.2757, 3.9822, 4.6039, -0.2757, 3.9822, 4.6039, 4.0201, 3.9822, 0, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 3.9822, 4.6039, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 3.9822, 4.6039, -2.03, 3.9822, 4.6039, -0.2757, 3.9822, 2.5741, -0.2757, 3.8769, 2.5741, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 2.5741, -0.2757, 3.8769, 2.5741, -0.2757, 3.8769, 2.5741, -2.03, 3.9822, 0, -0.2757, 3.8769, 2.5741, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 0, -0.2757, 3.8769, 0, -0.2757, 3.8769, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 3.8769, 0, -2.03, 3.9822, 0, -2.03, 3.9822, 2.5741, -2.03, 3.8769, 2.5741, -2.03, 3.8769, 0, -2.03, 3.9822, 2.5741, -2.03, 4.0875, 2.5741, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 4.0875, 2.5741, -2.03, 4.0875, 2.5741, -0.2757, 3.9822, 2.5741, -0.2757, 4.0875, 0, -0.2757, 3.9822, 0, -0.2757, 3.9822, 2.5741, -0.2757, 4.0875, 2.5741, -0.2757, 4.0875, 0, -0.2757, 3.9822, 0, -2.03, 4.0875, 2.5741, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 0, -2.03, 4.0875, 0, -2.03, 4.0875, 2.5741, -2.03, 4.0875, 2.5741, -2.03, 4.0875, 2.498, -0.3484, 4.0875, 2.5741, -0.2757, 4.0875, 2.5741, -2.03, 4.0875, 2.498, -1.9573, 4.0875, 2.498, -0.3484, 4.0875, 0, -2.03, 4.0875, 2.498, -1.9573, 4.0875, 2.5741, -2.03, 4.0875, 0, -2.03, 4.0875, 0, -1.9573, 4.0875, 2.498, -1.9573, 3.8769, 0, -0.2757, 3.8769, 2.498, -0.3484, 3.8769, 2.5741, -0.2757, 3.8769, 0, -0.2757, 3.8769, 0, -0.3484, 3.8769, 2.498, -0.3484, 4.0875, 2.5741, -0.2757, 4.0875, 0, -0.3484, 4.0875, 0, -0.2757, 4.0875, 2.5741, -0.2757, 4.0875, 2.498, -0.3484, 4.0875, 0, -0.3484, 3.8769, 2.5741, -0.2757, 3.8769, 2.498, -1.9573, 3.8769, 2.5741, -2.03, 3.8769, 2.5741, -0.2757, 3.8769, 2.498, -0.3484, 3.8769, 2.498, -1.9573, 3.8769, 2.5741, -2.03, 3.8769, 0, -1.9573, 3.8769, 0, -2.03, 3.8769, 2.5741, -2.03, 3.8769, 2.498, -1.9573, 3.8769, 0, -1.9573, 3.8769, 0, -0.3484, 4.0875, 2.498, -0.3484, 3.8769, 2.498, -0.3484, 3.8769, 0, -0.3484, 4.0875, 0, -0.3484, 4.0875, 2.498, -0.3484, 3.8769, 2.498, -1.9573, 4.0875, 2.498, -0.3484, 4.0875, 2.498, -1.9573, 3.8769, 2.498, -1.9573, 3.8769, 2.498, -0.3484, 4.0875, 2.498, -0.3484, 3.8769, 0, -1.9573, 4.0875, 2.498, -1.9573, 4.0875, 0, -1.9573, 3.8769, 0, -1.9573, 3.8769, 2.498, -1.9573, 4.0875, 2.498, -1.9573)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_yrh46"]
+data = PackedVector3Array(-3.9822, 0, 4.0063, 3.9822, 0, -4.0063, 3.9822, 0, 4.0063, -3.9822, 0, 4.0063, -3.9822, 0, -4.0063, 3.9822, 0, -4.0063)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ka7c8"]
+size = Vector3(0.16, 2.5, 1.6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mdasw"]
+size = Vector3(10, 11, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qg0qs"]
+size = Vector3(4.4, 1.2, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_37td7"]
+size = Vector3(0.2, 1.3, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_okvwq"]
+size = Vector3(3.2, 1.2, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y4vra"]
+size = Vector3(1.4, 0.8, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0tumk"]
+size = Vector3(2, 1.2, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_50mtp"]
+size = Vector3(2.7, 2.4, 4)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_lhbfw"]
+data = PackedVector3Array(-0.8403, 1.2003, 2.591, -0.8403, 2.3406, 0.1335, -0.8403, 2.3406, 2.591, -0.8403, 1.2003, 2.591, -0.8403, 1.2003, 0.1335, -0.8403, 2.3406, 0.1335, -0.8403, 1.2003, 0.1335, 0.8095, 2.3406, 0.1335, -0.8403, 2.3406, 0.1335, -0.8403, 1.2003, 0.1335, 0.8095, 1.2003, 0.1335, 0.8095, 2.3406, 0.1335, 0.8095, 1.2003, 0.1335, 0.8095, 2.3406, 2.591, 0.8095, 2.3406, 0.1335, 0.8095, 1.2003, 0.1335, 0.8095, 1.2003, 2.591, 0.8095, 2.3406, 2.591, 0.8095, 1.2003, 2.591, -0.8403, 2.3406, 2.591, 0.8095, 2.3406, 2.591, 0.8095, 1.2003, 2.591, -0.8403, 1.2003, 2.591, -0.8403, 2.3406, 2.591, -0.8403, -2.2208, 0.1335, 0.8095, -2.2208, 2.591, 0.8095, -2.2208, 0.1335, -0.8403, -2.2208, 0.1335, -0.8403, -2.2208, 2.591, 0.8095, -2.2208, 2.591, 0.8095, 2.3406, 0.1335, -0.8403, 2.3406, 2.591, -0.8403, 2.3406, 0.1335, 0.8095, 2.3406, 0.1335, 0.8095, 2.3406, 2.591, -0.8403, 2.3406, 2.591, 0.8095, -2.2208, 2.591, -0.8403, -1.0805, 2.591, 0.8095, -1.0805, 2.591, 0.8095, -2.2208, 2.591, -0.8403, -2.2208, 2.591, -0.8403, -1.0805, 2.591, 0.8095, -1.0805, 2.591, -0.8403, 0.0599, 2.591, 0.8095, 0.0599, 2.591, 0.8095, -1.0805, 2.591, -0.8403, -1.0805, 2.591, -0.8403, 0.0599, 2.591, 0.8095, 0.0599, 2.591, -0.8403, 1.2003, 2.591, 0.8095, 1.2003, 2.591, 0.8095, 0.0599, 2.591, -0.8403, 0.0599, 2.591, -0.8403, 1.2003, 2.591, 0.8095, -2.2208, 0.1335, 0.8095, -1.0805, 2.591, 0.8095, -1.0805, 0.1335, 0.8095, -2.2208, 0.1335, 0.8095, -2.2208, 2.591, 0.8095, -1.0805, 2.591, 0.8095, -1.0805, 0.1335, 0.8095, 0.0599, 2.591, 0.8095, 0.0599, 0.1335, 0.8095, -1.0805, 0.1335, 0.8095, -1.0805, 2.591, 0.8095, 0.0599, 2.591, 0.8095, 0.0599, 0.1335, 0.8095, 1.2003, 2.591, 0.8095, 1.2003, 0.1335, 0.8095, 0.0599, 0.1335, 0.8095, 0.0599, 2.591, 0.8095, 1.2003, 2.591, -0.8403, -2.2208, 0.1335, 0.8095, -1.0805, 0.1335, -0.8403, -1.0805, 0.1335, -0.8403, -2.2208, 0.1335, 0.8095, -2.2208, 0.1335, 0.8095, -1.0805, 0.1335, -0.8403, -1.0805, 0.1335, 0.8095, 0.0599, 0.1335, -0.8403, 0.0599, 0.1335, -0.8403, -1.0805, 0.1335, 0.8095, -1.0805, 0.1335, 0.8095, 0.0599, 0.1335, -0.8403, 0.0599, 0.1335, 0.8095, 1.2003, 0.1335, -0.8403, 1.2003, 0.1335, -0.8403, 0.0599, 0.1335, 0.8095, 0.0599, 0.1335, 0.8095, 1.2003, 0.1335, -0.8403, -2.2208, 2.591, -0.8403, -1.0805, 0.1335, -0.8403, -1.0805, 2.591, -0.8403, -2.2208, 2.591, -0.8403, -2.2208, 0.1335, -0.8403, -1.0805, 0.1335, -0.8403, -1.0805, 2.591, -0.8403, 0.0599, 0.1335, -0.8403, 0.0599, 2.591, -0.8403, -1.0805, 2.591, -0.8403, -1.0805, 0.1335, -0.8403, 0.0599, 0.1335, -0.8403, 0.0599, 2.591, -0.8403, 1.2003, 0.1335, -0.8403, 1.2003, 2.591, -0.8403, 0.0599, 2.591, -0.8403, 0.0599, 0.1335, -0.8403, 1.2003, 0.1335)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fkqeo"]
+size = Vector3(0.5, 0.7, 0.7)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_wrkon"]
+data = PackedVector3Array(0, -0.2519, -0.157, 0.1704, 0.0946, -0.1704, 0, 0.0946, -0.241, 0, -0.2519, -0.157, 0.111, -0.2519, -0.111, 0.1704, 0.0946, -0.1704, 0.111, -0.2519, -0.111, 0.241, 0.0946, 0, 0.1704, 0.0946, -0.1704, 0.111, -0.2519, -0.111, 0.157, -0.2519, 0, 0.241, 0.0946, 0, 0.157, -0.2519, 0, 0.1704, 0.0946, 0.1704, 0.241, 0.0946, 0, 0.157, -0.2519, 0, 0.111, -0.2519, 0.111, 0.1704, 0.0946, 0.1704, 0.111, -0.2519, 0.111, 0, 0.0946, 0.241, 0.1704, 0.0946, 0.1704, 0.111, -0.2519, 0.111, 0, -0.2519, 0.157, 0, 0.0946, 0.241, 0, -0.2519, 0.157, -0.1704, 0.0946, 0.1704, 0, 0.0946, 0.241, 0, -0.2519, 0.157, -0.111, -0.2519, 0.111, -0.1704, 0.0946, 0.1704, -0.111, -0.2519, 0.111, -0.241, 0.0946, 0, -0.1704, 0.0946, 0.1704, -0.111, -0.2519, 0.111, -0.157, -0.2519, 0, -0.241, 0.0946, 0, -0.241, 0.0946, 0, -0.1884, 0.0946, 0.1884, -0.1704, 0.0946, 0.1704, -0.241, 0.0946, 0, -0.2665, 0.0946, 0, -0.1884, 0.0946, 0.1884, -0.157, -0.2519, 0, -0.1704, 0.0946, -0.1704, -0.241, 0.0946, 0, -0.157, -0.2519, 0, -0.111, -0.2519, -0.111, -0.1704, 0.0946, -0.1704, -0.111, -0.2519, -0.111, 0, 0.0946, -0.241, -0.1704, 0.0946, -0.1704, -0.111, -0.2519, -0.111, 0, -0.2519, -0.157, 0, 0.0946, -0.241, -0.111, -0.2519, -0.111, 0.111, -0.2519, -0.111, 0, -0.2519, -0.157, 0.111, -0.2519, -0.111, 0.111, -0.2519, 0.111, 0.157, -0.2519, 0, 0.111, -0.2519, 0.111, -0.111, -0.2519, 0.111, 0, -0.2519, 0.157, -0.111, -0.2519, 0.111, -0.111, -0.2519, -0.111, -0.157, -0.2519, 0, -0.111, -0.2519, -0.111, 0.111, -0.2519, 0.111, 0.111, -0.2519, -0.111, 0.111, -0.2519, 0.111, -0.111, -0.2519, -0.111, -0.111, -0.2519, 0.111, -0.1884, 0.0946, 0.1884, 0, 0.2187, 0.2776, 0, 0.0946, 0.2665, -0.1884, 0.0946, 0.1884, -0.1963, 0.2187, 0.1963, 0, 0.2187, 0.2776, 0, 0.0946, 0.241, 0.1884, 0.0946, 0.1884, 0.1704, 0.0946, 0.1704, 0, 0.0946, 0.241, 0, 0.0946, 0.2665, 0.1884, 0.0946, 0.1884, -0.1704, 0.0946, -0.1704, -0.2665, 0.0946, 0, -0.241, 0.0946, 0, -0.1704, 0.0946, -0.1704, -0.1884, 0.0946, -0.1884, -0.2665, 0.0946, 0, 0.241, 0.0946, 0, 0.1884, 0.0946, -0.1884, 0.1704, 0.0946, -0.1704, 0.241, 0.0946, 0, 0.2665, 0.0946, 0, 0.1884, 0.0946, -0.1884, -0.1704, 0.0946, 0.1704, 0, 0.0946, 0.2665, 0, 0.0946, 0.241, -0.1704, 0.0946, 0.1704, -0.1884, 0.0946, 0.1884, 0, 0.0946, 0.2665, 0, 0.0946, -0.241, -0.1884, 0.0946, -0.1884, -0.1704, 0.0946, -0.1704, 0, 0.0946, -0.241, 0, 0.0946, -0.2665, -0.1884, 0.0946, -0.1884, 0.1704, 0.0946, -0.1704, 0, 0.0946, -0.2665, 0, 0.0946, -0.241, 0.1704, 0.0946, -0.1704, 0.1884, 0.0946, -0.1884, 0, 0.0946, -0.2665, 0.1704, 0.0946, 0.1704, 0.2665, 0.0946, 0, 0.241, 0.0946, 0, 0.1704, 0.0946, 0.1704, 0.1884, 0.0946, 0.1884, 0.2665, 0.0946, 0, 0.2166, 0.1133, 0, 0, 0.1133, -0.2166, 0.1532, 0.1133, -0.1532, 0, 0.1133, -0.2166, -0.2166, 0.1133, 0, -0.1532, 0.1133, -0.1532, -0.2166, 0.1133, 0, 0, 0.1133, 0.2166, -0.1532, 0.1133, 0.1532, 0, 0.1133, 0.2166, 0.2166, 0.1133, 0, 0.1532, 0.1133, 0.1532, 0.2166, 0.1133, 0, -0.2166, 0.1133, 0, 0, 0.1133, -0.2166, -0.2166, 0.1133, 0, 0.2166, 0.1133, 0, 0, 0.1133, 0.2166, 0.1884, 0.0946, 0.1884, 0.2776, 0.2187, 0, 0.2665, 0.0946, 0, 0.1884, 0.0946, 0.1884, 0.1963, 0.2187, 0.1963, 0.2776, 0.2187, 0, 0.1884, 0.0946, -0.1884, 0, 0.2187, -0.2776, 0, 0.0946, -0.2665, 0.1884, 0.0946, -0.1884, 0.1963, 0.2187, -0.1963, 0, 0.2187, -0.2776, 0, 0.0946, -0.2665, -0.1963, 0.2187, -0.1963, -0.1884, 0.0946, -0.1884, 0, 0.0946, -0.2665, 0, 0.2187, -0.2776, -0.1963, 0.2187, -0.1963, -0.2665, 0.0946, 0, -0.1963, 0.2187, 0.1963, -0.1884, 0.0946, 0.1884, -0.2665, 0.0946, 0, -0.2776, 0.2187, 0, -0.1963, 0.2187, 0.1963, 0, 0.0946, 0.2665, 0.1963, 0.2187, 0.1963, 0.1884, 0.0946, 0.1884, 0, 0.0946, 0.2665, 0, 0.2187, 0.2776, 0.1963, 0.2187, 0.1963, 0.2665, 0.0946, 0, 0.1963, 0.2187, -0.1963, 0.1884, 0.0946, -0.1884, 0.2665, 0.0946, 0, 0.2776, 0.2187, 0, 0.1963, 0.2187, -0.1963, -0.1884, 0.0946, -0.1884, -0.2776, 0.2187, 0, -0.2665, 0.0946, 0, -0.1884, 0.0946, -0.1884, -0.1963, 0.2187, -0.1963, -0.2776, 0.2187, 0, 0, 0.2187, -0.2386, 0.1963, 0.2187, -0.1963, 0.1687, 0.2187, -0.1687, 0, 0.2187, -0.2386, 0, 0.2187, -0.2776, 0.1963, 0.2187, -0.1963, 0.1687, 0.2187, -0.1687, 0.2776, 0.2187, 0, 0.2386, 0.2187, 0, 0.1687, 0.2187, -0.1687, 0.1963, 0.2187, -0.1963, 0.2776, 0.2187, 0, 0.2386, 0.2187, 0, 0.1963, 0.2187, 0.1963, 0.1687, 0.2187, 0.1687, 0.2386, 0.2187, 0, 0.2776, 0.2187, 0, 0.1963, 0.2187, 0.1963, 0.1687, 0.2187, 0.1687, 0, 0.2187, 0.2776, 0, 0.2187, 0.2386, 0.1687, 0.2187, 0.1687, 0.1963, 0.2187, 0.1963, 0, 0.2187, 0.2776, 0, 0.2187, 0.2386, -0.1963, 0.2187, 0.1963, -0.1687, 0.2187, 0.1687, 0, 0.2187, 0.2386, 0, 0.2187, 0.2776, -0.1963, 0.2187, 0.1963, -0.1687, 0.2187, 0.1687, -0.2776, 0.2187, 0, -0.2386, 0.2187, 0, -0.1687, 0.2187, 0.1687, -0.1963, 0.2187, 0.1963, -0.2776, 0.2187, 0, -0.2386, 0.2187, 0, -0.1963, 0.2187, -0.1963, -0.1687, 0.2187, -0.1687, -0.2386, 0.2187, 0, -0.2776, 0.2187, 0, -0.1963, 0.2187, -0.1963, -0.1687, 0.2187, -0.1687, 0, 0.2187, -0.2776, 0, 0.2187, -0.2386, -0.1687, 0.2187, -0.1687, -0.1963, 0.2187, -0.1963, 0, 0.2187, -0.2776, 0, 0.1133, -0.2166, 0.1687, 0.2187, -0.1687, 0.1532, 0.1133, -0.1532, 0, 0.1133, -0.2166, 0, 0.2187, -0.2386, 0.1687, 0.2187, -0.1687, 0.1532, 0.1133, -0.1532, 0.2386, 0.2187, 0, 0.2166, 0.1133, 0, 0.1532, 0.1133, -0.1532, 0.1687, 0.2187, -0.1687, 0.2386, 0.2187, 0, 0.2166, 0.1133, 0, 0.1687, 0.2187, 0.1687, 0.1532, 0.1133, 0.1532, 0.2166, 0.1133, 0, 0.2386, 0.2187, 0, 0.1687, 0.2187, 0.1687, 0.1532, 0.1133, 0.1532, 0, 0.2187, 0.2386, 0, 0.1133, 0.2166, 0.1532, 0.1133, 0.1532, 0.1687, 0.2187, 0.1687, 0, 0.2187, 0.2386, 0, 0.1133, 0.2166, -0.1687, 0.2187, 0.1687, -0.1532, 0.1133, 0.1532, 0, 0.1133, 0.2166, 0, 0.2187, 0.2386, -0.1687, 0.2187, 0.1687, -0.1532, 0.1133, 0.1532, -0.2386, 0.2187, 0, -0.2166, 0.1133, 0, -0.1532, 0.1133, 0.1532, -0.1687, 0.2187, 0.1687, -0.2386, 0.2187, 0, -0.2166, 0.1133, 0, -0.1687, 0.2187, -0.1687, -0.1532, 0.1133, -0.1532, -0.2166, 0.1133, 0, -0.2386, 0.2187, 0, -0.1687, 0.2187, -0.1687, -0.1532, 0.1133, -0.1532, 0, 0.2187, -0.2386, 0, 0.1133, -0.2166, -0.1532, 0.1133, -0.1532, -0.1687, 0.2187, -0.1687, 0, 0.2187, -0.2386)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f28xr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lun8f"]
+size = Vector3(1.5, 2.5, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5oejo"]
+size = Vector3(4, 2, 1.5)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_oblif"]
+data = PackedVector3Array(-2.4734, -2.1527, 0.9171, -2.4734, 2.1609, 0.8622, -2.4734, 2.1609, 0.9171, -2.4734, -2.1527, 0.9171, -2.4734, -2.1527, 0.8622, -2.4734, 2.1609, 0.8622, 2.4935, -2.1527, 0.8622, 2.4935, 2.1609, 0.9171, 2.4935, 2.1609, 0.8622, 2.4935, -2.1527, 0.8622, 2.4935, -2.1527, 0.9171, 2.4935, 2.1609, 0.9171, 2.4935, -2.1527, 0.9171, -2.4734, 2.1609, 0.9171, 2.4935, 2.1609, 0.9171, 2.4935, -2.1527, 0.9171, -2.4734, -2.1527, 0.9171, -2.4734, 2.1609, 0.9171, -2.4734, -2.1527, 0.8622, 2.4935, -2.1527, 0.9171, 2.4935, -2.1527, 0.8622, -2.4734, -2.1527, 0.8622, -2.4734, -2.1527, 0.9171, 2.4935, -2.1527, 0.9171, 2.4935, 2.1609, 0.8622, -2.4734, 2.1609, 0.9171, -2.4734, 2.1609, 0.8622, 2.4935, 2.1609, 0.8622, 2.4935, 2.1609, 0.9171, -2.4734, 2.1609, 0.9171)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ao0vj"]
+data = PackedVector3Array(-1.9743, -2.4547, 0.3114, -1.9743, 2.4683, 0.1612, -1.9743, 2.4683, 0.3114, -1.9743, -2.4547, 0.3114, -1.9743, -2.4547, 0.1612, -1.9743, 2.4683, 0.1612, 1.9819, -2.4547, 0.1612, 1.9819, 2.4683, 0.3114, 1.9819, 2.4683, 0.1612, 1.9819, -2.4547, 0.1612, 1.9819, -2.4547, 0.3114, 1.9819, 2.4683, 0.3114, 1.606, -2.0788, 0.2416, -1.5984, 2.0924, 0.2416, 1.606, 2.0924, 0.2416, 1.606, -2.0788, 0.2416, -1.5984, -2.0788, 0.2416, -1.5984, 2.0924, 0.2416, -1.9743, -2.4547, 0.1612, 1.9819, -2.4547, 0.3114, 1.9819, -2.4547, 0.1612, -1.9743, -2.4547, 0.1612, -1.9743, -2.4547, 0.3114, 1.9819, -2.4547, 0.3114, 1.9819, 2.4683, 0.1612, -1.9743, 2.4683, 0.3114, -1.9743, 2.4683, 0.1612, 1.9819, 2.4683, 0.1612, 1.9819, 2.4683, 0.3114, -1.9743, 2.4683, 0.3114, -1.5984, -2.0788, 0.3114, -1.9743, 2.4683, 0.3114, -1.5984, 2.0924, 0.3114, -1.5984, -2.0788, 0.3114, -1.9743, -2.4547, 0.3114, -1.9743, 2.4683, 0.3114, 1.606, 2.0924, 0.3114, 1.9819, -2.4547, 0.3114, 1.606, -2.0788, 0.3114, 1.606, 2.0924, 0.3114, 1.9819, 2.4683, 0.3114, 1.9819, -2.4547, 0.3114, 1.606, -2.0788, 0.3114, -1.9743, -2.4547, 0.3114, -1.5984, -2.0788, 0.3114, 1.606, -2.0788, 0.3114, 1.9819, -2.4547, 0.3114, -1.9743, -2.4547, 0.3114, -1.5984, 2.0924, 0.3114, 1.9819, 2.4683, 0.3114, 1.606, 2.0924, 0.3114, -1.5984, 2.0924, 0.3114, -1.9743, 2.4683, 0.3114, 1.9819, 2.4683, 0.3114, -1.5984, -2.0788, 0.2416, -1.5984, 2.0924, 0.3114, -1.5984, 2.0924, 0.2416, -1.5984, -2.0788, 0.2416, -1.5984, -2.0788, 0.3114, -1.5984, 2.0924, 0.3114, 1.606, 2.0924, 0.2416, 1.606, -2.0788, 0.3114, 1.606, -2.0788, 0.2416, 1.606, 2.0924, 0.2416, 1.606, 2.0924, 0.3114, 1.606, -2.0788, 0.3114, 1.606, -2.0788, 0.2416, -1.5984, -2.0788, 0.3114, -1.5984, -2.0788, 0.2416, 1.606, -2.0788, 0.2416, 1.606, -2.0788, 0.3114, -1.5984, -2.0788, 0.3114, -1.5984, 2.0924, 0.2416, 1.606, 2.0924, 0.3114, 1.606, 2.0924, 0.2416, -1.5984, 2.0924, 0.2416, -1.5984, 2.0924, 0.3114, 1.606, 2.0924, 0.3114)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_tn5vp"]
+data = PackedVector3Array(-1.9743, -2.4547, 0.3114, -1.9743, 2.4683, 0.1612, -1.9743, 2.4683, 0.3114, -1.9743, -2.4547, 0.3114, -1.9743, -2.4547, 0.1612, -1.9743, 2.4683, 0.1612, 1.9819, -2.4547, 0.1612, 1.9819, 2.4683, 0.3114, 1.9819, 2.4683, 0.1612, 1.9819, -2.4547, 0.1612, 1.9819, -2.4547, 0.3114, 1.9819, 2.4683, 0.3114, 1.606, -2.0788, 0.2416, -1.5984, 2.0924, 0.2416, 1.606, 2.0924, 0.2416, 1.606, -2.0788, 0.2416, -1.5984, -2.0788, 0.2416, -1.5984, 2.0924, 0.2416, -1.9743, -2.4547, 0.1612, 1.9819, -2.4547, 0.3114, 1.9819, -2.4547, 0.1612, -1.9743, -2.4547, 0.1612, -1.9743, -2.4547, 0.3114, 1.9819, -2.4547, 0.3114, 1.9819, 2.4683, 0.1612, -1.9743, 2.4683, 0.3114, -1.9743, 2.4683, 0.1612, 1.9819, 2.4683, 0.1612, 1.9819, 2.4683, 0.3114, -1.9743, 2.4683, 0.3114, -1.5984, -2.0788, 0.3114, -1.9743, 2.4683, 0.3114, -1.5984, 2.0924, 0.3114, -1.5984, -2.0788, 0.3114, -1.9743, -2.4547, 0.3114, -1.9743, 2.4683, 0.3114, 1.606, 2.0924, 0.3114, 1.9819, -2.4547, 0.3114, 1.606, -2.0788, 0.3114, 1.606, 2.0924, 0.3114, 1.9819, 2.4683, 0.3114, 1.9819, -2.4547, 0.3114, 1.606, -2.0788, 0.3114, -1.9743, -2.4547, 0.3114, -1.5984, -2.0788, 0.3114, 1.606, -2.0788, 0.3114, 1.9819, -2.4547, 0.3114, -1.9743, -2.4547, 0.3114, -1.5984, 2.0924, 0.3114, 1.9819, 2.4683, 0.3114, 1.606, 2.0924, 0.3114, -1.5984, 2.0924, 0.3114, -1.9743, 2.4683, 0.3114, 1.9819, 2.4683, 0.3114, -1.5984, -2.0788, 0.2416, -1.5984, 2.0924, 0.3114, -1.5984, 2.0924, 0.2416, -1.5984, -2.0788, 0.2416, -1.5984, -2.0788, 0.3114, -1.5984, 2.0924, 0.3114, 1.606, 2.0924, 0.2416, 1.606, -2.0788, 0.3114, 1.606, -2.0788, 0.2416, 1.606, 2.0924, 0.2416, 1.606, 2.0924, 0.3114, 1.606, -2.0788, 0.3114, 1.606, -2.0788, 0.2416, -1.5984, -2.0788, 0.3114, -1.5984, -2.0788, 0.2416, 1.606, -2.0788, 0.2416, 1.606, -2.0788, 0.3114, -1.5984, -2.0788, 0.3114, -1.5984, 2.0924, 0.2416, 1.606, 2.0924, 0.3114, 1.606, 2.0924, 0.2416, -1.5984, 2.0924, 0.2416, -1.5984, 2.0924, 0.3114, 1.606, 2.0924, 0.3114)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_14c0y"]
+data = PackedVector3Array(-1.8834, -2.6541, 0.2483, -1.8834, 2.6483, 0.1173, -1.8834, 2.6483, 0.2483, -1.8834, -2.6541, 0.2483, -1.8834, -2.6541, 0.1173, -1.8834, 2.6483, 0.1173, 1.8784, -2.6541, 0.1173, 1.8784, 2.6483, 0.2483, 1.8784, 2.6483, 0.1173, 1.8784, -2.6541, 0.1173, 1.8784, -2.6541, 0.2483, 1.8784, 2.6483, 0.2483, 1.8784, -2.6541, 0.2483, -1.8834, 2.6483, 0.2483, 1.8784, 2.6483, 0.2483, 1.8784, -2.6541, 0.2483, -1.8834, -2.6541, 0.2483, -1.8834, 2.6483, 0.2483, -1.8834, -2.6541, 0.1173, 1.8784, -2.6541, 0.2483, 1.8784, -2.6541, 0.1173, -1.8834, -2.6541, 0.1173, -1.8834, -2.6541, 0.2483, 1.8784, -2.6541, 0.2483, 1.8784, 2.6483, 0.1173, -1.8834, 2.6483, 0.2483, -1.8834, 2.6483, 0.1173, 1.8784, 2.6483, 0.1173, 1.8784, 2.6483, 0.2483, -1.8834, 2.6483, 0.2483)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_idvgj"]
+data = PackedVector3Array(-2.5648, -1.3987, 0.2483, -2.5648, 1.3847, 0.1173, -2.5648, 1.3847, 0.2483, -2.5648, -1.3987, 0.2483, -2.5648, -1.3987, 0.1173, -2.5648, 1.3847, 0.1173, 2.5665, -1.3987, 0.1173, 2.5665, 1.3847, 0.2483, 2.5665, 1.3847, 0.1173, 2.5665, -1.3987, 0.1173, 2.5665, -1.3987, 0.2483, 2.5665, 1.3847, 0.2483, 2.5665, -1.3987, 0.2483, -2.5648, 1.3847, 0.2483, 2.5665, 1.3847, 0.2483, 2.5665, -1.3987, 0.2483, -2.5648, -1.3987, 0.2483, -2.5648, 1.3847, 0.2483, -2.5648, -1.3987, 0.1173, 2.5665, -1.3987, 0.2483, 2.5665, -1.3987, 0.1173, -2.5648, -1.3987, 0.1173, -2.5648, -1.3987, 0.2483, 2.5665, -1.3987, 0.2483, 2.5665, 1.3847, 0.1173, -2.5648, 1.3847, 0.2483, -2.5648, 1.3847, 0.1173, 2.5665, 1.3847, 0.1173, 2.5665, 1.3847, 0.2483, -2.5648, 1.3847, 0.2483)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_s65t5"]
+data = PackedVector3Array(-2.5648, -2.0559, 0.2483, -2.5648, 2.0558, 0.1173, -2.5648, 2.0558, 0.2483, -2.5648, -2.0559, 0.2483, -2.5648, -2.0559, 0.1173, -2.5648, 2.0558, 0.1173, 2.5665, -2.0559, 0.1173, 2.5665, 2.0558, 0.2483, 2.5665, 2.0558, 0.1173, 2.5665, -2.0559, 0.1173, 2.5665, -2.0559, 0.2483, 2.5665, 2.0558, 0.2483, 2.5665, -2.0559, 0.2483, -2.5648, 2.0558, 0.2483, 2.5665, 2.0558, 0.2483, 2.5665, -2.0559, 0.2483, -2.5648, -2.0559, 0.2483, -2.5648, 2.0558, 0.2483, -2.5648, -2.0559, 0.1173, 2.5665, -2.0559, 0.2483, 2.5665, -2.0559, 0.1173, -2.5648, -2.0559, 0.1173, -2.5648, -2.0559, 0.2483, 2.5665, -2.0559, 0.2483, 2.5665, 2.0558, 0.1173, -2.5648, 2.0558, 0.2483, -2.5648, 2.0558, 0.1173, 2.5665, 2.0558, 0.1173, 2.5665, 2.0558, 0.2483, -2.5648, 2.0558, 0.2483)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_8cfr8"]
+data = PackedVector3Array(-2.5648, -2.0559, 0.2483, -2.5648, 2.0558, 0.1173, -2.5648, 2.0558, 0.2483, -2.5648, -2.0559, 0.2483, -2.5648, -2.0559, 0.1173, -2.5648, 2.0558, 0.1173, 2.5665, -2.0559, 0.1173, 2.5665, 2.0558, 0.2483, 2.5665, 2.0558, 0.1173, 2.5665, -2.0559, 0.1173, 2.5665, -2.0559, 0.2483, 2.5665, 2.0558, 0.2483, 2.5665, -2.0559, 0.2483, -2.5648, 2.0558, 0.2483, 2.5665, 2.0558, 0.2483, 2.5665, -2.0559, 0.2483, -2.5648, -2.0559, 0.2483, -2.5648, 2.0558, 0.2483, -2.5648, -2.0559, 0.1173, 2.5665, -2.0559, 0.2483, 2.5665, -2.0559, 0.1173, -2.5648, -2.0559, 0.1173, -2.5648, -2.0559, 0.2483, 2.5665, -2.0559, 0.2483, 2.5665, 2.0558, 0.1173, -2.5648, 2.0558, 0.2483, -2.5648, 2.0558, 0.1173, 2.5665, 2.0558, 0.1173, 2.5665, 2.0558, 0.2483, -2.5648, 2.0558, 0.2483)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_0y7oh"]
+data = PackedVector3Array(-2.5648, -2.0559, 0.2483, -2.5648, 2.0558, 0.1173, -2.5648, 2.0558, 0.2483, -2.5648, -2.0559, 0.2483, -2.5648, -2.0559, 0.1173, -2.5648, 2.0558, 0.1173, 2.5665, -2.0559, 0.1173, 2.5665, 2.0558, 0.2483, 2.5665, 2.0558, 0.1173, 2.5665, -2.0559, 0.1173, 2.5665, -2.0559, 0.2483, 2.5665, 2.0558, 0.2483, 2.5665, -2.0559, 0.2483, -2.5648, 2.0558, 0.2483, 2.5665, 2.0558, 0.2483, 2.5665, -2.0559, 0.2483, -2.5648, -2.0559, 0.2483, -2.5648, 2.0558, 0.2483, -2.5648, -2.0559, 0.1173, 2.5665, -2.0559, 0.2483, 2.5665, -2.0559, 0.1173, -2.5648, -2.0559, 0.1173, -2.5648, -2.0559, 0.2483, 2.5665, -2.0559, 0.2483, 2.5665, 2.0558, 0.1173, -2.5648, 2.0558, 0.2483, -2.5648, 2.0558, 0.1173, 2.5665, 2.0558, 0.1173, 2.5665, 2.0558, 0.2483, -2.5648, 2.0558, 0.2483)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_vhngb"]
+data = PackedVector3Array(-2.5648, -2.0559, 0.2483, -2.5648, 2.0558, 0.1173, -2.5648, 2.0558, 0.2483, -2.5648, -2.0559, 0.2483, -2.5648, -2.0559, 0.1173, -2.5648, 2.0558, 0.1173, 2.5665, -2.0559, 0.1173, 2.5665, 2.0558, 0.2483, 2.5665, 2.0558, 0.1173, 2.5665, -2.0559, 0.1173, 2.5665, -2.0559, 0.2483, 2.5665, 2.0558, 0.2483, 2.5665, -2.0559, 0.2483, -2.5648, 2.0558, 0.2483, 2.5665, 2.0558, 0.2483, 2.5665, -2.0559, 0.2483, -2.5648, -2.0559, 0.2483, -2.5648, 2.0558, 0.2483, -2.5648, -2.0559, 0.1173, 2.5665, -2.0559, 0.2483, 2.5665, -2.0559, 0.1173, -2.5648, -2.0559, 0.1173, -2.5648, -2.0559, 0.2483, 2.5665, -2.0559, 0.2483, 2.5665, 2.0558, 0.1173, -2.5648, 2.0558, 0.2483, -2.5648, 2.0558, 0.1173, 2.5665, 2.0558, 0.1173, 2.5665, 2.0558, 0.2483, -2.5648, 2.0558, 0.2483)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sis04"]
+size = Vector3(0.1, 0.02, 0.7)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ridwg"]
+size = Vector3(0.6, 1, 1.77)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4vf4k"]
+size = Vector3(0.4, 5.6, 2.7)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p3dxe"]
+size = Vector3(6, 0.8, 12.6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gbksj"]
+size = Vector3(750, 700, 330)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sgxuj"]
+size = Vector3(4.7, 3.5, 2.1)
+
+[node name="Main" type="Node"]
+script = ExtResource("1_hc5gj")
+
+[node name="Office" type="Node" parent="."]
+
+[node name="Room" parent="Office" instance=ExtResource("1_5ojr2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0124004, 0.00112748, -2.02227)
+metadata/_edit_group_ = true
+
+[node name="RoomCollision" type="StaticBody3D" parent="Office/Room"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/Room/RoomCollision"]
+shape = SubResource("ConcavePolygonShape3D_3y1ub")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Office/Room/RoomCollision"]
+shape = SubResource("ConcavePolygonShape3D_yrh46")
+
+[node name="Door" parent="Office/Room" instance=ExtResource("3_y6jh3")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Office/Room/Door"]
+collision_layer = 9
+collision_mask = 9
+metadata/objectID = 3
+metadata/interactText = "This door is locked, looks like I’m trapped in here. There must be a way to get out before it’s too late…"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/Room/Door/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.97644, 1.24026, -1.17607)
+shape = SubResource("BoxShape3D_ka7c8")
+
+[node name="Bookshelf" parent="Office" instance=ExtResource("9_6tuxl")]
+transform = Transform3D(-0.309085, 0, -2.70211e-08, 0, 0.309085, 0, 2.70211e-08, 0, -0.309085, 2.21172, 0.377521, 1.55189)
+metadata/_edit_group_ = true
+
+[node name="BookshelfFrame" type="StaticBody3D" parent="Office/Bookshelf"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -6.39488e-14, 0, 1, 0, 4.35981, 0)
+metadata/interactText = "A bookshelf. (WRITE SOMETHING IDK)"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/Bookshelf/BookshelfFrame"]
+shape = SubResource("BoxShape3D_mdasw")
+
+[node name="BottomLeft" type="StaticBody3D" parent="Office/Bookshelf"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -1.13687e-13, 0, 1, 2.50221, 2.08387, 0.708559)
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "\"The Modern Almanac of the Indecent and Morose\" seems a bit dark-humored for a doctor in an asylum."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/Bookshelf/BottomLeft"]
+shape = SubResource("BoxShape3D_qg0qs")
+
+[node name="SingleMidBottomMid" type="StaticBody3D" parent="Office/Bookshelf"]
+transform = Transform3D(0.893775, -0.441895, 0.076778, 0.442321, 0.896773, 0.0122849, -0.0742811, 0.0229806, 0.996973, 2.81525, 4.12512, 0.698956)
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "\"One Flew Over The Cuckoos nest\", the doc had a strange sense of humor"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/Bookshelf/SingleMidBottomMid"]
+shape = SubResource("BoxShape3D_37td7")
+
+[node name="SingleTopLeft" type="StaticBody3D" parent="Office/Bookshelf"]
+transform = Transform3D(0.893775, -0.441895, 0.076778, 0.442321, 0.896773, 0.0122849, -0.0742811, 0.0229806, 0.996973, -2.19135, 8.00363, 0.716186)
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "\"How to be Good\", Maybe this one was a joke"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/Bookshelf/SingleTopLeft"]
+shape = SubResource("BoxShape3D_37td7")
+
+[node name="SingleTopRight" type="StaticBody3D" parent="Office/Bookshelf"]
+transform = Transform3D(0.901126, 0.429763, 0.0572338, -0.427146, 0.902649, -0.0526317, -0.0742811, 0.0229806, 0.996973, 4.38402, 7.92276, 0.569618)
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "\"The Psychology of Contrivances\""
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/Bookshelf/SingleTopRight"]
+shape = SubResource("BoxShape3D_37td7")
+
+[node name="SingleMiddleTopRight" type="StaticBody3D" parent="Office/Bookshelf"]
+transform = Transform3D(0.901126, 0.429763, 0.0572338, -0.427146, 0.902649, -0.0526317, -0.0742811, 0.0229806, 0.996973, 4.41095, 6.15657, 0.648563)
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "\"Manipulation for the Morbid\""
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/Bookshelf/SingleMiddleTopRight"]
+shape = SubResource("BoxShape3D_37td7")
+
+[node name="SingleMiddleTopLeft" type="StaticBody3D" parent="Office/Bookshelf"]
+transform = Transform3D(0.901126, 0.429763, 0.0572338, -0.427146, 0.902649, -0.0526317, -0.0742811, 0.0229806, 0.996973, 4.04349, 6.14435, 0.719469)
+collision_layer = 8
+collision_mask = 8
+metadata/interactText = "\"In Cold Blood\", quite a twisted book to keep on hand"
+metadata/objectID = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/Bookshelf/SingleMiddleTopLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -2.84217e-14, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_37td7")
+
+[node name="SingleMidBottomFlat" type="StaticBody3D" parent="Office/Bookshelf"]
+transform = Transform3D(0.0352833, -0.999048, 0.0256571, 0.996613, 0.0370822, 0.0733997, -0.0742811, 0.0229805, 0.996973, 3.95287, 4.47495, 0.665765)
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "\"The Study of Blue\""
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/Bookshelf/SingleMidBottomFlat"]
+shape = SubResource("BoxShape3D_37td7")
+
+[node name="BottomRight" type="StaticBody3D" parent="Office/Bookshelf"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -1.13687e-13, 0, 1, -2.42475, 2.05219, 0.775457)
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "The Doctor sure does have a lot of books. From the outside, you never would imagine he had so much to hide."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/Bookshelf/BottomRight"]
+shape = SubResource("BoxShape3D_qg0qs")
+
+[node name="MidBottomLeft" type="StaticBody3D" parent="Office/Bookshelf"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -1.13687e-13, 0, 1, -2.32378, 4.06228, 0.707223)
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "A plethora of dusty books. These look like they haven’t been touched in ages."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/Bookshelf/MidBottomLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -2.84217e-14, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_qg0qs")
+
+[node name="MidTopLeft" type="StaticBody3D" parent="Office/Bookshelf"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -1.35003e-13, 0, 1, -2.41946, 6.04951, 0.802047)
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "\"Happenings of the Depraved: A Guide\", I wonder which of these books pushed Doc over the edge?"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/Bookshelf/MidTopLeft"]
+shape = SubResource("BoxShape3D_qg0qs")
+
+[node name="MidTopRightLeft" type="StaticBody3D" parent="Office/Bookshelf"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -1.91847e-13, 0, 1, 1.89296, 6.01432, 0.778987)
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "\"Disciplinary Action for the Mentally Ill\". So sinister, what sick freak would read this… or write it."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/Bookshelf/MidTopRightLeft"]
+shape = SubResource("BoxShape3D_okvwq")
+
+[node name="TopRightLeft" type="StaticBody3D" parent="Office/Bookshelf"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -1.49214e-13, 0, 1, 0.708997, 7.72731, 0.585663)
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "\"Turning Down the Volume of the Voices\", maybe Doc was going through something similar as I was."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/Bookshelf/TopRightLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.215021, 0, 0)
+shape = SubResource("BoxShape3D_y4vra")
+
+[node name="MidBottomRightRight" type="StaticBody3D" parent="Office/Bookshelf"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -1.91847e-13, 0, 1, 3.88199, 3.96611, 0.447377)
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "A whole stack of medical journals written by the doctor. He probably could have helped so many people before all this…"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/Bookshelf/MidBottomRightRight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -7.10543e-15, 0, 1, 0.181537, -0.0937872, 0.230056)
+shape = SubResource("BoxShape3D_y4vra")
+
+[node name="MidBottomRightLeft" type="StaticBody3D" parent="Office/Bookshelf"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -2.77112e-13, 0, 1, 1.06886, 4.17278, 0.705735)
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "A whole collection of Edgar Allen Poe writings, Doc seems to have an affinity for apologue"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/Bookshelf/MidBottomRightLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -7.10543e-15, 0, 1, 0.181537, -0.0937872, 0)
+shape = SubResource("BoxShape3D_0tumk")
+
+[node name="TopMid" type="StaticBody3D" parent="Office/Bookshelf"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -3.55271e-13, 0, 1, 2.58707, 7.94877, 0.680007)
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "A signed copy of \"1984\", Some other old books, I’m beginning to think the Doctor was a collector of the sinister and strange."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/Bookshelf/TopMid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -7.10543e-15, 0, 1, 0.181537, -0.0937872, 0)
+shape = SubResource("BoxShape3D_0tumk")
+
+[node name="TopLeftLeft" type="StaticBody3D" parent="Office/Bookshelf"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -3.76588e-13, 0, 1, -3.87708, 7.94877, 0.680007)
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "Huh, there’s a boxed copy of \"Drive\" starring Hollywood actor Ryan Gosling nestled among these books… He’s literally me."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/Bookshelf/TopLeftLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -7.10543e-15, 0, 1, 0.181537, -0.0937872, 0)
+shape = SubResource("BoxShape3D_0tumk")
+
+[node name="TopLeftRight" type="StaticBody3D" parent="Office/Bookshelf"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -1.49214e-13, 0, 1, -1.19179, 7.71033, 0.659573)
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "A desiccated stack of old books, not even readable"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/Bookshelf/TopLeftRight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.215021, 0, 0)
+shape = SubResource("BoxShape3D_y4vra")
+
+[node name="BankersBox" parent="Office" instance=ExtResource("2_ycq7u")]
+transform = Transform3D(0.158662, 0, 0.0525217, 0, 0.167129, 0, -0.0525217, 0, 0.158662, -3.10294, 2.2929, -5.51685)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Office/BankersBox"]
+collision_layer = 3
+collision_mask = 3
+metadata/interactText = "There’s a lot of random stuff that the Doctor seems to be storing. He must have been devising something huge."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/BankersBox/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0375557, -0.147988, 0.421305)
+shape = SubResource("BoxShape3D_50mtp")
+
+[node name="BankersBox2" parent="Office" instance=ExtResource("2_ycq7u")]
+transform = Transform3D(0.166469, 0, 0.0148394, 0, 0.167129, 0, -0.0148394, 0, 0.166469, -2.08551, 0.242045, -5.73001)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Office/BankersBox2"]
+collision_layer = 3
+collision_mask = 3
+metadata/interactText = "There’s a lot of random stuff that the Doctor seems to be storing. He must have been devising something huge."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/BankersBox2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0375557, -0.147988, 0.421305)
+shape = SubResource("BoxShape3D_50mtp")
+
+[node name="BankersBox3" parent="Office" instance=ExtResource("2_ycq7u")]
+transform = Transform3D(0.11751, 0, 0.118843, 0, 0.167129, 0, -0.118843, 0, 0.11751, -1.50664, 0.249132, -5.70562)
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Office/BankersBox3"]
+transform = Transform3D(0.999935, 0, 0.0113598, 0, 1, 0, -0.0113598, 0, 0.999935, 0.0895824, -0.0125387, 0.00574493)
+collision_layer = 3
+collision_mask = 3
+metadata/interactText = "There’s a lot of random stuff that the Doctor seems to be storing. He must have been devising something huge."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/BankersBox3/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0375557, -0.147988, 0.421305)
+shape = SubResource("BoxShape3D_50mtp")
+
+[node name="BankersBox4" parent="Office" instance=ExtResource("2_ycq7u")]
+transform = Transform3D(0.130875, 0, 0.103942, 0, 0.167129, 0, -0.103942, 0, 0.130875, -2.0516, 0.682602, -5.70562)
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Office/BankersBox4"]
+transform = Transform3D(0.999935, 0, 0.0113599, 0, 1, 0, -0.0113599, 0, 0.999935, 0.0895815, -0.0125384, 0.00574493)
+collision_layer = 3
+collision_mask = 3
+metadata/interactText = "There’s a lot of random stuff that the Doctor seems to be storing. He must have been devising something huge."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/BankersBox4/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0375557, -0.147989, 0.421303)
+shape = SubResource("BoxShape3D_50mtp")
+
+[node name="FilingCabinet" parent="Office" instance=ExtResource("3_ndaiv")]
+transform = Transform3D(0.451475, 0, 0, 0, 0.451475, 0, 0, 0, 0.451475, -3.56834, 1.0055, -6.10094)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Office/FilingCabinet"]
+collision_layer = 5
+collision_mask = 5
+metadata/interactText = "This is locked, it looks like it needs a phrase or something to unlock it. Hopefully, there’s something in this room that can help."
+metadata/objectID = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/FilingCabinet/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_lhbfw")
+
+[node name="FilingCabinet2" parent="Office" instance=ExtResource("3_ndaiv")]
+transform = Transform3D(0.451475, 0, 0, 0, 0.451475, 0, 0, 0, 0.451475, -2.81954, 1.0055, -6.10094)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Office/FilingCabinet2"]
+collision_layer = 5
+collision_mask = 5
+metadata/interactText = "This is locked, it looks like it needs a phrase or something to unlock it. Hopefully, there’s something in this room that can help."
+metadata/objectID = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/FilingCabinet2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_lhbfw")
+
+[node name="StickyNote" type="StaticBody3D" parent="Office/FilingCabinet2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.843369, 1.80821, 2.0213)
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = ":3"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/FilingCabinet2/StickyNote"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.145967, 0.0709114)
+shape = SubResource("BoxShape3D_fkqeo")
+
+[node name="Clock" parent="Office" instance=ExtResource("4_rx2rl")]
+transform = Transform3D(0.0993947, 0, 0, 0, 0.0993947, 0, 0, 0, 0.0993947, 0.487319, 4.0832, -6.13037)
+
+[node name="Pot" parent="Office" instance=ExtResource("5_b3i3n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.61618, 2.31066, -5.31019)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Office/Pot"]
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "I doubt a man like the Doctor ever had anything living in here."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/Pot/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_wrkon")
+
+[node name="MorgueNote" parent="Office" instance=ExtResource("6_lummi")]
+transform = Transform3D(-0.605141, 0, -0.796118, 0, 1, 0, 0.796118, 0, -0.605141, -0.824282, 1.35814, -0.979226)
+
+[node name="StickyNote" type="StaticBody3D" parent="Office/MorgueNote"]
+transform = Transform3D(0.738192, 0, 0, 0, 0.738192, 0, 0, 0, 0.738192, 0.00961456, -0.236931, -0.0592849)
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "\"XL_L_M_S” must be some incoherent list the Doctor was writing"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/MorgueNote/StickyNote"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.145967, 0.0709114)
+shape = SubResource("BoxShape3D_fkqeo")
+
+[node name="Bottle" parent="Office" instance=ExtResource("7_2j0gq")]
+transform = Transform3D(0.0480521, 0, -0.07428, 0, 0.0884676, 0, 0.07428, 0, 0.0480521, -0.464063, 1.51067, -3.56122)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Office/Bottle"]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "Is there any left?"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/Bottle/StaticBody3D"]
+transform = Transform3D(4.57575, 0, 2.38419e-07, 0, 4.57576, 0, -2.38419e-07, 0, 4.57575, 1.20576, 0.416037, 0.368225)
+shape = SubResource("BoxShape3D_f28xr")
+
+[node name="Bottle2" parent="Office" instance=ExtResource("7_2j0gq")]
+transform = Transform3D(0.0247128, -0.0849458, -3.7131e-09, -3.74675e-23, -3.86704e-09, 0.0884676, -0.0849458, -0.0247128, -1.08023e-09, -0.345894, 1.26495, -3.41991)
+
+[node name="Lamp" parent="Office" instance=ExtResource("11_crpoq")]
+transform = Transform3D(0.232432, 0, 0.18191, 0, 0.295154, 0, -0.18191, 0, 0.232432, -0.383993, 1.78006, -0.554943)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Office/Lamp"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, -0.0117847, -0.23518, -0.00679684)
+collision_layer = 8
+collision_mask = 8
+metadata/objectID = 4
+metadata/interactText = "test"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/Lamp/StaticBody3D"]
+shape = SubResource("BoxShape3D_lun8f")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Office"]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, -0.464609, 1.84178, -0.636107)
+light_color = Color(1, 0.909804, 0.509804, 1)
+omni_range = 8.0
+
+[node name="Desk" parent="Office" instance=ExtResource("11_8af68")]
+transform = Transform3D(-0.0180344, 0, -0.929944, 0, 0.74414, 0, 0.929944, 0, -0.0180344, -0.370324, 0.631773, -1.93476)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Office/Desk"]
+collision_layer = 3
+collision_mask = 3
+metadata/interactText = "An old desk, the drawers are all locked."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/Desk/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0487452, -0.0389816, 0.336845)
+shape = SubResource("BoxShape3D_5oejo")
+
+[node name="Paintings" type="Node" parent="."]
+
+[node name="Diploma" parent="Paintings" instance=ExtResource("8_rsgle")]
+transform = Transform3D(-5.48173e-09, 0, 0.125407, 0, 0.125407, 0, -0.125407, 0, -5.48173e-09, -4.09393, 2.52081, -3.84072)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Paintings/Diploma"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0295105, 0)
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "The doctor seemed to be so distinguished, top of his field. I bet he could have helped a lot of people, until..."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Paintings/Diploma/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_oblif")
+
+[node name="Portrait2" parent="Paintings" instance=ExtResource("9_yu8rj")]
+transform = Transform3D(-1.43233e-08, 0, 0.32768, 0, 0.32768, 0, -0.32768, 0, -1.43233e-08, -4.03651, 2.60982, -2.71555)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Paintings/Portrait2"]
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "Such a sinister scowl upon this man’s face, I’m curious if the Doctor saw himself in this man."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Paintings/Portrait2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_ao0vj")
+
+[node name="Portrait1" parent="Paintings" instance=ExtResource("10_whjv3")]
+transform = Transform3D(0.239887, 0, 0, 0, 0.239887, 0, 0, 0, 0.239887, -1.24892, 2.28799, -6.08628)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Paintings/Portrait1"]
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "A creepy painting of an old man, so foreboding and perturbed."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Paintings/Portrait1/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_tn5vp")
+
+[node name="PaintingGoya" parent="Paintings" instance=ExtResource("11_rdtv5")]
+transform = Transform3D(-1.71528e-08, 0, -0.392409, 0, 0.392409, 0, 0.392409, 0, -1.71528e-08, 4.00229, 2.76417, -5.05372)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Paintings/PaintingGoya"]
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "I’m unsure of what this painting is depicting. I feel like I’ve seen it before, like an omen of misdeed."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Paintings/PaintingGoya/StaticBody3D"]
+transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_14c0y")
+
+[node name="PaintingBoecklin" parent="Paintings" instance=ExtResource("12_p806y")]
+transform = Transform3D(-0.470841, 0, -4.11622e-08, 0, 0.470841, 0, 4.11622e-08, 0, -0.470841, -1.82559, 3.22185, 2.07082)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Paintings/PaintingBoecklin"]
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "The doctor must have a fascination with eerie decorations. This office is littered with them."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Paintings/PaintingBoecklin/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_idvgj")
+
+[node name="PaintingBlue" parent="Paintings" instance=ExtResource("16_wu05h")]
+transform = Transform3D(0.571554, 0, 0, 0, 0.571554, 0, 0, 0, 0.571554, 1.57618, 2.57515, -6.1317)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Paintings/PaintingBlue"]
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "This sure is a huge painting. I don’t get why the light in the lighthouse is painted blue, seems odd."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Paintings/PaintingBlue/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_s65t5")
+
+[node name="PaintingGreen" parent="Paintings" instance=ExtResource("17_euy3x")]
+transform = Transform3D(-2.10294e-08, 0, -0.481097, 0, 0.481097, 0, 0.481097, 0, -2.10294e-08, 4.04132, 2.54003, 0.0361078)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Paintings/PaintingGreen"]
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "A green lighthouse light seems a bit out of place, I wonder if it’s a metaphor for something.?"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Paintings/PaintingGreen/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_8cfr8")
+
+[node name="PaintingRed" parent="Paintings" instance=ExtResource("18_nfr30")]
+transform = Transform3D(-1.42834e-08, 0, 0.326766, 0, 0.326766, 0, -0.326766, 0, -1.42834e-08, -4.02784, 2.50177, 0.436247)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Paintings/PaintingRed"]
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "What a somber painting. It’s kind of strange that the doctor has so many of them in his office."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Paintings/PaintingRed/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_0y7oh")
+
+[node name="PaintingYellow" parent="Paintings" instance=ExtResource("19_fpqgu")]
+transform = Transform3D(-0.191867, 0, -1.67736e-08, 0, 0.191867, 0, 1.67736e-08, 0, -0.191867, -0.465854, 1.8075, 2.01789)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Paintings/PaintingYellow"]
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "The doc seemed to have really liked this painting. He seems to have one in every color."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Paintings/PaintingYellow/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_vhngb")
+
+[node name="DummyLight" type="DirectionalLight3D" parent="."]
+light_energy = 0.0
+
+[node name="player" parent="." instance=ExtResource("14_jctlq")]
+transform = Transform3D(1.3903, 0, 0, 0, 1.3903, 0, 0, 0, 1.3903, 2.24493, 1.46403, -0.881717)
+
+[node name="Autopsy1" type="Node" parent="."]
+
+[node name="Scalpel" parent="Autopsy1" instance=ExtResource("23_7khgu")]
+transform = Transform3D(-0.710296, 0, 0.703903, 0, 1, 0, -0.703903, 0, -0.710296, -3.65929, 1.40372, 10.1758)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/Scalpel"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Autopsy1/Scalpel/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0166264, 0.00118673, -0.159988)
+shape = SubResource("BoxShape3D_sis04")
+
+[node name="AutopsyRoom1" parent="Autopsy1" instance=ExtResource("23_6ln0o")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, -0.538, 4.00198, 6.49658)
+
+[node name="AutopsyRoomCollision" type="StaticBody3D" parent="Autopsy1/AutopsyRoom1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.495608, 0.349566)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Autopsy1/AutopsyRoom1/AutopsyRoomCollision"]
+transform = Transform3D(0.01651, -0.999864, 0, 0.999864, 0.01651, 0, 0, 0, 1, 0, 0.308088, 0.0335209)
+shape = SubResource("BoxShape3D_ridwg")
+
+[node name="Autopsy1Door" parent="Autopsy1" instance=ExtResource("24_36aba")]
+transform = Transform3D(0.704, 0, 0, 0, 0.704, 0, 0, 0, 0.704, -5.13186, 0.72414, 14.2797)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/Autopsy1Door"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Autopsy1/Autopsy1Door/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.850198, 1.69545, 0.324362)
+shape = SubResource("BoxShape3D_4vf4k")
+
+[node name="Autopsy2CielingLight" parent="Autopsy1" instance=ExtResource("25_7tdgx")]
+transform = Transform3D(0.304, 0, 0, 0, 0.16, 0, 0, 0, 0.72, 1.25218, 4.0935, 9.05671)
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Autopsy1/Autopsy2CielingLight"]
+transform = Transform3D(3.28947, 0, 0, 0, 6.25, 0, 0, 0, 1.38889, -0.0509267, -2.88382, -3.08947)
+light_color = Color(0.858824, 0.886275, 0.760784, 1)
+light_energy = 0.925
+shadow_enabled = true
+shadow_bias = 0.0
+shadow_blur = 10.0
+omni_range = 1.785
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Autopsy1/Autopsy2CielingLight"]
+transform = Transform3D(3.28947, 0, 0, 0, 6.25, 0, 0, 0, 1.38889, -0.0509267, -2.88382, 3.72648)
+light_color = Color(0.858824, 0.886275, 0.760784, 1)
+light_energy = 0.444
+shadow_enabled = true
+shadow_bias = 0.0
+shadow_blur = 10.0
+omni_range = 1.785
+
+[node name="Autopsy2CielingLight2" parent="Autopsy1" instance=ExtResource("25_7tdgx")]
+transform = Transform3D(0.304, 0, 0, 0, 0.16, 0, 0, 0, 0.72, -2.36753, 4.08365, 8.92985)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Autopsy1/Autopsy2CielingLight2"]
+transform = Transform3D(3.28947, 0, 0, 0, 6.25, 0, 0, 0, 1.38889, 0, -2.82227, -2.91326)
+light_color = Color(0.858824, 0.886275, 0.760784, 1)
+light_energy = 0.925
+shadow_enabled = true
+shadow_bias = 0.0
+shadow_blur = 10.0
+omni_range = 1.785
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Autopsy1/Autopsy2CielingLight2"]
+transform = Transform3D(3.28947, 0, 0, 0, 6.25, 0, 0, 0, 1.38889, 0, -2.82227, 3.90269)
+light_color = Color(0.858824, 0.886275, 0.760784, 1)
+light_energy = 0.444
+shadow_enabled = true
+shadow_bias = 0.0
+shadow_blur = 10.0
+omni_range = 1.785
+
+[node name="Autopsy-Table" parent="Autopsy1" instance=ExtResource("26_0ggdj")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 1.64883, 0.0863407, 6.8087)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/Autopsy-Table"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Autopsy1/Autopsy-Table/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.120863, 4.06354, 0)
+shape = SubResource("BoxShape3D_p3dxe")
+
+[node name="Autopsy-Table2" parent="Autopsy1" instance=ExtResource("26_0ggdj")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -2.32992, 0.0863407, 6.8087)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/Autopsy-Table2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Autopsy1/Autopsy-Table2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.120863, 4.06354, 0)
+shape = SubResource("BoxShape3D_p3dxe")
+
+[node name="shelve" parent="Autopsy1" instance=ExtResource("27_33gcu")]
+transform = Transform3D(0.003, 0, 0, 0, 0.003, 0, 0, 0, 0.003, 2.02804, 0.0731369, 16.0389)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/shelve"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Autopsy1/shelve/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.4011, 365.519, -28.8149)
+shape = SubResource("BoxShape3D_gbksj")
+
+[node name="shelve2" parent="Autopsy1" instance=ExtResource("27_33gcu")]
+transform = Transform3D(0.003, 0, 0, 0, 0.003, 0, 0, 0, 0.003, -0.544692, 0.0731369, 16.0389)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/shelve2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Autopsy1/shelve2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.4011, 365.519, -28.8149)
+shape = SubResource("BoxShape3D_gbksj")
+
+[node name="Sink" parent="Autopsy1" instance=ExtResource("28_nd8q5")]
+transform = Transform3D(0.0112986, 0, 0.599894, 0, 0.6, 0, -0.599894, 0, 0.0112986, -3.91028, 1.41196, 11.214)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/Sink"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Autopsy1/Sink/StaticBody3D"]
+transform = Transform3D(1, 0, 2.04891e-08, 0, 1, 0, -2.04891e-08, 0, 1, -0.000951767, -0.469317, -0.0509014)
+shape = SubResource("BoxShape3D_sgxuj")
+
+[connection signal="solvedPuzzle" from="." to="player" method="_on_main_solved_puzzle"]
+[connection signal="itemCheck" from="player" to="." method="_on_player_item_check"]
+[connection signal="passInput" from="player" to="." method="_on_player_pass_input"]

@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=3 uid="uid://bd6r8sffjatsu"]
+
+[ext_resource type="Script" path="res://characters/player.gd" id="1_fyxnu"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_n3i5p"]
+radius = 0.2
+height = 1.5
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_07jqo"]
+
+[node name="player" type="CharacterBody3D"]
+script = ExtResource("1_fyxnu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_n3i5p")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.587713, 0)
+
+[node name="lookDetect" type="RayCast3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -0.010059, 0)
+target_position = Vector3(0, -1.7, 0)
+collision_mask = 14
+
+[node name="UIControl" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="InfoText" type="Label" parent="UIControl"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 414.0
+offset_right = 1060.0
+offset_bottom = 588.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+text = "WASD to move
+E to interact
+Escape to exit text"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="LineEdit" type="LineEdit" parent="UIControl"]
+layout_mode = 0
+offset_left = 338.0
+offset_top = 555.0
+offset_right = 791.0
+offset_bottom = 633.0
+placeholder_text = "Type here, Press enter to submit"
+
+[node name="Sprite2D" type="Sprite2D" parent="UIControl"]
+position = Vector2(576, 320)
+scale = Vector2(4.75, 4.24997)
+texture = SubResource("PlaceholderTexture2D_07jqo")
