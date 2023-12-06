@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=3 uid="uid://cq81es0qf4r30"]
+[gd_scene load_steps=103 format=3 uid="uid://cq81es0qf4r30"]
 
 [ext_resource type="PackedScene" uid="uid://tn2wk1umidam" path="res://3DAssets/Room.glb" id="1_5ojr2"]
 [ext_resource type="Script" path="res://mainController.gd" id="1_hc5gj"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://bm27v6xyl1a2i" path="res://3DAssets/Paintings/PaintingBoecklin.glb" id="12_p806y"]
 [ext_resource type="PackedScene" uid="uid://blx1u5auexyp4" path="res://3DAssets/Furniture/Safe.glb" id="13_fe2pk"]
 [ext_resource type="PackedScene" uid="uid://bd6r8sffjatsu" path="res://characters/player.tscn" id="14_jctlq"]
+[ext_resource type="PackedScene" uid="uid://dg7eubjxa7dak" path="res://3DAssets/Clutter/NewspaperStack.glb" id="14_ljjgm"]
 [ext_resource type="PackedScene" uid="uid://b2yhigo2fhkok" path="res://3DAssets/Paintings/PaintingBlue.glb" id="16_wu05h"]
 [ext_resource type="PackedScene" uid="uid://cjl6f1vrx7vj3" path="res://3DAssets/Paintings/PaintingGreen.glb" id="17_euy3x"]
 [ext_resource type="PackedScene" uid="uid://kpo8f5l72l8c" path="res://3DAssets/Paintings/PaintingRed.glb" id="18_nfr30"]
@@ -42,6 +43,7 @@
 [ext_resource type="PackedScene" uid="uid://c8itb4bw0ojnj" path="res://3DAssets/Autopsy1/scissors.glb" id="38_x5wvj"]
 [ext_resource type="PackedScene" uid="uid://brsc0jbfdw0n7" path="res://3DAssets/Autopsy2/AutopsyRoom2.glb" id="41_ebwa1"]
 [ext_resource type="PackedScene" uid="uid://bte7fnf46d605" path="res://3DAssets/Bodies/Corpse1textiured.glb" id="42_b2y1f"]
+[ext_resource type="PackedScene" uid="uid://bqso6krrdytos" path="res://3DAssets/Clutter/CasetteTape.glb" id="44_1mvty"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_3y1ub"]
 data = PackedVector3Array(3.9822, 0, -4.0201, 3.9822, 2.5741, -2.03, 3.9822, 0, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 4.6039, -4.0201, 3.9822, 4.6039, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 0, -4.0201, 3.9822, 4.6039, -4.0201, -3.9822, 0, -4.0201, -3.9822, 4.6039, 4.0201, -3.9822, 4.6039, -4.0201, -3.9822, 0, -4.0201, -3.9822, 0, 4.0201, -3.9822, 4.6039, 4.0201, 3.9822, 0, -4.0201, -3.9822, 4.6039, -4.0201, 3.9822, 4.6039, -4.0201, 3.9822, 0, -4.0201, -3.9822, 0, -4.0201, -3.9822, 4.6039, -4.0201, -3.9822, 0, 4.0201, 3.9822, 4.6039, 4.0201, -3.9822, 4.6039, 4.0201, -3.9822, 0, 4.0201, 3.9822, 0, 4.0201, 3.9822, 4.6039, 4.0201, 3.9822, 0, -0.2757, 3.9822, 4.6039, 4.0201, 3.9822, 0, 4.0201, 3.9822, 4.6039, 4.0201, 3.9822, 2.5741, -0.2757, 3.9822, 4.6039, -0.2757, 3.9822, 4.6039, 4.0201, 3.9822, 0, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 3.9822, 4.6039, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 3.9822, 4.6039, -2.03, 3.9822, 4.6039, -0.2757, 3.9822, 2.5741, -0.2757, 3.8769, 2.5741, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 2.5741, -0.2757, 3.8769, 2.5741, -0.2757, 3.8769, 2.5741, -2.03, 3.9822, 0, -0.2757, 3.8769, 2.5741, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 0, -0.2757, 3.8769, 0, -0.2757, 3.8769, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 3.8769, 0, -2.03, 3.9822, 0, -2.03, 3.9822, 2.5741, -2.03, 3.8769, 2.5741, -2.03, 3.8769, 0, -2.03, 3.9822, 2.5741, -2.03, 4.0875, 2.5741, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 4.0875, 2.5741, -2.03, 4.0875, 2.5741, -0.2757, 3.9822, 2.5741, -0.2757, 4.0875, 0, -0.2757, 3.9822, 0, -0.2757, 3.9822, 2.5741, -0.2757, 4.0875, 2.5741, -0.2757, 4.0875, 0, -0.2757, 3.9822, 0, -2.03, 4.0875, 2.5741, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 0, -2.03, 4.0875, 0, -2.03, 4.0875, 2.5741, -2.03, 4.0875, 2.5741, -2.03, 4.0875, 2.498, -0.3484, 4.0875, 2.5741, -0.2757, 4.0875, 2.5741, -2.03, 4.0875, 2.498, -1.9573, 4.0875, 2.498, -0.3484, 4.0875, 0, -2.03, 4.0875, 2.498, -1.9573, 4.0875, 2.5741, -2.03, 4.0875, 0, -2.03, 4.0875, 0, -1.9573, 4.0875, 2.498, -1.9573, 3.8769, 0, -0.2757, 3.8769, 2.498, -0.3484, 3.8769, 2.5741, -0.2757, 3.8769, 0, -0.2757, 3.8769, 0, -0.3484, 3.8769, 2.498, -0.3484, 4.0875, 2.5741, -0.2757, 4.0875, 0, -0.3484, 4.0875, 0, -0.2757, 4.0875, 2.5741, -0.2757, 4.0875, 2.498, -0.3484, 4.0875, 0, -0.3484, 3.8769, 2.5741, -0.2757, 3.8769, 2.498, -1.9573, 3.8769, 2.5741, -2.03, 3.8769, 2.5741, -0.2757, 3.8769, 2.498, -0.3484, 3.8769, 2.498, -1.9573, 3.8769, 2.5741, -2.03, 3.8769, 0, -1.9573, 3.8769, 0, -2.03, 3.8769, 2.5741, -2.03, 3.8769, 2.498, -1.9573, 3.8769, 0, -1.9573, 3.8769, 0, -0.3484, 4.0875, 2.498, -0.3484, 3.8769, 2.498, -0.3484, 3.8769, 0, -0.3484, 4.0875, 0, -0.3484, 4.0875, 2.498, -0.3484, 3.8769, 2.498, -1.9573, 4.0875, 2.498, -0.3484, 4.0875, 2.498, -1.9573, 3.8769, 2.498, -1.9573, 3.8769, 2.498, -0.3484, 4.0875, 2.498, -0.3484, 3.8769, 0, -1.9573, 4.0875, 2.498, -1.9573, 4.0875, 0, -1.9573, 3.8769, 0, -1.9573, 3.8769, 2.498, -1.9573, 4.0875, 2.498, -1.9573)
@@ -558,7 +560,7 @@ metadata/interactText = "test"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Office/Lamp/StaticBody3D"]
 shape = SubResource("BoxShape3D_lun8f")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Office"]
+[node name="LampLight" type="OmniLight3D" parent="Office"]
 transform = Transform3D(-0.000401415, 0, 1, 0, 1, 0, -1, 0, -0.000401415, -5.1758, 15.4964, 13.705)
 light_color = Color(1, 0.909804, 0.509804, 1)
 omni_range = 8.0
@@ -587,6 +589,12 @@ metadata/interactText = "Fingerprint huh? Maybe someone here can unlock it."
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Office/Safe/StaticBody3D"]
 transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.683544, -0.98871, -1.4868)
 shape = SubResource("BoxShape3D_n0bng")
+
+[node name="NewspaperStack" parent="Office" instance=ExtResource("14_ljjgm")]
+transform = Transform3D(-0.0477025, 0, -0.140801, 0, 0.148663, 0, 0.140801, 0, -0.0477025, -7.97772, 14.9845, 14.2981)
+
+[node name="NewspaperStack2" parent="Office" instance=ExtResource("14_ljjgm")]
+transform = Transform3D(0.144817, 0, -0.0335935, 0, 0.148663, 0, 0.0335935, 0, 0.144817, -4.80805, 14.9845, 14.135)
 
 [node name="Paintings" type="Node" parent="."]
 
@@ -765,34 +773,30 @@ shape = SubResource("BoxShape3D_4vf4k")
 [node name="Autopsy2CielingLight" parent="Autopsy1" instance=ExtResource("25_7tdgx")]
 transform = Transform3D(0.304, 0, 0, 0, 0.16, 0, 0, 0, 0.72, 13.2384, 3.84027, -14.0647)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Autopsy1/Autopsy2CielingLight"]
+[node name="A2C3" type="OmniLight3D" parent="Autopsy1/Autopsy2CielingLight"]
 transform = Transform3D(3.28947, 0, 0, 0, 6.25, 0, 0, 0, 1.38889, -11.2995, -2.03592, -3.97119)
-light_color = Color(0.678431, 0.54902, 0.137255, 1)
-light_energy = 0.75
+light_energy = 0.25
 omni_range = 5.44
 omni_attenuation = 0.0796603
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="Autopsy1/Autopsy2CielingLight"]
+[node name="A2C4" type="OmniLight3D" parent="Autopsy1/Autopsy2CielingLight"]
 transform = Transform3D(3.28947, 0, 0, 0, 6.25, 0, 0, 0, 1.38889, 0.672108, -2.03592, 4.37169)
-light_color = Color(0.678431, 0.54902, 0.137255, 1)
-light_energy = 0.75
+light_energy = 0.25
 omni_range = 5.44
 omni_attenuation = 0.0796603
 
 [node name="Autopsy2CielingLight2" parent="Autopsy1" instance=ExtResource("25_7tdgx")]
 transform = Transform3D(0.304, 0, 0, 0, 0.16, 0, 0, 0, 0.72, 9.61865, 3.83042, -14.1916)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Autopsy1/Autopsy2CielingLight2"]
+[node name="A2C1" type="OmniLight3D" parent="Autopsy1/Autopsy2CielingLight2"]
 transform = Transform3D(3.28947, 0, 0, 0, 6.25, 0, 0, 0, 1.38889, 12.7522, -2.03592, -3.97119)
-light_color = Color(0.678431, 0.54902, 0.137255, 1)
-light_energy = 0.75
+light_energy = 0.25
 omni_range = 5.44
 omni_attenuation = 0.0796603
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="Autopsy1/Autopsy2CielingLight2"]
+[node name="A2C2" type="OmniLight3D" parent="Autopsy1/Autopsy2CielingLight2"]
 transform = Transform3D(3.28947, 0, 0, 0, 6.25, 0, 0, 0, 1.38889, 1.1907, -2.03592, 3.92909)
-light_color = Color(0.678431, 0.54902, 0.137255, 1)
-light_energy = 0.75
+light_energy = 0.25
 omni_range = 5.44
 omni_attenuation = 0.0796603
 
@@ -1041,15 +1045,15 @@ shape = SubResource("BoxShape3D_qia6q")
 transform = Transform3D(2.73653, 0, 0, 0, 2.73653, 0, 0, 0, 2.73653, -8.60728, 4.21662, -3.91192)
 shape = SubResource("BoxShape3D_81k4r")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Courtyard/Patient004_courtyard"]
+[node name="Lamp1" type="OmniLight3D" parent="Courtyard/Patient004_courtyard"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.10295, 7.11109, 9.32944)
 light_color = Color(0.678431, 0.54902, 0.137255, 1)
 light_energy = 0.75
 omni_range = 5.44
 omni_attenuation = 0.0796603
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="Courtyard/Patient004_courtyard"]
-transform = Transform3D(2.44954, 0, 0, 0, 2.44954, 0, 0, 0, 2.44954, -8.63316, 6.74893, -3.9562)
+[node name="Lamp2" type="OmniLight3D" parent="Courtyard/Patient004_courtyard"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.63316, 6.74893, -3.9562)
 light_color = Color(0.678431, 0.54902, 0.137255, 1)
 light_energy = 0.75
 omni_range = 5.44
@@ -1060,55 +1064,54 @@ omni_attenuation = 0.0796603
 [node name="AutopsyRoom2" parent="Autopsy2" instance=ExtResource("41_ebwa1")]
 transform = Transform3D(-7.76703, 0, -6.79015e-07, 0, 7.76703, 0, 6.79015e-07, 0, -7.76703, -11.6484, 4.2795, 9.20351)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Autopsy2/AutopsyRoom2"]
+[node name="CollisionHolder" type="StaticBody3D" parent="Autopsy2/AutopsyRoom2"]
+metadata/_edit_group_ = true
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Autopsy2/AutopsyRoom2/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Autopsy2/AutopsyRoom2/CollisionHolder"]
 transform = Transform3D(1, 0, -7.10543e-15, 0, 1, 0, 7.10543e-15, 0, 1, 0, -0.500644, 0.388298)
 shape = SubResource("BoxShape3D_7txet")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Autopsy2/AutopsyRoom2/StaticBody3D"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Autopsy2/AutopsyRoom2/CollisionHolder"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.193844, -0.504764)
 shape = SubResource("BoxShape3D_lgj5q")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="Autopsy2/AutopsyRoom2/StaticBody3D"]
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Autopsy2/AutopsyRoom2/CollisionHolder"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, -0.193844, 1.27561)
 shape = SubResource("BoxShape3D_lgj5q")
 
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="Autopsy2/AutopsyRoom2/StaticBody3D"]
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Autopsy2/AutopsyRoom2/CollisionHolder"]
 transform = Transform3D(1, 0, 4.26326e-14, 0, 1, 0, -4.26326e-14, 0, 1, 0.524427, -0.223377, 0.38955)
 shape = SubResource("BoxShape3D_1hbtm")
 
 [node name="Autopsy2CielingLight" parent="Autopsy2" instance=ExtResource("25_7tdgx")]
 transform = Transform3D(0.304, 0, 0, 0, 0.16, 0, 0, 0, 0.72, -10.499, 4.64047, 7.19987)
+metadata/_edit_group_ = true
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Autopsy2/Autopsy2CielingLight"]
-transform = Transform3D(3.28947, 0, 0, 0, 6.25, 0, 0, 0, 1.38889, 0.231731, -2.03592, -3.97119)
-light_color = Color(0.678431, 0.54902, 0.137255, 1)
-light_energy = 0.75
+[node name="A1C1" type="OmniLight3D" parent="Autopsy2/Autopsy2CielingLight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.231731, -2.03592, -3.97119)
+light_energy = 0.25
 omni_range = 5.44
 omni_attenuation = 0.0796603
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="Autopsy2/Autopsy2CielingLight"]
-transform = Transform3D(3.28947, 0, 0, 0, 6.25, 0, 0, 0, 1.38889, 0.157322, -2.03592, 4.37169)
-light_color = Color(0.678431, 0.54902, 0.137255, 1)
-light_energy = 0.75
+[node name="A1C2" type="OmniLight3D" parent="Autopsy2/Autopsy2CielingLight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.157322, -2.03592, 4.37169)
+light_energy = 0.25
 omni_range = 5.44
 omni_attenuation = 0.0796603
 
 [node name="Autopsy2CielingLight2" parent="Autopsy2" instance=ExtResource("25_7tdgx")]
 transform = Transform3D(0.304, 0, 0, 0, 0.16, 0, 0, 0, 0.72, -13.5615, 4.53767, 7.19987)
+metadata/_edit_group_ = true
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Autopsy2/Autopsy2CielingLight2"]
-transform = Transform3D(3.28947, 0, 0, 0, 6.25, 0, 0, 0, 1.38889, 0.231731, -2.03592, -3.97119)
-light_color = Color(0.678431, 0.54902, 0.137255, 1)
-light_energy = 0.75
+[node name="A1C3" type="OmniLight3D" parent="Autopsy2/Autopsy2CielingLight2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.231731, -2.03592, -3.97119)
+light_energy = 0.25
 omni_range = 5.44
 omni_attenuation = 0.0796603
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="Autopsy2/Autopsy2CielingLight2"]
-transform = Transform3D(3.28947, 0, 0, 0, 6.25, 0, 0, 0, 1.38889, 0.157322, -2.03592, 4.37169)
-light_color = Color(0.678431, 0.54902, 0.137255, 1)
-light_energy = 0.75
+[node name="A1C4" type="OmniLight3D" parent="Autopsy2/Autopsy2CielingLight2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.157322, -2.03592, 4.37169)
+light_energy = 0.25
 omni_range = 5.44
 omni_attenuation = 0.0796603
 
@@ -1139,14 +1142,17 @@ transform = Transform3D(-5.69623e-05, 0, 0.00320251, 0, 0.00523897, 0, -0.003202
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.4011, 365.519, -28.8149)
 shape = SubResource("BoxShape3D_gbksj")
 
-[node name="Corpse1textiured" parent="." instance=ExtResource("42_b2y1f")]
+[node name="Corpse1" parent="Autopsy2" instance=ExtResource("42_b2y1f")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -10.1961, 1.6352, 10.0771)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Corpse1textiured"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Autopsy2/Corpse1"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Corpse1textiured/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Autopsy2/Corpse1/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
 shape = SubResource("BoxShape3D_3mie4")
+
+[node name="CasetteTape" parent="." instance=ExtResource("44_1mvty")]
+transform = Transform3D(-0.2942, 0, -0.421616, 0, 0.514115, 0, 0.421616, 0, -0.2942, 0.290981, 1.10928, 5.78403)
 
 [connection signal="solvedPuzzle" from="." to="player" method="_on_main_solved_puzzle"]
 [connection signal="itemCheck" from="player" to="." method="_on_player_item_check"]
