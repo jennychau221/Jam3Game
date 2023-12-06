@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=3 uid="uid://cq81es0qf4r30"]
+[gd_scene load_steps=80 format=3 uid="uid://cq81es0qf4r30"]
 
 [ext_resource type="PackedScene" uid="uid://tn2wk1umidam" path="res://3DAssets/Room.glb" id="1_5ojr2"]
 [ext_resource type="Script" path="res://mainController.gd" id="1_hc5gj"]
@@ -36,9 +36,8 @@
 [ext_resource type="Texture2D" uid="uid://dcimoy47duvri" path="res://3DAssets/Autopsy1/Poster4_BaseColor.png" id="32_pk2tk"]
 [ext_resource type="PackedScene" uid="uid://sp6alrx5fb0k" path="res://3DAssets/Autopsy1/saw.glb" id="35_i0yvp"]
 [ext_resource type="PackedScene" uid="uid://c4idiinhq46f7" path="res://3DAssets/Autopsy1/cart.glb" id="36_lq8fw"]
-[ext_resource type="PackedScene" uid="uid://uu4cyj6v6iu7" path="res://3DAssets/Autopsy1/Syringe.glb" id="37_f2tf7"]
 [ext_resource type="PackedScene" uid="uid://cr0mi7qu7tman" path="res://3DAssets/Courtyard/Patient004_courtyard.glb" id="37_vinll"]
-[ext_resource type="PackedScene" uid="uid://uu4cyj6v6iu7" path="res://3DAssets/Autopsy1/Sink.glb" id="38_6x2om"]
+[ext_resource type="PackedScene" uid="uid://uu4cyj6v6iu7" path="res://3DAssets/Autopsy1/Syringe.glb" id="38_6x2om"]
 [ext_resource type="PackedScene" uid="uid://c8itb4bw0ojnj" path="res://3DAssets/Autopsy1/scissors.glb" id="38_x5wvj"]
 [ext_resource type="PackedScene" uid="uid://brsc0jbfdw0n7" path="res://3DAssets/Autopsy2/AutopsyRoom2.glb" id="41_ebwa1"]
 
@@ -817,7 +816,7 @@ transform = Transform3D(-0.0312618, 0, 0.0160767, 0, 0.0313596, 0, -0.013852, 0,
 transform = Transform3D(-1, -8.74227e-08, 2.98023e-07, 8.74227e-08, -0.999999, 0, 2.98023e-07, 2.13163e-14, 1, 1.32965, 24.0176, -0.589172)
 shape = SubResource("BoxShape3D_dirmt")
 
-[node name="Syringe" parent="Autopsy1" instance=ExtResource("37_f2tf7")]
+[node name="Syringe" parent="Autopsy1" instance=ExtResource("38_6x2om")]
 transform = Transform3D(0.000822572, 0.0400974, 0, -0.0202366, 0.000504886, -0.0465798, -0.0302075, 0.000753649, 0.0312048, 0.57864, 1.34421, 9.34992)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/Syringe"]
