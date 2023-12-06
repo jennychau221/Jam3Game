@@ -1,4 +1,4 @@
-[gd_scene load_steps=95 format=3 uid="uid://cq81es0qf4r30"]
+[gd_scene load_steps=96 format=3 uid="uid://cq81es0qf4r30"]
 
 [ext_resource type="PackedScene" uid="uid://tn2wk1umidam" path="res://3DAssets/Room.glb" id="1_5ojr2"]
 [ext_resource type="Script" path="res://mainController.gd" id="1_hc5gj"]
@@ -118,6 +118,9 @@ data = PackedVector3Array(-2.5648, -2.0559, 0.2483, -2.5648, 2.0558, 0.1173, -2.
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_vhngb"]
 data = PackedVector3Array(-2.5648, -2.0559, 0.2483, -2.5648, 2.0558, 0.1173, -2.5648, 2.0558, 0.2483, -2.5648, -2.0559, 0.2483, -2.5648, -2.0559, 0.1173, -2.5648, 2.0558, 0.1173, 2.5665, -2.0559, 0.1173, 2.5665, 2.0558, 0.2483, 2.5665, 2.0558, 0.1173, 2.5665, -2.0559, 0.1173, 2.5665, -2.0559, 0.2483, 2.5665, 2.0558, 0.2483, 2.5665, -2.0559, 0.2483, -2.5648, 2.0558, 0.2483, 2.5665, 2.0558, 0.2483, 2.5665, -2.0559, 0.2483, -2.5648, -2.0559, 0.2483, -2.5648, 2.0558, 0.2483, -2.5648, -2.0559, 0.1173, 2.5665, -2.0559, 0.2483, 2.5665, -2.0559, 0.1173, -2.5648, -2.0559, 0.1173, -2.5648, -2.0559, 0.2483, 2.5665, -2.0559, 0.2483, 2.5665, 2.0558, 0.1173, -2.5648, 2.0558, 0.2483, -2.5648, 2.0558, 0.1173, 2.5665, 2.0558, 0.1173, 2.5665, 2.0558, 0.2483, -2.5648, 2.0558, 0.2483)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v5cl4"]
+size = Vector3(4.5, 3.7, 2.2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_quybg"]
 size = Vector3(7, 0.1, 13)
@@ -686,6 +689,12 @@ transform = Transform3D(1.3903, 0, 0, 0, 1.3903, 0, 0, 0, 1.3903, 1.51346, 3.647
 [node name="Sink" parent="Autopsy1" instance=ExtResource("24_my6kb")]
 transform = Transform3D(-0.0107021, 0, 0.577319, 0, 0.577419, 0, -0.577319, 0, -0.0107021, 8.3119, 1.38672, -12.1154)
 
+[node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/Sink"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Autopsy1/Sink/StaticBody3D"]
+transform = Transform3D(1, 0, -1.49012e-08, 0, 1, 0, 1.49012e-08, 0, 1, 0.000167847, -0.512619, -0.00889206)
+shape = SubResource("BoxShape3D_v5cl4")
+
 [node name="AutopsyRoom1" parent="Autopsy1" instance=ExtResource("23_6ln0o")]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 11.635, 3.9824, -16.8126)
 
@@ -743,44 +752,36 @@ shape = SubResource("BoxShape3D_4vf4k")
 [node name="Autopsy2CielingLight" parent="Autopsy1" instance=ExtResource("25_7tdgx")]
 transform = Transform3D(0.304, 0, 0, 0, 0.16, 0, 0, 0, 0.72, 13.2384, 3.84027, -14.0647)
 
-[node name="OmniLight3D3" type="OmniLight3D" parent="Autopsy1/Autopsy2CielingLight"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0509267, -2.88382, -3.08947)
-light_color = Color(0.858824, 0.886275, 0.760784, 1)
-light_energy = 0.925
-shadow_enabled = true
-shadow_bias = 0.0
-shadow_blur = 10.0
-omni_range = 1.785
+[node name="OmniLight3D" type="OmniLight3D" parent="Autopsy1/Autopsy2CielingLight"]
+transform = Transform3D(3.28947, 0, 0, 0, 6.25, 0, 0, 0, 1.38889, -11.2995, -2.03592, -3.97119)
+light_color = Color(0.678431, 0.54902, 0.137255, 1)
+light_energy = 0.75
+omni_range = 5.44
+omni_attenuation = 0.0796603
 
-[node name="OmniLight3D4" type="OmniLight3D" parent="Autopsy1/Autopsy2CielingLight"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0509267, -2.88382, 3.72648)
-light_color = Color(0.858824, 0.886275, 0.760784, 1)
-light_energy = 0.444
-shadow_enabled = true
-shadow_bias = 0.0
-shadow_blur = 10.0
-omni_range = 1.785
+[node name="OmniLight3D2" type="OmniLight3D" parent="Autopsy1/Autopsy2CielingLight"]
+transform = Transform3D(3.28947, 0, 0, 0, 6.25, 0, 0, 0, 1.38889, 0.672108, -2.03592, 4.37169)
+light_color = Color(0.678431, 0.54902, 0.137255, 1)
+light_energy = 0.75
+omni_range = 5.44
+omni_attenuation = 0.0796603
 
 [node name="Autopsy2CielingLight2" parent="Autopsy1" instance=ExtResource("25_7tdgx")]
 transform = Transform3D(0.304, 0, 0, 0, 0.16, 0, 0, 0, 0.72, 9.61865, 3.83042, -14.1916)
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="Autopsy1/Autopsy2CielingLight2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.82227, -2.91326)
-light_color = Color(0.858824, 0.886275, 0.760784, 1)
-light_energy = 0.925
-shadow_enabled = true
-shadow_bias = 0.0
-shadow_blur = 10.0
-omni_range = 1.785
-
 [node name="OmniLight3D" type="OmniLight3D" parent="Autopsy1/Autopsy2CielingLight2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.82227, 3.90269)
-light_color = Color(0.858824, 0.886275, 0.760784, 1)
-light_energy = 0.444
-shadow_enabled = true
-shadow_bias = 0.0
-shadow_blur = 10.0
-omni_range = 1.785
+transform = Transform3D(3.28947, 0, 0, 0, 6.25, 0, 0, 0, 1.38889, 12.7522, -2.03592, -3.97119)
+light_color = Color(0.678431, 0.54902, 0.137255, 1)
+light_energy = 0.75
+omni_range = 5.44
+omni_attenuation = 0.0796603
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Autopsy1/Autopsy2CielingLight2"]
+transform = Transform3D(3.28947, 0, 0, 0, 6.25, 0, 0, 0, 1.38889, 1.1907, -2.03592, 3.92909)
+light_color = Color(0.678431, 0.54902, 0.137255, 1)
+light_energy = 0.75
+omni_range = 5.44
+omni_attenuation = 0.0796603
 
 [node name="Autopsy-Table" parent="Autopsy1" instance=ExtResource("26_0ggdj")]
 transform = Transform3D(0.25, 0, 0, 0, 0.315403, 0, 0, 0, 0.335539, 13.3629, 0.0889606, -17.0905)
@@ -819,7 +820,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.4011, 365.519, -28.8149)
 shape = SubResource("BoxShape3D_gbksj")
 
 [node name="Scalpel" parent="Autopsy1" instance=ExtResource("23_7khgu")]
-transform = Transform3D(-0.910848, 0, 0.77707, 0, 0.877959, 0, -0.90265, 0, -0.784127, 8.84876, 1.47267, -13.0737)
+transform = Transform3D(-0.132982, 0.00424469, 1.09798, 0.00569119, 0.877942, -0.00485532, -1.27542, 0.00347498, -0.114502, 12.9629, 1.28131, -14.0929)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/Scalpel"]
 
