@@ -61,6 +61,10 @@ func _on_player_item_check(objectID):
 			player.descUI.text = "It worked! A log book? Maybe I can find something about myself."
 		else:
 			pass
+	if (objectID == 6):
+		if (player.global_position.distance_to($Autopsy1/Autopsy1Door/Pos1.global_position) > player.global_position.distance_to($Autopsy1/Autopsy1Door/Pos2.global_position)):
+			player.global_position = $Autopsy1/Autopsy1Door/Pos1.global_position
+		else: player.global_position = $Autopsy1/Autopsy1Door/Pos2.global_position
 
 #INDEX:
 #1 - FileCabinet
@@ -68,3 +72,4 @@ func _on_player_item_check(objectID):
 #3 - OfficeDoor
 #4 - Lamp
 #5 - OfficeSafe
+#6 - Autopsy1 - Courtyard Door
