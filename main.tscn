@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://cq81es0qf4r30"]
+[gd_scene load_steps=80 format=3 uid="uid://cq81es0qf4r30"]
 
 [ext_resource type="PackedScene" uid="uid://tn2wk1umidam" path="res://3DAssets/Room.glb" id="1_5ojr2"]
 [ext_resource type="Script" path="res://mainController.gd" id="1_hc5gj"]
@@ -29,14 +29,17 @@
 [ext_resource type="PackedScene" uid="uid://cx3wiphunm6gr" path="res://3DAssets/Autopsy1/Autopsy2CielingLight.glb" id="25_7tdgx"]
 [ext_resource type="PackedScene" uid="uid://ce21j0c1x6a2b" path="res://3DAssets/Autopsy1/Autopsy-Table.glb" id="26_0ggdj"]
 [ext_resource type="PackedScene" uid="uid://dy67svh0n83dj" path="res://3DAssets/Autopsy1/shelve.glb" id="27_33gcu"]
-[ext_resource type="PackedScene" uid="uid://cod0qc3xs5tyg" path="res://3DAssets/Autopsy1/Sink.glb" id="28_nd8q5"]
+[ext_resource type="PackedScene" uid="uid://uu4cyj6v6iu7" path="res://3DAssets/Autopsy1/Sink.glb" id="28_nd8q5"]
 [ext_resource type="PackedScene" uid="uid://dg8cfd0c615a0" path="res://3DAssets/Morgue/MorgueRoom.glb" id="30_1m5i2"]
 [ext_resource type="Texture2D" uid="uid://dho6j7c805cli" path="res://3DAssets/Autopsy1/Poster1_BaseColor.png" id="31_6iqbq"]
 [ext_resource type="Texture2D" uid="uid://bl82jtnei1whn" path="res://3DAssets/Autopsy1/Poster3_BaseColor.png" id="31_wc58g"]
 [ext_resource type="Texture2D" uid="uid://cn022ml5bwmit" path="res://3DAssets/Autopsy1/Poster2_BaseColor.png" id="32_0nlmr"]
 [ext_resource type="Texture2D" uid="uid://dcimoy47duvri" path="res://3DAssets/Autopsy1/Poster4_BaseColor.png" id="32_pk2tk"]
 [ext_resource type="PackedScene" uid="uid://sp6alrx5fb0k" path="res://3DAssets/Autopsy1/saw.glb" id="35_i0yvp"]
+[ext_resource type="PackedScene" uid="uid://c4idiinhq46f7" path="res://3DAssets/Autopsy1/cart.glb" id="36_lq8fw"]
+[ext_resource type="PackedScene" path="res://3DAssets/Autopsy1/Syringe.glb" id="37_f2tf7"]
 [ext_resource type="PackedScene" uid="uid://cr0mi7qu7tman" path="res://3DAssets/Courtyard/Patient004_courtyard.glb" id="37_vinll"]
+[ext_resource type="PackedScene" path="res://3DAssets/Autopsy1/scissors.glb" id="38_x5wvj"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_3y1ub"]
 data = PackedVector3Array(3.9822, 0, -4.0201, 3.9822, 2.5741, -2.03, 3.9822, 0, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 4.6039, -4.0201, 3.9822, 4.6039, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 0, -4.0201, 3.9822, 4.6039, -4.0201, -3.9822, 0, -4.0201, -3.9822, 4.6039, 4.0201, -3.9822, 4.6039, -4.0201, -3.9822, 0, -4.0201, -3.9822, 0, 4.0201, -3.9822, 4.6039, 4.0201, 3.9822, 0, -4.0201, -3.9822, 4.6039, -4.0201, 3.9822, 4.6039, -4.0201, 3.9822, 0, -4.0201, -3.9822, 0, -4.0201, -3.9822, 4.6039, -4.0201, -3.9822, 0, 4.0201, 3.9822, 4.6039, 4.0201, -3.9822, 4.6039, 4.0201, -3.9822, 0, 4.0201, 3.9822, 0, 4.0201, 3.9822, 4.6039, 4.0201, 3.9822, 0, -0.2757, 3.9822, 4.6039, 4.0201, 3.9822, 0, 4.0201, 3.9822, 4.6039, 4.0201, 3.9822, 2.5741, -0.2757, 3.9822, 4.6039, -0.2757, 3.9822, 4.6039, 4.0201, 3.9822, 0, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 3.9822, 4.6039, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 3.9822, 4.6039, -2.03, 3.9822, 4.6039, -0.2757, 3.9822, 2.5741, -0.2757, 3.8769, 2.5741, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 2.5741, -0.2757, 3.8769, 2.5741, -0.2757, 3.8769, 2.5741, -2.03, 3.9822, 0, -0.2757, 3.8769, 2.5741, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 0, -0.2757, 3.8769, 0, -0.2757, 3.8769, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 3.8769, 0, -2.03, 3.9822, 0, -2.03, 3.9822, 2.5741, -2.03, 3.8769, 2.5741, -2.03, 3.8769, 0, -2.03, 3.9822, 2.5741, -2.03, 4.0875, 2.5741, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 4.0875, 2.5741, -2.03, 4.0875, 2.5741, -0.2757, 3.9822, 2.5741, -0.2757, 4.0875, 0, -0.2757, 3.9822, 0, -0.2757, 3.9822, 2.5741, -0.2757, 4.0875, 2.5741, -0.2757, 4.0875, 0, -0.2757, 3.9822, 0, -2.03, 4.0875, 2.5741, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 0, -2.03, 4.0875, 0, -2.03, 4.0875, 2.5741, -2.03, 4.0875, 2.5741, -2.03, 4.0875, 2.498, -0.3484, 4.0875, 2.5741, -0.2757, 4.0875, 2.5741, -2.03, 4.0875, 2.498, -1.9573, 4.0875, 2.498, -0.3484, 4.0875, 0, -2.03, 4.0875, 2.498, -1.9573, 4.0875, 2.5741, -2.03, 4.0875, 0, -2.03, 4.0875, 0, -1.9573, 4.0875, 2.498, -1.9573, 3.8769, 0, -0.2757, 3.8769, 2.498, -0.3484, 3.8769, 2.5741, -0.2757, 3.8769, 0, -0.2757, 3.8769, 0, -0.3484, 3.8769, 2.498, -0.3484, 4.0875, 2.5741, -0.2757, 4.0875, 0, -0.3484, 4.0875, 0, -0.2757, 4.0875, 2.5741, -0.2757, 4.0875, 2.498, -0.3484, 4.0875, 0, -0.3484, 3.8769, 2.5741, -0.2757, 3.8769, 2.498, -1.9573, 3.8769, 2.5741, -2.03, 3.8769, 2.5741, -0.2757, 3.8769, 2.498, -0.3484, 3.8769, 2.498, -1.9573, 3.8769, 2.5741, -2.03, 3.8769, 0, -1.9573, 3.8769, 0, -2.03, 3.8769, 2.5741, -2.03, 3.8769, 2.498, -1.9573, 3.8769, 0, -1.9573, 3.8769, 0, -0.3484, 4.0875, 2.498, -0.3484, 3.8769, 2.498, -0.3484, 3.8769, 0, -0.3484, 4.0875, 0, -0.3484, 4.0875, 2.498, -0.3484, 3.8769, 2.498, -1.9573, 4.0875, 2.498, -0.3484, 4.0875, 2.498, -1.9573, 3.8769, 2.498, -1.9573, 3.8769, 2.498, -0.3484, 4.0875, 2.498, -0.3484, 3.8769, 0, -1.9573, 4.0875, 2.498, -1.9573, 4.0875, 0, -1.9573, 3.8769, 0, -1.9573, 3.8769, 2.498, -1.9573, 4.0875, 2.498, -1.9573)
@@ -115,9 +118,6 @@ data = PackedVector3Array(-2.5648, -2.0559, 0.2483, -2.5648, 2.0558, 0.1173, -2.
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_vhngb"]
 data = PackedVector3Array(-2.5648, -2.0559, 0.2483, -2.5648, 2.0558, 0.1173, -2.5648, 2.0558, 0.2483, -2.5648, -2.0559, 0.2483, -2.5648, -2.0559, 0.1173, -2.5648, 2.0558, 0.1173, 2.5665, -2.0559, 0.1173, 2.5665, 2.0558, 0.2483, 2.5665, 2.0558, 0.1173, 2.5665, -2.0559, 0.1173, 2.5665, -2.0559, 0.2483, 2.5665, 2.0558, 0.2483, 2.5665, -2.0559, 0.2483, -2.5648, 2.0558, 0.2483, 2.5665, 2.0558, 0.2483, 2.5665, -2.0559, 0.2483, -2.5648, -2.0559, 0.2483, -2.5648, 2.0558, 0.2483, -2.5648, -2.0559, 0.1173, 2.5665, -2.0559, 0.2483, 2.5665, -2.0559, 0.1173, -2.5648, -2.0559, 0.1173, -2.5648, -2.0559, 0.2483, 2.5665, -2.0559, 0.2483, 2.5665, 2.0558, 0.1173, -2.5648, 2.0558, 0.2483, -2.5648, 2.0558, 0.1173, 2.5665, 2.0558, 0.1173, 2.5665, 2.0558, 0.2483, -2.5648, 2.0558, 0.2483)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_sis04"]
-size = Vector3(0.1, 0.02, 0.7)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_ridwg"]
 size = Vector3(0.6, 1, 1.77)
 
@@ -130,14 +130,26 @@ size = Vector3(6, 0.8, 12.6)
 [sub_resource type="BoxShape3D" id="BoxShape3D_gbksj"]
 size = Vector3(750, 700, 330)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_sis04"]
+size = Vector3(0.1, 0.02, 0.7)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_sgxuj"]
 size = Vector3(4.7, 3.5, 2.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pqdnn"]
+size = Vector3(2.1, 0.6, 0.1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v377k"]
 size = Vector3(11, 10, 0.5)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_pqdnn"]
-size = Vector3(2.1, 0.6, 0.1)
+[sub_resource type="BoxShape3D" id="BoxShape3D_dirmt"]
+size = Vector3(40, 35, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a0dxx"]
+size = Vector3(2, 14, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cixrp"]
+size = Vector3(4, 1, 10)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_bhgok"]
 data = PackedVector3Array(3.9822, 0, -4.0201, 3.9822, 2.5741, -2.03, 3.9822, 0, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 4.6039, -4.0201, 3.9822, 4.6039, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 0, -4.0201, 3.9822, 4.6039, -4.0201, -3.9822, 0, -4.0201, -3.9822, 4.6039, 4.0201, -3.9822, 4.6039, -4.0201, -3.9822, 0, -4.0201, -3.9822, 0, 4.0201, -3.9822, 4.6039, 4.0201, 3.9822, 0, -4.0201, -3.9822, 4.6039, -4.0201, 3.9822, 4.6039, -4.0201, 3.9822, 0, -4.0201, -3.9822, 0, -4.0201, -3.9822, 4.6039, -4.0201, -3.9822, 0, 4.0201, 3.9822, 4.6039, 4.0201, -3.9822, 4.6039, 4.0201, -3.9822, 0, 4.0201, 3.9822, 0, 4.0201, 3.9822, 4.6039, 4.0201, 3.9822, 0, -0.2757, 3.9822, 4.6039, 4.0201, 3.9822, 0, 4.0201, 3.9822, 4.6039, 4.0201, 3.9822, 2.5741, -0.2757, 3.9822, 4.6039, -0.2757, 3.9822, 4.6039, 4.0201, 3.9822, 0, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 3.9822, 4.6039, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 3.9822, 4.6039, -2.03, 3.9822, 4.6039, -0.2757, 3.9822, 2.5741, -0.2757, 3.8769, 2.5741, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 2.5741, -0.2757, 3.8769, 2.5741, -0.2757, 3.8769, 2.5741, -2.03, 3.9822, 0, -0.2757, 3.8769, 2.5741, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 0, -0.2757, 3.8769, 0, -0.2757, 3.8769, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 3.8769, 0, -2.03, 3.9822, 0, -2.03, 3.9822, 2.5741, -2.03, 3.8769, 2.5741, -2.03, 3.8769, 0, -2.03, 3.9822, 2.5741, -2.03, 4.0875, 2.5741, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 4.0875, 2.5741, -2.03, 4.0875, 2.5741, -0.2757, 3.9822, 2.5741, -0.2757, 4.0875, 0, -0.2757, 3.9822, 0, -0.2757, 3.9822, 2.5741, -0.2757, 4.0875, 2.5741, -0.2757, 4.0875, 0, -0.2757, 3.9822, 0, -2.03, 4.0875, 2.5741, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 0, -2.03, 4.0875, 0, -2.03, 4.0875, 2.5741, -2.03, 4.0875, 2.5741, -2.03, 4.0875, 2.498, -0.3484, 4.0875, 2.5741, -0.2757, 4.0875, 2.5741, -2.03, 4.0875, 2.498, -1.9573, 4.0875, 2.498, -0.3484, 4.0875, 0, -2.03, 4.0875, 2.498, -1.9573, 4.0875, 2.5741, -2.03, 4.0875, 0, -2.03, 4.0875, 0, -1.9573, 4.0875, 2.498, -1.9573, 3.8769, 0, -0.2757, 3.8769, 2.498, -0.3484, 3.8769, 2.5741, -0.2757, 3.8769, 0, -0.2757, 3.8769, 0, -0.3484, 3.8769, 2.498, -0.3484, 4.0875, 2.5741, -0.2757, 4.0875, 0, -0.3484, 4.0875, 0, -0.2757, 4.0875, 2.5741, -0.2757, 4.0875, 2.498, -0.3484, 4.0875, 0, -0.3484, 3.8769, 2.5741, -0.2757, 3.8769, 2.498, -1.9573, 3.8769, 2.5741, -2.03, 3.8769, 2.5741, -0.2757, 3.8769, 2.498, -0.3484, 3.8769, 2.498, -1.9573, 3.8769, 2.5741, -2.03, 3.8769, 0, -1.9573, 3.8769, 0, -2.03, 3.8769, 2.5741, -2.03, 3.8769, 2.498, -1.9573, 3.8769, 0, -1.9573, 3.8769, 0, -0.3484, 4.0875, 2.498, -0.3484, 3.8769, 2.498, -0.3484, 3.8769, 0, -0.3484, 4.0875, 0, -0.3484, 4.0875, 2.498, -0.3484, 3.8769, 2.498, -1.9573, 4.0875, 2.498, -0.3484, 4.0875, 2.498, -1.9573, 3.8769, 2.498, -1.9573, 3.8769, 2.498, -0.3484, 4.0875, 2.498, -0.3484, 3.8769, 0, -1.9573, 4.0875, 2.498, -1.9573, 4.0875, 0, -1.9573, 3.8769, 0, -1.9573, 3.8769, 2.498, -1.9573, 4.0875, 2.498, -1.9573)
@@ -152,6 +164,7 @@ script = ExtResource("1_hc5gj")
 
 [node name="Room" parent="Office" instance=ExtResource("1_5ojr2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0124004, 0.00112748, -2.02227)
+visible = false
 metadata/_edit_group_ = true
 
 [node name="RoomCollision" type="StaticBody3D" parent="Office/Room"]
@@ -628,17 +641,8 @@ transform = Transform3D(1.3903, 0, 0, 0, 1.3903, 0, 0, 0, 1.3903, 2.24493, 1.464
 
 [node name="Autopsy1" type="Node" parent="."]
 
-[node name="Scalpel" parent="Autopsy1" instance=ExtResource("23_7khgu")]
-transform = Transform3D(-0.710296, 0, 0.703903, 0, 1, 0, -0.703903, 0, -0.710296, -3.65929, 1.40372, 10.1758)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/Scalpel"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Autopsy1/Scalpel/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0166264, 0.00118673, -0.159988)
-shape = SubResource("BoxShape3D_sis04")
-
 [node name="AutopsyRoom1" parent="Autopsy1" instance=ExtResource("23_6ln0o")]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, -0.538, 4.00198, 6.49658)
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, -0.351172, 4.23563, 6.30885)
 
 [node name="AutopsyRoomCollision" type="StaticBody3D" parent="Autopsy1/AutopsyRoom1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.495608, 0.349566)
@@ -648,7 +652,7 @@ transform = Transform3D(0.01651, -0.999864, 0, 0.999864, 0.01651, 0, 0, 0, 1, 0,
 shape = SubResource("BoxShape3D_ridwg")
 
 [node name="Autopsy1Door" parent="Autopsy1" instance=ExtResource("24_36aba")]
-transform = Transform3D(0.704, 0, 0, 0, 0.704, 0, 0, 0, 0.704, -5.13186, 0.72414, 14.2797)
+transform = Transform3D(0.704, 0, 0, 0, 0.704, 0, 0, 0, 0.704, -4.9212, 0.84972, 14.0229)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/Autopsy1Door"]
 
@@ -699,7 +703,7 @@ shadow_blur = 10.0
 omni_range = 1.785
 
 [node name="Autopsy-Table" parent="Autopsy1" instance=ExtResource("26_0ggdj")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 1.64883, 0.0863407, 6.8087)
+transform = Transform3D(0.25, 0, 0, 0, 0.315403, 0, 0, 0, 0.335539, 1.37672, 0.342197, 6.03089)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/Autopsy-Table"]
 
@@ -708,7 +712,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.120863, 4.06354, 0)
 shape = SubResource("BoxShape3D_p3dxe")
 
 [node name="Autopsy-Table2" parent="Autopsy1" instance=ExtResource("26_0ggdj")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -2.32992, 0.0863407, 6.8087)
+transform = Transform3D(0.25, 0, 0, 0, 0.315403, 0, 0, 0, 0.335539, -2.60203, 0.342197, 6.03089)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/Autopsy-Table2"]
 
@@ -717,7 +721,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.120863, 4.06354, 0)
 shape = SubResource("BoxShape3D_p3dxe")
 
 [node name="shelve" parent="Autopsy1" instance=ExtResource("27_33gcu")]
-transform = Transform3D(0.003, 0, 0, 0, 0.003, 0, 0, 0, 0.003, 2.02804, 0.0731369, 16.0389)
+transform = Transform3D(0.00320302, 0, 0, 0, 0.00523897, 0, 0, 0, 0.00320302, 2.28604, 0.0731369, 16.0389)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/shelve"]
 
@@ -726,7 +730,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.4011, 365.519, -28.8149)
 shape = SubResource("BoxShape3D_gbksj")
 
 [node name="shelve2" parent="Autopsy1" instance=ExtResource("27_33gcu")]
-transform = Transform3D(0.003, 0, 0, 0, 0.003, 0, 0, 0, 0.003, -0.544692, 0.0731369, 16.0389)
+transform = Transform3D(0.00320302, 0, 0, 0, 0.00523897, 0, 0, 0, 0.00320302, -0.692922, 0.0731369, 16.0389)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/shelve2"]
 
@@ -734,14 +738,32 @@ transform = Transform3D(0.003, 0, 0, 0, 0.003, 0, 0, 0, 0.003, -0.544692, 0.0731
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.4011, 365.519, -28.8149)
 shape = SubResource("BoxShape3D_gbksj")
 
+[node name="Scalpel" parent="Autopsy1" instance=ExtResource("23_7khgu")]
+transform = Transform3D(-0.910848, 0, 0.77707, 0, 0.877959, 0, -0.90265, 0, -0.784127, -3.12359, 1.57984, 9.68723)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/Scalpel"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Autopsy1/Scalpel/StaticBody3D"]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, 0, 0, 1, -0.0166261, 0.00118673, -0.159988)
+shape = SubResource("BoxShape3D_sis04")
+
 [node name="Sink" parent="Autopsy1" instance=ExtResource("28_nd8q5")]
-transform = Transform3D(0.0112986, 0, 0.599894, 0, 0.6, 0, -0.599894, 0, 0.0112986, -3.91028, 1.41196, 11.214)
+transform = Transform3D(0.010528, 0, 0.768934, 0, 0.563291, 0, -0.55898, 0, 0.0144824, -3.50127, 1.56283, 10.6558)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/Sink"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Autopsy1/Sink/StaticBody3D"]
 transform = Transform3D(1, 0, 2.04891e-08, 0, 1, 0, -2.04891e-08, 0, 1, -0.000951767, -0.469317, -0.0509014)
 shape = SubResource("BoxShape3D_sgxuj")
+
+[node name="saw" parent="Autopsy1" instance=ExtResource("35_i0yvp")]
+transform = Transform3D(-0.255219, -0.425328, 1.32545e-08, -0.000427066, 0.000242792, -0.351163, 0.436948, -0.248432, -0.000343213, -2.85993, 1.60534, 11.4529)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/saw"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Autopsy1/saw/StaticBody3D"]
+transform = Transform3D(1, 2.98023e-08, 0, -5.96046e-08, 0.999999, -1.16415e-10, 0, -3.49246e-10, 1, 0.0681648, 0.354862, -0.0680389)
+shape = SubResource("BoxShape3D_pqdnn")
 
 [node name="Poster1" type="Sprite3D" parent="Autopsy1"]
 transform = Transform3D(0.11123, 0, 0, 0, 0.168754, 0, 0, 0, 0.168754, 1.30964, 2.72254, 2.50821)
@@ -795,14 +817,32 @@ metadata/interactText = "\"Hang in there!\""
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.181973)
 shape = SubResource("BoxShape3D_v377k")
 
-[node name="saw" parent="Autopsy1" instance=ExtResource("35_i0yvp")]
-transform = Transform3D(-0.201745, -0.345397, 1.50978e-08, -0.000337586, 0.000197165, -0.4, 0.345397, -0.201745, -0.000390945, -3.71139, 1.4255, 12.2035)
+[node name="cart" parent="Autopsy1" instance=ExtResource("36_lq8fw")]
+transform = Transform3D(-0.0312618, 0, 0.0160767, 0, 0.0313596, 0, -0.013852, 0, -0.0362827, 1.09707, 0.270568, 9.34144)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/saw"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/cart"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Autopsy1/saw/StaticBody3D"]
-transform = Transform3D(1, 2.98023e-08, 0, -5.96046e-08, 0.999999, -1.16415e-10, 0, -3.49246e-10, 1, 0.0681648, 0.354862, -0.0680389)
-shape = SubResource("BoxShape3D_pqdnn")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Autopsy1/cart/StaticBody3D"]
+transform = Transform3D(-1, -8.74227e-08, 2.98023e-07, 8.74227e-08, -0.999999, 0, 2.98023e-07, 2.13163e-14, 1, 1.32965, 24.0176, -0.589172)
+shape = SubResource("BoxShape3D_dirmt")
+
+[node name="Syringe" parent="Autopsy1" instance=ExtResource("37_f2tf7")]
+transform = Transform3D(0.000822572, 0.0400974, 0, -0.0202366, 0.000504886, -0.0465798, -0.0302075, 0.000753649, 0.0312048, 0.57864, 1.56769, 9.34992)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/Syringe"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Autopsy1/Syringe/StaticBody3D"]
+transform = Transform3D(0.84884, -0.0218212, 0.528201, 0.011507, 0.999674, 0.0228065, -0.528526, -0.013281, 0.848813, -0.160233, 6.64141, -0.325203)
+shape = SubResource("BoxShape3D_a0dxx")
+
+[node name="scissors" parent="Autopsy1" instance=ExtResource("38_x5wvj")]
+transform = Transform3D(0.0712912, 0, 0, 0, 0.0712912, 0, 0, 0, 0.0712912, 1.37686, 1.54514, 9.39674)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/scissors"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Autopsy1/scissors/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.284241, 0.621948)
+shape = SubResource("BoxShape3D_cixrp")
 
 [node name="Morgue" type="Node" parent="."]
 
@@ -821,7 +861,7 @@ shape = SubResource("ConcavePolygonShape3D_4p7ih")
 
 [node name="Courtyard" type="Node" parent="."]
 
-[node name="Patient004_courtyard" parent="." instance=ExtResource("37_vinll")]
+[node name="Patient004_courtyard" parent="Courtyard" instance=ExtResource("37_vinll")]
 transform = Transform3D(0.40824, 0, 0, 0, 0.40824, 0, 0, 0, 0.40824, 0, 0, -35.3114)
 
 [connection signal="solvedPuzzle" from="." to="player" method="_on_main_solved_puzzle"]
