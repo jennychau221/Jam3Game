@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cod0qc3xs5tyg"
-path="res://.godot/imported/Sink.glb-61a48126e7d65dfdcb18dd07c7e77abb.scn"
+uid="uid://n7lgabm3l5p0"
+path="res://.godot/imported/Sink.glb-d3a9bd5cafaedbcd79e6a552480c82a7.scn"
 
 [deps]
 
-source_file="res://3DAssets/Autopsy1/Sink.glb"
-dest_files=["res://.godot/imported/Sink.glb-61a48126e7d65dfdcb18dd07c7e77abb.scn"]
+source_file="res://3DAssets/Autopsy1/sink/Sink.glb"
+dest_files=["res://.godot/imported/Sink.glb-d3a9bd5cafaedbcd79e6a552480c82a7.scn"]
 
 [params]
 
