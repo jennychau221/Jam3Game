@@ -95,6 +95,7 @@ func lookingAt():
 		inputUI.visible = true #This makes the input field visible
 		inputUI.grab_focus() #This grabs focus for the input field
 		inputting = true #This sets a flag to disable traditional movement
+	#
 	if lookedObject.get_collision_mask_value(4) == true:
 		itemCheck.emit(lookedObject.get_meta("objectID"))
 

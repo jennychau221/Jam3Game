@@ -63,7 +63,7 @@ func _on_player_item_check(objectID):
 			pass
 
 #INDEX:
-#1 - FileCabinet2
+#1 - FileCabinet
 #2 - "Cold Blood" Book
 #3 - OfficeDoor
 #4 - Lamp
