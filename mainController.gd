@@ -10,6 +10,7 @@ var officeKey = false
 var bookKey = false
 var bookKey2 = false
 var fingerKey = false
+var brainKey = false
 
 #Passwords
 @export var portrait1Pass = "Darwin"
@@ -65,6 +66,12 @@ func _on_player_item_check(objectID):
 		if (player.global_position.distance_to($Autopsy1/Autopsy1Door/Pos1.global_position) > player.global_position.distance_to($Autopsy1/Autopsy1Door/Pos2.global_position)):
 			player.global_position = $Autopsy1/Autopsy1Door/Pos1.global_position
 		else: player.global_position = $Autopsy1/Autopsy1Door/Pos2.global_position
+	if (objectID == 7):
+		if (player.global_position.distance_to($Autopsy1/Autopsy1Door2/Pos1.global_position) > player.global_position.distance_to($Autopsy1/Autopsy1Door2/Pos2.global_position)):
+			player.global_position = $Autopsy1/Autopsy1Door2/Pos1.global_position
+		else: player.global_position = $Autopsy1/Autopsy1Door2/Pos2.global_position
+	if (objectID == 8):
+		brainKey = true
 
 #INDEX:
 #1 - FileCabinet
@@ -73,3 +80,5 @@ func _on_player_item_check(objectID):
 #4 - Lamp
 #5 - OfficeSafe
 #6 - Autopsy1 - Courtyard Door
+#7 - Autopsy1 - Morgue Door
+#8 - Brain

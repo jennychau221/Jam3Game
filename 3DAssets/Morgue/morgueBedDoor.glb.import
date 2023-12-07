@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://x1ivmdbq0grd"
-path="res://.godot/imported/Morgue Door.glb-b128093b882ffb21495cb44122b9d26c.scn"
+uid="uid://bqcqyeuhwburq"
+path="res://.godot/imported/morgueBedDoor.glb-fce7f00ba88262bb8fd08a4c637b5add.scn"
 
 [deps]
 
-source_file="res://3DAssets/Morgue/Morgue Door.glb"
-dest_files=["res://.godot/imported/Morgue Door.glb-b128093b882ffb21495cb44122b9d26c.scn"]
+source_file="res://3DAssets/Morgue/morgueBedDoor.glb"
+dest_files=["res://.godot/imported/morgueBedDoor.glb-fce7f00ba88262bb8fd08a4c637b5add.scn"]
 
 [params]
 

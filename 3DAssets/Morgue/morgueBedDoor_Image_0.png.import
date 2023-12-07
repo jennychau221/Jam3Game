@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbeffid0th0wy"
-path.s3tc="res://.godot/imported/Morgue Door_0.png-84ac4d957cf2ce1d26f6821d31ac0478.s3tc.ctex"
+uid="uid://dckmsbhqmkyg6"
+path.s3tc="res://.godot/imported/morgueBedDoor_Image_0.png-a594f513c2e8182cd7a465c519e1ffad.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://3DAssets/Morgue/Morgue Door_0.png"
-dest_files=["res://.godot/imported/Morgue Door_0.png-84ac4d957cf2ce1d26f6821d31ac0478.s3tc.ctex"]
+source_file="res://3DAssets/Morgue/morgueBedDoor_Image_0.png"
+dest_files=["res://.godot/imported/morgueBedDoor_Image_0.png-a594f513c2e8182cd7a465c519e1ffad.s3tc.ctex"]
 
 [params]
 
