@@ -103,3 +103,12 @@ func _on_main_solved_puzzle():
 	inputUI.clear()
 	inputUI.visible = false
 	inputting = false
+
+
+func _on_area_3d_body_entered(body):
+	descUI.text = "Press E to go to up the stairs."
+	descUI.visible = true
+
+
+func _on_main_not_blind():
+	$UIControl/Blind.visible = false
