@@ -127,7 +127,8 @@ func _on_leave_button_pressed():
 	$"UIControl/Stay Button".disabled = true
 	$UIControl/LeaveButton.visible = false
 	$UIControl/LeaveButton.disabled = true
-	#fade out code
+	await get_tree().create_timer(44).timeout
+	get_tree().change_scene_to_file("res://title.tscn")
 
 
 func _on_stay_button_pressed():
@@ -136,4 +137,5 @@ func _on_stay_button_pressed():
 	$"UIControl/Stay Button".disabled = true
 	$UIControl/LeaveButton.visible = false
 	$UIControl/LeaveButton.disabled = true
-	#fade out code
+	await get_tree().create_timer(30).timeout
+	get_tree().change_scene_to_file("res://title.tscn")

@@ -123,6 +123,9 @@ func _on_player_item_check(objectID):
 		emit_signal("notBlind")
 		eyeFlag = true
 		$Morgue/Eyeball.queue_free()
+		$AudioFiles/organInsertion/Eyeball.play()
+		await get_tree().create_timer(3).timeout
+		$AudioFiles/organInsertion/Eyeball2.play()
 	if (objectID == 15):
 		$Autopsy1/Clue1.global_position = $Clue1Pos.global_position
 		frameCount += 1
@@ -169,6 +172,11 @@ func _on_player_item_check(objectID):
 		lungKey = true
 		player.SPEED = 6
 		$Autopsy2/Lung.queue_free()
+		$AudioFiles/organInsertion/Lung1.play()
+		await get_tree().create_timer(1).timeout
+		$AudioFiles/organInsertion/Lung2.play()
+		await get_tree().create_timer(6).timeout
+		$AudioFiles/organInsertion/Lung3.play()
 	if (objectID == 25):
 		endCutscene()
 

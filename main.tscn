@@ -1,4 +1,4 @@
-[gd_scene load_steps=170 format=3 uid="uid://cq81es0qf4r30"]
+[gd_scene load_steps=177 format=3 uid="uid://cq81es0qf4r30"]
 
 [ext_resource type="PackedScene" uid="uid://tn2wk1umidam" path="res://3DAssets/Room.glb" id="1_5ojr2"]
 [ext_resource type="Script" path="res://mainController.gd" id="1_hc5gj"]
@@ -66,6 +66,7 @@
 [ext_resource type="Texture2D" uid="uid://bauprc8wnl6cw" path="res://3DAssets/NightSkyPano.png" id="52_xiuh2"]
 [ext_resource type="Texture2D" uid="uid://cbi3vlhvgv5a3" path="res://3DAssets/Courtyard/Courtyard_Concrete034_2K-PNG_Color.png" id="59_3sqi6"]
 [ext_resource type="Texture2D" uid="uid://b5yh0a0iepm5" path="res://3DAssets/Courtyard/Courtyard_RoofingTiles008_2K-PNG_Color.png" id="60_rdl3g"]
+[ext_resource type="PackedScene" uid="uid://bgail5wjnafyn" path="res://3DAssets/Courtyard/Fountain.glb" id="61_8jgi3"]
 [ext_resource type="PackedScene" uid="uid://bju8hwagoycl1" path="res://3DAssets/Autopsy2/Lung.glb" id="62_5c2gv"]
 [ext_resource type="AudioStream" uid="uid://bcvjfha4dnylj" path="res://Audio/Casettes/Patient_File_001_Cassette.mp3" id="65_d1svh"]
 [ext_resource type="AudioStream" uid="uid://d0h5nysocbdcj" path="res://Audio/Casettes/Patient_File_003_Cassette.mp3" id="65_wfw4u"]
@@ -73,6 +74,11 @@
 [ext_resource type="AudioStream" uid="uid://b1sv2rynswodq" path="res://Audio/VoiceOver/endingHeartTaken.wav" id="69_nvcqw"]
 [ext_resource type="AudioStream" uid="uid://c150s5m4at200" path="res://Audio/VoiceOver/endingStay.wav" id="70_mjmna"]
 [ext_resource type="AudioStream" uid="uid://80lmnw3y1wgc" path="res://Audio/VoiceOver/endingLeave.wav" id="71_bjdqf"]
+[ext_resource type="AudioStream" uid="uid://dceppmiapicbc" path="res://Audio/VoiceOver/Morgue_interaction_p1_P1.wav" id="74_1piox"]
+[ext_resource type="AudioStream" uid="uid://ctiys788iv7hn" path="res://Audio/VoiceOver/Morgue_interaction_p2_P1.wav" id="75_j3p7r"]
+[ext_resource type="AudioStream" uid="uid://bddh1sj6yn7t" path="res://Audio/VoiceOver/Autopsy_2_lung_P1.wav" id="76_ps1r1"]
+[ext_resource type="AudioStream" uid="uid://b64tyn7dh30vb" path="res://Audio/VoiceOver/AR2_lung_P2.wav" id="77_7xiy3"]
+[ext_resource type="AudioStream" uid="uid://m37gdu8482kf" path="res://Audio/VoiceOver/patient3_line_2.wav" id="78_jajom"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_3y1ub"]
 data = PackedVector3Array(3.9822, 0, -4.0201, 3.9822, 2.5741, -2.03, 3.9822, 0, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 4.6039, -4.0201, 3.9822, 4.6039, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 0, -4.0201, 3.9822, 4.6039, -4.0201, -3.9822, 0, -4.0201, -3.9822, 4.6039, 4.0201, -3.9822, 4.6039, -4.0201, -3.9822, 0, -4.0201, -3.9822, 0, 4.0201, -3.9822, 4.6039, 4.0201, 3.9822, 0, -4.0201, -3.9822, 4.6039, -4.0201, 3.9822, 4.6039, -4.0201, 3.9822, 0, -4.0201, -3.9822, 0, -4.0201, -3.9822, 4.6039, -4.0201, -3.9822, 0, 4.0201, 3.9822, 4.6039, 4.0201, -3.9822, 4.6039, 4.0201, -3.9822, 0, 4.0201, 3.9822, 0, 4.0201, 3.9822, 4.6039, 4.0201, 3.9822, 0, -0.2757, 3.9822, 4.6039, 4.0201, 3.9822, 0, 4.0201, 3.9822, 4.6039, 4.0201, 3.9822, 2.5741, -0.2757, 3.9822, 4.6039, -0.2757, 3.9822, 4.6039, 4.0201, 3.9822, 0, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 3.9822, 4.6039, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 3.9822, 4.6039, -2.03, 3.9822, 4.6039, -0.2757, 3.9822, 2.5741, -0.2757, 3.8769, 2.5741, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 2.5741, -0.2757, 3.8769, 2.5741, -0.2757, 3.8769, 2.5741, -2.03, 3.9822, 0, -0.2757, 3.8769, 2.5741, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 0, -0.2757, 3.8769, 0, -0.2757, 3.8769, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 3.8769, 0, -2.03, 3.9822, 0, -2.03, 3.9822, 2.5741, -2.03, 3.8769, 2.5741, -2.03, 3.8769, 0, -2.03, 3.9822, 2.5741, -2.03, 4.0875, 2.5741, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 4.0875, 2.5741, -2.03, 4.0875, 2.5741, -0.2757, 3.9822, 2.5741, -0.2757, 4.0875, 0, -0.2757, 3.9822, 0, -0.2757, 3.9822, 2.5741, -0.2757, 4.0875, 2.5741, -0.2757, 4.0875, 0, -0.2757, 3.9822, 0, -2.03, 4.0875, 2.5741, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 0, -2.03, 4.0875, 0, -2.03, 4.0875, 2.5741, -2.03, 4.0875, 2.5741, -2.03, 4.0875, 2.498, -0.3484, 4.0875, 2.5741, -0.2757, 4.0875, 2.5741, -2.03, 4.0875, 2.498, -1.9573, 4.0875, 2.498, -0.3484, 4.0875, 0, -2.03, 4.0875, 2.498, -1.9573, 4.0875, 2.5741, -2.03, 4.0875, 0, -2.03, 4.0875, 0, -1.9573, 4.0875, 2.498, -1.9573, 3.8769, 0, -0.2757, 3.8769, 2.498, -0.3484, 3.8769, 2.5741, -0.2757, 3.8769, 0, -0.2757, 3.8769, 0, -0.3484, 3.8769, 2.498, -0.3484, 4.0875, 2.5741, -0.2757, 4.0875, 0, -0.3484, 4.0875, 0, -0.2757, 4.0875, 2.5741, -0.2757, 4.0875, 2.498, -0.3484, 4.0875, 0, -0.3484, 3.8769, 2.5741, -0.2757, 3.8769, 2.498, -1.9573, 3.8769, 2.5741, -2.03, 3.8769, 2.5741, -0.2757, 3.8769, 2.498, -0.3484, 3.8769, 2.498, -1.9573, 3.8769, 2.5741, -2.03, 3.8769, 0, -1.9573, 3.8769, 0, -2.03, 3.8769, 2.5741, -2.03, 3.8769, 2.498, -1.9573, 3.8769, 0, -1.9573, 3.8769, 0, -0.3484, 4.0875, 2.498, -0.3484, 3.8769, 2.498, -0.3484, 3.8769, 0, -0.3484, 4.0875, 0, -0.3484, 4.0875, 2.498, -0.3484, 3.8769, 2.498, -1.9573, 4.0875, 2.498, -0.3484, 4.0875, 2.498, -1.9573, 3.8769, 2.498, -1.9573, 3.8769, 2.498, -0.3484, 4.0875, 2.498, -0.3484, 3.8769, 0, -1.9573, 4.0875, 2.498, -1.9573, 4.0875, 0, -1.9573, 3.8769, 0, -1.9573, 3.8769, 2.498, -1.9573, 4.0875, 2.498, -1.9573)
@@ -411,6 +417,10 @@ shadow_mesh = SubResource("ArrayMesh_51acn")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gv2of"]
 size = Vector3(11, 4, 0.2)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_yrg48"]
+height = 9.0
+radius = 4.2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1qjpx"]
 size = Vector3(4, 1, 1)
@@ -1507,6 +1517,7 @@ transform = Transform3D(-0.67252, -0.00153697, 0.740078, -0.00336031, 0.999994, 
 transform = Transform3D(0.408, 0, 0, 0, 0.408, 0, 0, 0, 0.408, 0, 0, 0)
 
 [node name="CollisionHolder(Please don\'t edit)" type="StaticBody3D" parent="Courtyard/Courtyard"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 metadata/_edit_group_ = true
 
 [node name="Floor" type="CollisionShape3D" parent="Courtyard/Courtyard/CollisionHolder(Please don\'t edit)"]
@@ -1633,7 +1644,7 @@ transform = Transform3D(0, 0, 0.763934, 0, 0.763934, 0, -0.763934, 0, 0, -53.259
 shape = SubResource("ConcavePolygonShape3D_fuslo")
 
 [node name="2_roof" type="MeshInstance3D" parent="Courtyard/Courtyard/CollisionHolder(Please don\'t edit)"]
-transform = Transform3D(-8.00869e-07, 0, -27.9681, 0, 26.2881, 0, 18.3217, 0, -1.22252e-06, 55.863, -4.87461, 27.0487)
+transform = Transform3D(-5.23994e-07, 0, -27.8693, 0, 26.1952, 0, 11.9876, 0, -1.21821e-06, 55.863, -4.87461, 24.6045)
 mesh = SubResource("ArrayMesh_3u54r")
 skeleton = NodePath("")
 
@@ -1671,6 +1682,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.5249, 3.15683, -26.7284)
 
 [node name="OfficeEntrance" type="Marker3D" parent="Courtyard/Courtyard/StairBody"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.29681, -18.6945, 13.3515)
+
+[node name="Fountain" parent="Courtyard/Courtyard" instance=ExtResource("61_8jgi3")]
+transform = Transform3D(0.628802, 0, 0, 0, 0.628802, 0, 0, 0, 0.628802, 0, 0, 3.1946)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Courtyard/Courtyard/Fountain"]
+collision_layer = 3
+collision_mask = 3
+metadata/interactText = "An old, dried fountain."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Courtyard/Courtyard/Fountain/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.41396, 0)
+shape = SubResource("CylinderShape3D_yrg48")
 
 [node name="Area3D" type="Area3D" parent="Courtyard"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.68946, 0.656397, -12.5083)
@@ -1946,6 +1969,22 @@ stream = ExtResource("70_mjmna")
 stream = ExtResource("71_bjdqf")
 
 [node name="organInsertion" type="Node" parent="AudioFiles"]
+
+[node name="Eyeball" type="AudioStreamPlayer" parent="AudioFiles/organInsertion"]
+stream = ExtResource("74_1piox")
+
+[node name="Eyeball2" type="AudioStreamPlayer" parent="AudioFiles/organInsertion"]
+stream = ExtResource("75_j3p7r")
+
+[node name="Lung1" type="AudioStreamPlayer" parent="AudioFiles/organInsertion"]
+stream = ExtResource("76_ps1r1")
+
+[node name="Lung2" type="AudioStreamPlayer" parent="AudioFiles/organInsertion"]
+stream = ExtResource("77_7xiy3")
+
+[node name="Lung3" type="AudioStreamPlayer" parent="AudioFiles/organInsertion"]
+stream = ExtResource("78_jajom")
+volume_db = 8.0
 
 [connection signal="buttonSelect" from="." to="player" method="_on_main_button_select"]
 [connection signal="notBlind" from="." to="player" method="_on_main_not_blind"]
