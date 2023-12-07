@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 #Player constants
-const SPEED = 4
+var SPEED = 4
 
 #Player camera References
 var look_dir: Vector2

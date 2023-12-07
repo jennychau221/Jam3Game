@@ -8,12 +8,16 @@ extends Node
 var officeKey = false
 #bookKey 1 is from file cabinet, 2 is actual key for it
 var bookKey = false
-var bookKey2 = false
 var fingerKey = false
 var brainKey = false
 var morgueKey = false
 var scalpelKey = false
 var autop1Key = false
+var autop2Key = false
+var sawKey = false
+var lungKey = false
+#The actual key
+var autopsy2GigaKey = false
 #Used to make sure the body doesn't try and make the now deleted eyeball visible again
 var eyeFlag = false
 var frameCount = 0
@@ -55,15 +59,25 @@ func _on_player_pass_input(objectID, inputString):
 			else: player.global_position = $Autopsy1/Autopsy1Door/Pos2.global_position
 			autop1Key = true
 		else: player.descUI.text = "It's still not budging."
+	if (objectID == 9):
+		if (autop2Key || inputString == "24/7/25"):
+			if (player.global_position.distance_to($Autopsy2/Autopsy2Door/Pos1.global_position) > player.global_position.distance_to($Autopsy2/Autopsy2Door/Pos2.global_position)):
+				player.global_position = $Autopsy2/Autopsy2Door/Pos1.global_position
+			else: player.global_position = $Autopsy2/Autopsy2Door/Pos2.global_position
+			autop2Key = true
+			player.descUI.text = ""
+		else: player.descUI.text = "There seems to be some scratches on the door, 'DD/DD/DDDD' it looks like."
 
 func _on_player_item_check(objectID):
 	if (objectID == 2):
-		if bookKey2:
-			player.descUI.text = '"In Cold Blood,” This must be where that key belongs! Flipping open the book, nestled deep in the pages of the thick carved book is a plump bloody heart, wrapped in a plastic bag.'
-		elif bookKey:
-			player.descUI.text = '"In Cold Blood" this must be it! This isn’t even a real book. It’s locked, it sounds like there’s something inside. *slosh*'
-		else:
-			pass
+		if (bookKey):
+			if autopsy2GigaKey:
+					player.descUI.text = '"In Cold Blood,” This must be where that key belongs! Flipping open the book, nestled deep in the pages of the thick carved book is a plump bloody heart. I have set it on the desk.'
+					$Office/heart.visible = true
+					$Office/heart/StaticBody3D/CollisionShape3D.disabled = false
+			elif bookKey:
+					player.descUI.text = '"In Cold Blood" this must be it! This isn’t even a real book. It’s locked, it sounds like there’s something inside. *slosh*'
+		else: pass
 	if (objectID == 3):
 		player.global_position = $Courtyard/Courtyard/StairBody/StairExit.global_position
 	if (objectID == 4):
@@ -72,6 +86,8 @@ func _on_player_item_check(objectID):
 	if (objectID == 5):
 		if fingerKey:
 			player.descUI.text = "It worked! A log book? Maybe I can find something about myself."
+			$Office/LogBook.visible = true
+			$Office/LogBook/StaticBody3D/CollisionShape3D.disabled = false
 		else:
 			pass
 	if (objectID == 7):
@@ -85,10 +101,6 @@ func _on_player_item_check(objectID):
 	if (objectID == 8):
 		brainKey = true
 		$Morgue/Brain.queue_free()
-	if (objectID == 9):
-		if (player.global_position.distance_to($Autopsy2/Autopsy2Door/Pos1.global_position) > player.global_position.distance_to($Autopsy2/Autopsy2Door/Pos2.global_position)):
-			player.global_position = $Autopsy2/Autopsy2Door/Pos1.global_position
-		else: player.global_position = $Autopsy2/Autopsy2Door/Pos2.global_position
 	if (objectID == 10):
 		player.global_position = $Courtyard/Courtyard/StairBody/OfficeEntrance.global_position
 	if (objectID == 11):
@@ -134,7 +146,31 @@ func _on_player_item_check(objectID):
 		if (frameCount >= 4):
 			player.descUI.text = "Hey it looks like these pieces make a code. '424' I think."
 		else: pass
-
+	if (objectID == 20):
+		if (scalpelKey && !fingerKey):
+			fingerKey = true
+			player.descUI.text = "A finger this might come in 'handy'... haha..."
+		elif (fingerKey): player.descUI.text = "I already have enough fingers."
+		else: pass
+	if (objectID == 21):
+		autopsy2GigaKey = true
+		$Autopsy2/Key.queue_free()
+	if (objectID == 22):
+		sawKey = true
+		$Autopsy1/saw.queue_free()
+	if (objectID == 23):
+		if (sawKey && !lungKey):
+			player.descUI.text = "This is so grotesque..."
+			$Autopsy2/Lung.visible = true
+			$Autopsy2/Lung/StaticBody3D/CollisionShape3D.disabled = false
+		else: pass
+	if (objectID == 24):
+		lungKey = true
+		player.SPEED = 6
+		$Autopsy2/Lung.queue_free()
+	if (objectID == 25):
+		pass
+		#Transition
 
 #INDEX:
 #1 - FileCabinet
@@ -156,3 +192,9 @@ func _on_player_item_check(objectID):
 #17 - clue3
 #18 - clue4
 #19 - Frame
+#20 - Bodies
+#21 - Autopsy2Key
+#22 - Saw
+#23 - Autopsy2Corpse
+#24 - Lung
+#25 - Heart
