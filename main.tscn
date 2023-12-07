@@ -42,7 +42,7 @@
 [ext_resource type="PackedScene" uid="uid://uu4cyj6v6iu7" path="res://3DAssets/Autopsy1/Syringe.glb" id="38_6x2om"]
 [ext_resource type="PackedScene" uid="uid://c8itb4bw0ojnj" path="res://3DAssets/Autopsy1/scissors.glb" id="38_x5wvj"]
 [ext_resource type="PackedScene" uid="uid://cwr6xg0qum22f" path="res://3DAssets/Autopsy1/Operating Lamp.glb" id="39_k8rub"]
-[ext_resource type="PackedScene" path="res://3DAssets/Morgue/Wheely-Table.glb" id="40_yiabu"]
+[ext_resource type="PackedScene" uid="uid://urnbsg2lhll7" path="res://3DAssets/Morgue/Wheely-Table.glb" id="40_yiabu"]
 [ext_resource type="PackedScene" uid="uid://brsc0jbfdw0n7" path="res://3DAssets/Autopsy2/AutopsyRoom2.glb" id="41_ebwa1"]
 [ext_resource type="PackedScene" uid="uid://bte7fnf46d605" path="res://3DAssets/Bodies/Corpse1textiured.glb" id="42_b2y1f"]
 [ext_resource type="PackedScene" uid="uid://7p1e65jfuptx" path="res://3DAssets/Morgue/Actual morgue Door.glb" id="43_xies6"]
@@ -732,9 +732,6 @@ transform = Transform3D(1.3903, 0, 0, 0, 1.3903, 0, 0, 0, 1.3903, 1.51346, 3.647
 
 [node name="Autopsy1" type="Node" parent="."]
 
-[node name="AutopsyRoom" parent="Autopsy1" instance=ExtResource("45_ucwjg")]
-transform = Transform3D(7.95388, 0, 0, 0, 7.95388, 0, 0, 0, 7.95388, 11.5772, 3.94792, -16.7114)
-
 [node name="Sink" parent="Autopsy1" instance=ExtResource("24_my6kb")]
 transform = Transform3D(-0.0107021, 0, 0.577319, 0, 0.577419, 0, -0.577319, 0, -0.0107021, 8.3119, 1.38672, -12.1154)
 
@@ -746,7 +743,6 @@ shape = SubResource("BoxShape3D_v5cl4")
 
 [node name="AutopsyRoom1" parent="Autopsy1" instance=ExtResource("23_6ln0o")]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 11.635, 3.9824, -16.8126)
-visible = false
 
 [node name="AutopsyRoomCollision" type="StaticBody3D" parent="Autopsy1/AutopsyRoom1"]
 transform = Transform3D(0.14306, 0, 0, 0, 0.14306, 0, 0, 0, 0.14306, 0, -0.567331, 0.408483)
@@ -1041,6 +1037,14 @@ transform = Transform3D(-0.011476, -0.118618, 0.143492, 0.185659, -0.017962, 0, 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Morgue/Key/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.371265)
 shape = SubResource("BoxShape3D_huqnp")
+
+[node name="Operating Lamp" parent="Morgue" instance=ExtResource("39_k8rub")]
+transform = Transform3D(0.546083, 0, 0, 0, 0.546083, 0, 0, 0, 0.546083, -11.8953, 4.2098, -7.59821)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Morgue/Operating Lamp"]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Morgue/Operating Lamp/StaticBody3D"]
+light_color = Color(1, 1, 0.87451, 1)
 
 [node name="Courtyard" type="Node" parent="."]
 
