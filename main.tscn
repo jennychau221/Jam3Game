@@ -732,6 +732,9 @@ transform = Transform3D(1.3903, 0, 0, 0, 1.3903, 0, 0, 0, 1.3903, 1.51346, 3.647
 
 [node name="Autopsy1" type="Node" parent="."]
 
+[node name="AutopsyRoom" parent="Autopsy1" instance=ExtResource("45_ucwjg")]
+transform = Transform3D(7.95388, 0, 0, 0, 7.95388, 0, 0, 0, 7.95388, 11.5772, 3.94792, -16.7114)
+
 [node name="Sink" parent="Autopsy1" instance=ExtResource("24_my6kb")]
 transform = Transform3D(-0.0107021, 0, 0.577319, 0, 0.577419, 0, -0.577319, 0, -0.0107021, 8.3119, 1.38672, -12.1154)
 
@@ -743,6 +746,7 @@ shape = SubResource("BoxShape3D_v5cl4")
 
 [node name="AutopsyRoom1" parent="Autopsy1" instance=ExtResource("23_6ln0o")]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 11.635, 3.9824, -16.8126)
+visible = false
 
 [node name="AutopsyRoomCollision" type="StaticBody3D" parent="Autopsy1/AutopsyRoom1"]
 transform = Transform3D(0.14306, 0, 0, 0, 0.14306, 0, 0, 0, 0.14306, 0, -0.567331, 0.408483)
