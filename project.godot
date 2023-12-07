@@ -10,9 +10,11 @@ config_version=5
 
 [application]
 
-config/name="Jam3"
+config/name="Patient 004"
 run/main_scene="res://title.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
+config/icon="res://iconPNG.png"
+config/windows_native_icon="res://icon.ico"
 
 [display]
 

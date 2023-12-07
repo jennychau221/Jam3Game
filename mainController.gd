@@ -21,11 +21,16 @@ var autopsy2GigaKey = false
 #Used to make sure the body doesn't try and make the now deleted eyeball visible again
 var eyeFlag = false
 var frameCount = 0
+#This is just for memeing 
+var corpseCount = 1
 
 #Passwords
 @export var portrait1Pass = "Darwin"
 @export var fileCabinetPass = "B_G_R_Y"
 @export var fileCabinetPass2 = "b_g_r_y"
+
+@onready var doorSounds = $AudioFiles/sfx/DoorSound
+@onready var keySfx = $AudioFiles/sfx/KeySfx
 #@export var fileCabinetPass3 = "BLUE_GREEN_RED_YELLOW"
 
 signal solvedPuzzle
@@ -56,15 +61,21 @@ func _on_player_pass_input(objectID, inputString):
 		if (autop1Key || inputString == "424"):
 			if (player.global_position.distance_to($Autopsy1/Autopsy1Door/Pos1.global_position) > player.global_position.distance_to($Autopsy1/Autopsy1Door/Pos2.global_position)):
 				player.global_position = $Autopsy1/Autopsy1Door/Pos1.global_position
-				
-			else: player.global_position = $Autopsy1/Autopsy1Door/Pos2.global_position
+				doorSounds.play()
+			else: 
+				player.global_position = $Autopsy1/Autopsy1Door/Pos2.global_position
+				doorSounds.play()
 			autop1Key = true
+			player.descUI.text = ""
 		else: player.descUI.text = "It's still not budging."
 	if (objectID == 9):
 		if (autop2Key || inputString == "24/7/25"):
 			if (player.global_position.distance_to($Autopsy2/Autopsy2Door/Pos1.global_position) > player.global_position.distance_to($Autopsy2/Autopsy2Door/Pos2.global_position)):
 				player.global_position = $Autopsy2/Autopsy2Door/Pos1.global_position
-			else: player.global_position = $Autopsy2/Autopsy2Door/Pos2.global_position
+				doorSounds.play()
+			else: 
+				player.global_position = $Autopsy2/Autopsy2Door/Pos2.global_position
+				doorSounds.play()
 			autop2Key = true
 			player.descUI.text = ""
 		else: player.descUI.text = "There seems to be some scratches on the door, 'DD/DD/DDDD' it looks like."
@@ -96,7 +107,10 @@ func _on_player_item_check(objectID):
 			if (morgueKey):
 				if (player.global_position.distance_to($Autopsy1/Autopsy1Door2/Pos1.global_position) > player.global_position.distance_to($Autopsy1/Autopsy1Door2/Pos2.global_position)):
 					player.global_position = $Autopsy1/Autopsy1Door2/Pos1.global_position
-				else: player.global_position = $Autopsy1/Autopsy1Door2/Pos2.global_position
+					doorSounds.play()
+				else: 
+					player.global_position = $Autopsy1/Autopsy1Door2/Pos2.global_position
+					doorSounds.play()
 			elif (brainKey): player.descUI.text = "It’s locked. Must be a way to unlock this door."
 		else: pass
 	if (objectID == 8):
@@ -104,9 +118,11 @@ func _on_player_item_check(objectID):
 		$Morgue/Brain.queue_free()
 	if (objectID == 10):
 		player.global_position = $Courtyard/Courtyard/StairBody/OfficeEntrance.global_position
+		doorSounds.play()
 	if (objectID == 11):
 		if (brainKey):
 			morgueKey = true
+			keySfx.play()
 			$Morgue/Key.queue_free()
 		else: player.descUI.text = ""
 	if (objectID == 12):
@@ -158,6 +174,7 @@ func _on_player_item_check(objectID):
 		else: pass
 	if (objectID == 21):
 		autopsy2GigaKey = true
+		keySfx.play()
 		$Autopsy2/Key.queue_free()
 	if (objectID == 22):
 		sawKey = true
@@ -167,7 +184,9 @@ func _on_player_item_check(objectID):
 			player.descUI.text = "This is so grotesque..."
 			$Autopsy2/Lung.visible = true
 			$Autopsy2/Lung/StaticBody3D/CollisionShape3D.disabled = false
-		else: pass
+		elif (corpseCount >= 3):
+			player.descUI.text = "Damm bitch you live like this?"
+		else: corpseCount += 1
 	if (objectID == 24):
 		lungKey = true
 		player.SPEED = 6
@@ -179,6 +198,10 @@ func _on_player_item_check(objectID):
 		$AudioFiles/organInsertion/Lung3.play()
 	if (objectID == 25):
 		endCutscene()
+	if (objectID == 30):
+		if eyeFlag:
+			player.descUI.text = "Dang, what happened to me. I look decomposed."
+		else: pass
 
 #This section controls casette tape playing
 	if (objectID == 26):
@@ -234,3 +257,4 @@ func endCutscene():
 #27 - Casette Office (Doctor)
 #28 - Casette Autopsy2 (?)
 #29 - Casette Autopsy1 (001)
+#30 - Mirror

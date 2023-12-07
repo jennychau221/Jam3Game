@@ -1,14 +1,15 @@
 extends CharacterBody3D
 
-#Player constants
+#Player stats
 var SPEED = 4
 
 #Player camera References
 var look_dir: Vector2
 @onready var camera = $Camera3D
-var camera_sens = 35
+var camera_sens = 23
 @onready var aim = $Camera3D/lookDetect
 var lookedObject
+@onready var footSounds = $footSounds
 
 #Main scene references + signals
 @onready var scene = $".."
@@ -41,9 +42,13 @@ func _physics_process(delta):
 	if direction && !inputting:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
+		if !footSounds.is_playing():
+			footSounds.play()
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
+		if footSounds.is_playing():
+			footSounds.stop()
 		
 	#Interact function: runs when the raycast is colliding with a properly layered object and "enter" is pressed
 	#not runnable when player is inputting something to avoid clearing text

@@ -1,4 +1,4 @@
-[gd_scene load_steps=177 format=3 uid="uid://cq81es0qf4r30"]
+[gd_scene load_steps=184 format=3 uid="uid://cq81es0qf4r30"]
 
 [ext_resource type="PackedScene" uid="uid://tn2wk1umidam" path="res://3DAssets/Room.glb" id="1_5ojr2"]
 [ext_resource type="Script" path="res://mainController.gd" id="1_hc5gj"]
@@ -32,6 +32,7 @@
 [ext_resource type="PackedScene" uid="uid://n7lgabm3l5p0" path="res://3DAssets/Autopsy1/sink/Sink.glb" id="24_my6kb"]
 [ext_resource type="PackedScene" uid="uid://cx3wiphunm6gr" path="res://3DAssets/Autopsy1/Autopsy2CielingLight.glb" id="25_7tdgx"]
 [ext_resource type="PackedScene" uid="uid://ce21j0c1x6a2b" path="res://3DAssets/Autopsy1/Autopsy-Table.glb" id="26_0ggdj"]
+[ext_resource type="PackedScene" uid="uid://eqof7qqpmhlw" path="res://3DAssets/Clutter/Polaroid.glb" id="26_gen87"]
 [ext_resource type="PackedScene" uid="uid://dy67svh0n83dj" path="res://3DAssets/Autopsy1/shelve.glb" id="27_33gcu"]
 [ext_resource type="Texture2D" uid="uid://1lyfh0bl7ro3" path="res://3DAssets/Autopsy1/Autopsy1Door_0.png" id="28_v48js"]
 [ext_resource type="Texture2D" uid="uid://b1s4p28gadvad" path="res://3DAssets/Autopsy1/Autopsy1Door_1.png" id="29_jh02j"]
@@ -63,6 +64,8 @@
 [ext_resource type="PackedScene" uid="uid://qacx1bwesnjh" path="res://3DAssets/Courtyard/Courtyard.glb" id="48_d3pp1"]
 [ext_resource type="PackedScene" uid="uid://o5s1ntgr1w7x" path="res://3DAssets/Bodies/Nurse2.glb" id="48_hsa5k"]
 [ext_resource type="PackedScene" uid="uid://biud4tu0y5k7l" path="res://3DAssets/Morgue/Eyeball.glb" id="48_o5vms"]
+[ext_resource type="PackedScene" uid="uid://dr67w7y1x7f8i" path="res://3DAssets/Bodies/Corpse3textiured.glb" id="49_4tn7g"]
+[ext_resource type="PackedScene" uid="uid://clsnqsd4hmt8" path="res://3DAssets/Autopsy1/Mirror.glb" id="49_85ufq"]
 [ext_resource type="Texture2D" uid="uid://bauprc8wnl6cw" path="res://3DAssets/NightSkyPano.png" id="52_xiuh2"]
 [ext_resource type="Texture2D" uid="uid://cbi3vlhvgv5a3" path="res://3DAssets/Courtyard/Courtyard_Concrete034_2K-PNG_Color.png" id="59_3sqi6"]
 [ext_resource type="Texture2D" uid="uid://b5yh0a0iepm5" path="res://3DAssets/Courtyard/Courtyard_RoofingTiles008_2K-PNG_Color.png" id="60_rdl3g"]
@@ -79,6 +82,8 @@
 [ext_resource type="AudioStream" uid="uid://bddh1sj6yn7t" path="res://Audio/VoiceOver/Autopsy_2_lung_P1.wav" id="76_ps1r1"]
 [ext_resource type="AudioStream" uid="uid://b64tyn7dh30vb" path="res://Audio/VoiceOver/AR2_lung_P2.wav" id="77_7xiy3"]
 [ext_resource type="AudioStream" uid="uid://m37gdu8482kf" path="res://Audio/VoiceOver/patient3_line_2.wav" id="78_jajom"]
+[ext_resource type="AudioStream" uid="uid://yrc3xky3wt3x" path="res://Audio/door_open.mp3" id="82_2rbo4"]
+[ext_resource type="AudioStream" uid="uid://7up0l5shk3n3" path="res://Audio/key_get.mp3" id="83_5cxqq"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_3y1ub"]
 data = PackedVector3Array(3.9822, 0, -4.0201, 3.9822, 2.5741, -2.03, 3.9822, 0, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 4.6039, -4.0201, 3.9822, 4.6039, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 0, -4.0201, 3.9822, 4.6039, -4.0201, -3.9822, 0, -4.0201, -3.9822, 4.6039, 4.0201, -3.9822, 4.6039, -4.0201, -3.9822, 0, -4.0201, -3.9822, 0, 4.0201, -3.9822, 4.6039, 4.0201, 3.9822, 0, -4.0201, -3.9822, 4.6039, -4.0201, 3.9822, 4.6039, -4.0201, 3.9822, 0, -4.0201, -3.9822, 0, -4.0201, -3.9822, 4.6039, -4.0201, -3.9822, 0, 4.0201, 3.9822, 4.6039, 4.0201, -3.9822, 4.6039, 4.0201, -3.9822, 0, 4.0201, 3.9822, 0, 4.0201, 3.9822, 4.6039, 4.0201, 3.9822, 0, -0.2757, 3.9822, 4.6039, 4.0201, 3.9822, 0, 4.0201, 3.9822, 4.6039, 4.0201, 3.9822, 2.5741, -0.2757, 3.9822, 4.6039, -0.2757, 3.9822, 4.6039, 4.0201, 3.9822, 0, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 3.9822, 4.6039, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 3.9822, 4.6039, -2.03, 3.9822, 4.6039, -0.2757, 3.9822, 2.5741, -0.2757, 3.8769, 2.5741, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 2.5741, -0.2757, 3.8769, 2.5741, -0.2757, 3.8769, 2.5741, -2.03, 3.9822, 0, -0.2757, 3.8769, 2.5741, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 0, -0.2757, 3.8769, 0, -0.2757, 3.8769, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 3.8769, 0, -2.03, 3.9822, 0, -2.03, 3.9822, 2.5741, -2.03, 3.8769, 2.5741, -2.03, 3.8769, 0, -2.03, 3.9822, 2.5741, -2.03, 4.0875, 2.5741, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 4.0875, 2.5741, -2.03, 4.0875, 2.5741, -0.2757, 3.9822, 2.5741, -0.2757, 4.0875, 0, -0.2757, 3.9822, 0, -0.2757, 3.9822, 2.5741, -0.2757, 4.0875, 2.5741, -0.2757, 4.0875, 0, -0.2757, 3.9822, 0, -2.03, 4.0875, 2.5741, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 0, -2.03, 4.0875, 0, -2.03, 4.0875, 2.5741, -2.03, 4.0875, 2.5741, -2.03, 4.0875, 2.498, -0.3484, 4.0875, 2.5741, -0.2757, 4.0875, 2.5741, -2.03, 4.0875, 2.498, -1.9573, 4.0875, 2.498, -0.3484, 4.0875, 0, -2.03, 4.0875, 2.498, -1.9573, 4.0875, 2.5741, -2.03, 4.0875, 0, -2.03, 4.0875, 0, -1.9573, 4.0875, 2.498, -1.9573, 3.8769, 0, -0.2757, 3.8769, 2.498, -0.3484, 3.8769, 2.5741, -0.2757, 3.8769, 0, -0.2757, 3.8769, 0, -0.3484, 3.8769, 2.498, -0.3484, 4.0875, 2.5741, -0.2757, 4.0875, 0, -0.3484, 4.0875, 0, -0.2757, 4.0875, 2.5741, -0.2757, 4.0875, 2.498, -0.3484, 4.0875, 0, -0.3484, 3.8769, 2.5741, -0.2757, 3.8769, 2.498, -1.9573, 3.8769, 2.5741, -2.03, 3.8769, 2.5741, -0.2757, 3.8769, 2.498, -0.3484, 3.8769, 2.498, -1.9573, 3.8769, 2.5741, -2.03, 3.8769, 0, -1.9573, 3.8769, 0, -2.03, 3.8769, 2.5741, -2.03, 3.8769, 2.498, -1.9573, 3.8769, 0, -1.9573, 3.8769, 0, -0.3484, 4.0875, 2.498, -0.3484, 3.8769, 2.498, -0.3484, 3.8769, 0, -0.3484, 4.0875, 0, -0.3484, 4.0875, 2.498, -0.3484, 3.8769, 2.498, -1.9573, 4.0875, 2.498, -0.3484, 4.0875, 2.498, -1.9573, 3.8769, 2.498, -1.9573, 3.8769, 2.498, -0.3484, 4.0875, 2.498, -0.3484, 3.8769, 0, -1.9573, 4.0875, 2.498, -1.9573, 4.0875, 0, -1.9573, 3.8769, 0, -1.9573, 3.8769, 2.498, -1.9573, 4.0875, 2.498, -1.9573)
@@ -165,6 +170,9 @@ data = PackedVector3Array(-2.5648, -2.0559, 0.2483, -2.5648, 2.0558, 0.1173, -2.
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_vhngb"]
 data = PackedVector3Array(-2.5648, -2.0559, 0.2483, -2.5648, 2.0558, 0.1173, -2.5648, 2.0558, 0.2483, -2.5648, -2.0559, 0.2483, -2.5648, -2.0559, 0.1173, -2.5648, 2.0558, 0.1173, 2.5665, -2.0559, 0.1173, 2.5665, 2.0558, 0.2483, 2.5665, 2.0558, 0.1173, 2.5665, -2.0559, 0.1173, 2.5665, -2.0559, 0.2483, 2.5665, 2.0558, 0.2483, 2.5665, -2.0559, 0.2483, -2.5648, 2.0558, 0.2483, 2.5665, 2.0558, 0.2483, 2.5665, -2.0559, 0.2483, -2.5648, -2.0559, 0.2483, -2.5648, 2.0558, 0.2483, -2.5648, -2.0559, 0.1173, 2.5665, -2.0559, 0.2483, 2.5665, -2.0559, 0.1173, -2.5648, -2.0559, 0.1173, -2.5648, -2.0559, 0.2483, 2.5665, -2.0559, 0.2483, 2.5665, 2.0558, 0.1173, -2.5648, 2.0558, 0.2483, -2.5648, 2.0558, 0.1173, 2.5665, 2.0558, 0.1173, 2.5665, 2.0558, 0.2483, -2.5648, 2.0558, 0.2483)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tdib0"]
+size = Vector3(2.5, 2, 3)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v5cl4"]
 size = Vector3(4.5, 3.7, 2.2)
@@ -255,6 +263,12 @@ size = Vector3(20, 20, 20)
 [sub_resource type="BoxShape3D" id="BoxShape3D_tbea6"]
 size = Vector3(0.5, 0.2, 0.5)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_x0e7r"]
+size = Vector3(2.8, 4.3, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i0ea0"]
+size = Vector3(3.02095, 1.01675, 7.83109)
+
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_bhgok"]
 data = PackedVector3Array(3.9822, 0, -4.0201, 3.9822, 2.5741, -2.03, 3.9822, 0, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 4.6039, -4.0201, 3.9822, 4.6039, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 0, -4.0201, 3.9822, 4.6039, -4.0201, -3.9822, 0, -4.0201, -3.9822, 4.6039, 4.0201, -3.9822, 4.6039, -4.0201, -3.9822, 0, -4.0201, -3.9822, 0, 4.0201, -3.9822, 4.6039, 4.0201, 3.9822, 0, -4.0201, -3.9822, 4.6039, -4.0201, 3.9822, 4.6039, -4.0201, 3.9822, 0, -4.0201, -3.9822, 0, -4.0201, -3.9822, 4.6039, -4.0201, -3.9822, 0, 4.0201, 3.9822, 4.6039, 4.0201, -3.9822, 4.6039, 4.0201, -3.9822, 0, 4.0201, 3.9822, 0, 4.0201, 3.9822, 4.6039, 4.0201, 3.9822, 0, -0.2757, 3.9822, 4.6039, 4.0201, 3.9822, 0, 4.0201, 3.9822, 4.6039, 4.0201, 3.9822, 2.5741, -0.2757, 3.9822, 4.6039, -0.2757, 3.9822, 4.6039, 4.0201, 3.9822, 0, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 3.9822, 4.6039, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 3.9822, 4.6039, -2.03, 3.9822, 4.6039, -0.2757, 3.9822, 2.5741, -0.2757, 3.8769, 2.5741, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 2.5741, -0.2757, 3.8769, 2.5741, -0.2757, 3.8769, 2.5741, -2.03, 3.9822, 0, -0.2757, 3.8769, 2.5741, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 0, -0.2757, 3.8769, 0, -0.2757, 3.8769, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 3.8769, 0, -2.03, 3.9822, 0, -2.03, 3.9822, 2.5741, -2.03, 3.8769, 2.5741, -2.03, 3.8769, 0, -2.03, 3.9822, 2.5741, -2.03, 4.0875, 2.5741, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 4.0875, 2.5741, -2.03, 4.0875, 2.5741, -0.2757, 3.9822, 2.5741, -0.2757, 4.0875, 0, -0.2757, 3.9822, 0, -0.2757, 3.9822, 2.5741, -0.2757, 4.0875, 2.5741, -0.2757, 4.0875, 0, -0.2757, 3.9822, 0, -2.03, 4.0875, 2.5741, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 0, -2.03, 4.0875, 0, -2.03, 4.0875, 2.5741, -2.03, 4.0875, 2.5741, -2.03, 4.0875, 2.498, -0.3484, 4.0875, 2.5741, -0.2757, 4.0875, 2.5741, -2.03, 4.0875, 2.498, -1.9573, 4.0875, 2.498, -0.3484, 4.0875, 0, -2.03, 4.0875, 2.498, -1.9573, 4.0875, 2.5741, -2.03, 4.0875, 0, -2.03, 4.0875, 0, -1.9573, 4.0875, 2.498, -1.9573, 3.8769, 0, -0.2757, 3.8769, 2.498, -0.3484, 3.8769, 2.5741, -0.2757, 3.8769, 0, -0.2757, 3.8769, 0, -0.3484, 3.8769, 2.498, -0.3484, 4.0875, 2.5741, -0.2757, 4.0875, 0, -0.3484, 4.0875, 0, -0.2757, 4.0875, 2.5741, -0.2757, 4.0875, 2.498, -0.3484, 4.0875, 0, -0.3484, 3.8769, 2.5741, -0.2757, 3.8769, 2.498, -1.9573, 3.8769, 2.5741, -2.03, 3.8769, 2.5741, -0.2757, 3.8769, 2.498, -0.3484, 3.8769, 2.498, -1.9573, 3.8769, 2.5741, -2.03, 3.8769, 0, -1.9573, 3.8769, 0, -2.03, 3.8769, 2.5741, -2.03, 3.8769, 2.498, -1.9573, 3.8769, 0, -1.9573, 3.8769, 0, -0.3484, 4.0875, 2.498, -0.3484, 3.8769, 2.498, -0.3484, 3.8769, 0, -0.3484, 4.0875, 0, -0.3484, 4.0875, 2.498, -0.3484, 3.8769, 2.498, -1.9573, 4.0875, 2.498, -0.3484, 4.0875, 2.498, -1.9573, 3.8769, 2.498, -1.9573, 3.8769, 2.498, -0.3484, 4.0875, 2.498, -0.3484, 3.8769, 0, -1.9573, 4.0875, 2.498, -1.9573, 4.0875, 0, -1.9573, 3.8769, 0, -1.9573, 3.8769, 2.498, -1.9573, 4.0875, 2.498, -1.9573)
 
@@ -262,7 +276,7 @@ data = PackedVector3Array(3.9822, 0, -4.0201, 3.9822, 2.5741, -2.03, 3.9822, 0, 
 data = PackedVector3Array(-3.9822, 0, 4.0063, 3.9822, 0, -4.0063, 3.9822, 0, 4.0063, -3.9822, 0, 4.0063, -3.9822, 0, -4.0063, 3.9822, 0, -4.0063)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mrh3g"]
-size = Vector3(5.73941, 8.7561, 8.7885)
+size = Vector3(5.739, 4, 8.788)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5t0s4"]
 size = Vector3(2.6, 2, 0.25)
@@ -275,9 +289,6 @@ size = Vector3(8, 8, 8)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uqqmk"]
 size = Vector3(5.5, 1, 12)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_i0ea0"]
-size = Vector3(3.02095, 1.01675, 7.83109)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_huqnp"]
 size = Vector3(0.0664457, 0.733885, 1.57282)
@@ -1005,6 +1016,18 @@ metadata/interactText = "The doc seemed to have really liked this painting. He s
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Paintings/PaintingYellow/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_vhngb")
 
+[node name="Polaroid" parent="Paintings" instance=ExtResource("26_gen87")]
+transform = Transform3D(-0.0459595, 0, 0.0332997, 0, 0.0567551, 0, -0.0332997, 0, -0.0459595, -2.14142, -7.08279, 1.42409)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Paintings/Polaroid"]
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "My beloved."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Paintings/Polaroid/StaticBody3D"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0, -0.355247, 0)
+shape = SubResource("BoxShape3D_tdib0")
+
 [node name="player" parent="." instance=ExtResource("14_jctlq")]
 transform = Transform3D(-1.3903, 0, 1.21544e-07, 0, 1.3903, 0, -1.21544e-07, 0, -1.3903, 7.10354, 1.80665, 25.1678)
 
@@ -1127,6 +1150,9 @@ omni_attenuation = 0.0796603
 transform = Transform3D(0.00011345, 0, -0.335539, 0, 0.315403, 0, 0.25, 0, 0.000152305, 10.9022, 0.0889616, 18.4016)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/Autopsy-Table"]
+collision_layer = 3
+collision_mask = 3
+metadata/interactText = "An operating table with a blood splatter on it... what happened here?"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Autopsy1/Autopsy-Table/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.120863, 4.06354, 0)
@@ -1136,6 +1162,9 @@ shape = SubResource("BoxShape3D_p3dxe")
 transform = Transform3D(0.00011345, 0, -0.335539, 0, 0.315403, 0, 0.25, 0, 0.000152305, 10.9004, 0.0889616, 14.4228)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/Autopsy-Table2"]
+collision_layer = 3
+collision_mask = 3
+metadata/interactText = "Looks comfortable."
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Autopsy1/Autopsy-Table2/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.120863, 4.06354, 0)
@@ -1241,8 +1270,10 @@ shape = SubResource("BoxShape3D_dirmt")
 transform = Transform3D(0.0302079, -0.000735447, -0.0312047, -0.0202366, 0.000504884, -0.0465798, 0.000808862, 0.0400977, 1.41636e-05, 7.58287, 1.31446, 17.605)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/Syringe"]
-collision_layer = 0
-collision_mask = 0
+transform = Transform3D(1, -1.86265e-08, 1.88784e-08, 1.86265e-09, 1, 6.8685e-09, 3.89498e-08, -6.40284e-10, 1, -0.266876, 0.00546265, -0.25853)
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "I know this is a morgue, but why would they just leave this stuff around?"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Autopsy1/Syringe/StaticBody3D"]
 transform = Transform3D(0.84884, -0.0218212, 0.528201, 0.011507, 0.999674, 0.0228065, -0.528526, -0.013281, 0.848813, -0.160233, 6.64141, -0.325203)
@@ -1252,8 +1283,10 @@ shape = SubResource("BoxShape3D_a0dxx")
 transform = Transform3D(3.2356e-05, 0, -0.0712912, 0, 0.0712912, 0, 0.0712912, 0, 3.2356e-05, 7.53643, 1.29191, 18.4032)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/scissors"]
-collision_layer = 0
-collision_mask = 0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.703394, 0)
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "It's bloody, I wonder what happened here?"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Autopsy1/scissors/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.284241, 0.621948)
@@ -1340,17 +1373,31 @@ metadata/interactText = "Seems like there should be more pieces to put here."
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.154844, 0.152964, 0.060751)
 shape = SubResource("BoxShape3D_tbea6")
 
-[node name="Clue1Pos" type="Marker3D" parent="."]
-transform = Transform3D(0.0153044, -0.0135193, 5.90947e-10, -4.98165e-16, -8.92609e-10, -0.0204205, 0.0135193, 0.0153044, -6.68979e-10, 0.847, 1.245, 16.028)
+[node name="Mirror" parent="Autopsy1" instance=ExtResource("49_85ufq")]
+transform = Transform3D(0.333036, 0, 0, 0, 0.333036, 0, 0, 0, 0.333036, 6.45059, 2.1198, 20.6493)
 
-[node name="Clue2Pos" type="Marker3D" parent="."]
-transform = Transform3D(0.020416, 0.000427655, -1.86934e-11, 0, -8.92609e-10, -0.0204205, -0.000427655, 0.020416, -8.92413e-10, 0.847, 1.245, 15.818)
+[node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/Mirror"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0879631)
+collision_layer = 8
+collision_mask = 8
+metadata/interactText = "Why can't I see myself, is it because I'm missing an eye?"
+metadata/objectID = 30
 
-[node name="Clue3Pos" type="Marker3D" parent="."]
-transform = Transform3D(0.0203736, -0.00138357, 6.0478e-11, 0, -8.92609e-10, -0.0204205, 0.00138357, 0.0203736, -8.90558e-10, 1.056, 1.245, 15.818)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Autopsy1/Mirror/StaticBody3D"]
+shape = SubResource("BoxShape3D_x0e7r")
 
-[node name="Clue4Pos" type="Marker3D" parent="."]
-transform = Transform3D(-8.92609e-10, 0, 0.0204205, -0.0165394, 0.0119769, -7.22959e-10, -0.0119769, -0.0165394, -5.23528e-10, 1.056, 1.245, 16.027)
+[node name="Corpse3textiured" parent="Autopsy1" instance=ExtResource("49_4tn7g")]
+transform = Transform3D(-0.00624624, 0, 0.424, 0, 0.424046, 0, -0.424, 0, -0.00624624, 12.4163, 1.51675, 14.3083)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Autopsy1/Corpse3textiured"]
+transform = Transform3D(1, 0, 3.72529e-09, 0, 1, 0, -3.72529e-09, 0, 1, 0, 0.648922, 0)
+collision_layer = 2
+collision_mask = 2
+metadata/interactText = "I wasn't the only victim here, but why was I the only one that woke up?"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Autopsy1/Corpse3textiured/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0851226, -4)
+shape = SubResource("BoxShape3D_i0ea0")
 
 [node name="Morgue" type="Node" parent="."]
 
@@ -1372,6 +1419,7 @@ transform = Transform3D(0.0422712, -0.158829, -0.0993161, 0.186407, 0.0457274, 0
 [node name="StaticBody3D" type="StaticBody3D" parent="Morgue/MorgueRoom/Wheely-Table"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Morgue/MorgueRoom/Wheely-Table/StaticBody3D"]
+transform = Transform3D(1, -2.98023e-08, -1.71363e-07, 0, 1, -2.68221e-07, 0, -5.96046e-08, 0.999999, -0.0289936, 2.60956, -0.184258)
 shape = SubResource("BoxShape3D_mrh3g")
 
 [node name="Poster4" type="Sprite3D" parent="Morgue"]
@@ -1787,6 +1835,9 @@ omni_attenuation = 0.0796603
 transform = Transform3D(0.25, 0, 0, 0, 0.315403, 0, 0, 0, 0.335539, -38.6058, -0.44075, 8.56964)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Autopsy2/Autopsy-Table"]
+collision_layer = 3
+collision_mask = 3
+metadata/interactText = "It's a table... why did I make such a big deal out of that?"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Autopsy2/Autopsy-Table/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.120863, 4.06354, 0)
@@ -1817,7 +1868,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -35.0635, 1.10549, 10.1
 collision_layer = 9
 collision_mask = 9
 metadata/objectID = 23
-metadata/interactText = "Whoever did this must’ve had some twisted idea of death"
+metadata/interactText = "Whoever did this must’ve had some twisted idea of death."
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Autopsy2/Corpse1/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
@@ -1984,6 +2035,28 @@ stream = ExtResource("77_7xiy3")
 [node name="Lung3" type="AudioStreamPlayer" parent="AudioFiles/organInsertion"]
 stream = ExtResource("78_jajom")
 volume_db = 8.0
+
+[node name="sfx" type="Node" parent="AudioFiles"]
+
+[node name="DoorSound" type="AudioStreamPlayer" parent="AudioFiles/sfx"]
+stream = ExtResource("82_2rbo4")
+volume_db = 16.0
+
+[node name="KeySfx" type="AudioStreamPlayer" parent="AudioFiles/sfx"]
+stream = ExtResource("83_5cxqq")
+volume_db = 8.0
+
+[node name="Clue1Pos" type="Marker3D" parent="."]
+transform = Transform3D(0.0153044, -0.0135193, 5.90947e-10, -4.98165e-16, -8.92609e-10, -0.0204205, 0.0135193, 0.0153044, -6.68979e-10, 0.847, 1.245, 16.028)
+
+[node name="Clue2Pos" type="Marker3D" parent="."]
+transform = Transform3D(0.020416, 0.000427655, -1.86934e-11, 0, -8.92609e-10, -0.0204205, -0.000427655, 0.020416, -8.92413e-10, 0.847, 1.245, 15.818)
+
+[node name="Clue3Pos" type="Marker3D" parent="."]
+transform = Transform3D(0.0203736, -0.00138357, 6.0478e-11, 0, -8.92609e-10, -0.0204205, 0.00138357, 0.0203736, -8.90558e-10, 1.056, 1.245, 15.818)
+
+[node name="Clue4Pos" type="Marker3D" parent="."]
+transform = Transform3D(-8.92609e-10, 0, 0.0204205, -0.0165394, 0.0119769, -7.22959e-10, -0.0119769, -0.0165394, -5.23528e-10, 1.056, 1.245, 16.027)
 
 [connection signal="buttonSelect" from="." to="player" method="_on_main_button_select"]
 [connection signal="notBlind" from="." to="player" method="_on_main_not_blind"]

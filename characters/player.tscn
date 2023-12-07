@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bd6r8sffjatsu"]
+[gd_scene load_steps=6 format=3 uid="uid://bd6r8sffjatsu"]
 
 [ext_resource type="Script" path="res://characters/player.gd" id="1_fyxnu"]
 [ext_resource type="Texture2D" uid="uid://sroqctdivhx8" path="res://characters/Half_blind.png" id="2_otogr"]
+[ext_resource type="AudioStream" uid="uid://dbyjklv5lrl7k" path="res://Audio/Steps on Wood Floor.mp3" id="3_jsuqf"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_n3i5p"]
 radius = 0.2
@@ -87,6 +88,10 @@ offset_bottom = 524.0
 theme_override_font_sizes/font_size = 38
 disabled = true
 text = "LIVE, LAUGH, LOVE"
+
+[node name="footSounds" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_jsuqf")
+volume_db = 8.0
 
 [connection signal="pressed" from="UIControl/Stay Button" to="." method="_on_stay_button_pressed"]
 [connection signal="pressed" from="UIControl/LeaveButton" to="." method="_on_leave_button_pressed"]
