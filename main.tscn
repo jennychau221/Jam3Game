@@ -1,4 +1,4 @@
-[gd_scene load_steps=184 format=3 uid="uid://cq81es0qf4r30"]
+[gd_scene load_steps=185 format=3 uid="uid://cq81es0qf4r30"]
 
 [ext_resource type="PackedScene" uid="uid://tn2wk1umidam" path="res://3DAssets/Room.glb" id="1_5ojr2"]
 [ext_resource type="Script" path="res://mainController.gd" id="1_hc5gj"]
@@ -425,6 +425,9 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_51acn")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2c0xs"]
+size = Vector3(0.5, 10, 11)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gv2of"]
 size = Vector3(11, 4, 0.2)
@@ -1699,6 +1702,10 @@ skeleton = NodePath("")
 transform = Transform3D(-8.00869e-07, 0, -27.9681, 0, 26.2881, 0, 18.3218, 0, -1.22252e-06, 55.863, -4.87461, -21.2461)
 mesh = SubResource("ArrayMesh_3u54r")
 skeleton = NodePath("")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="Courtyard/Courtyard/CollisionHolder(Please don\'t edit)"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -79.0138, 3.46766, 3.00676)
+shape = SubResource("BoxShape3D_2c0xs")
 
 [node name="Lamp1" type="OmniLight3D" parent="Courtyard/Courtyard"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.10295, 7.11109, 9.32944)
