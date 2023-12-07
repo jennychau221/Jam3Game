@@ -187,11 +187,11 @@ func _on_player_item_check(objectID):
 		else: $CasetteTapes/CasetteTape1/Casette1Player.stop()
 	if (objectID == 27):
 		if (!$CasetteTapes/CasetteTape2/Casette2Player.is_playing()):
-			$CasetteTapes/CasetteTape2/Casette1Player.play()
+			$CasetteTapes/CasetteTape2/Casette2Player.play()
 		else: $CasetteTapes/CasetteTape2/Casette2Player.stop()
 	if (objectID == 28):
 		if (!$CasetteTapes/CasetteTape3/Casette3Player.is_playing()):
-			$CasetteTapes/CasetteTape3/Casette1Player.play()
+			$CasetteTapes/CasetteTape3/Casette3Player.play()
 		else: $CasetteTapes/CasetteTape3/Casette3Player.stop()
 	if (objectID == 29):
 		if (!$CasetteTapes/CasetteTape4/Casette4Player.is_playing()):

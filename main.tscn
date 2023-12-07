@@ -1517,7 +1517,6 @@ transform = Transform3D(-0.67252, -0.00153697, 0.740078, -0.00336031, 0.999994, 
 transform = Transform3D(0.408, 0, 0, 0, 0.408, 0, 0, 0, 0.408, 0, 0, 0)
 
 [node name="CollisionHolder(Please don\'t edit)" type="StaticBody3D" parent="Courtyard/Courtyard"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 metadata/_edit_group_ = true
 
 [node name="Floor" type="CollisionShape3D" parent="Courtyard/Courtyard/CollisionHolder(Please don\'t edit)"]
