@@ -112,3 +112,28 @@ func _on_area_3d_body_entered(body):
 
 func _on_main_not_blind():
 	$UIControl/Blind.visible = false
+
+
+func _on_main_button_select():
+	$"UIControl/Stay Button".visible = true
+	$"UIControl/Stay Button".disabled = false
+	$UIControl/LeaveButton.visible = true
+	$UIControl/LeaveButton.disabled = false
+
+
+func _on_leave_button_pressed():
+	$"../AudioFiles/Endings/leaveEnding".play()
+	$"UIControl/Stay Button".visible = false
+	$"UIControl/Stay Button".disabled = true
+	$UIControl/LeaveButton.visible = false
+	$UIControl/LeaveButton.disabled = true
+	#fade out code
+
+
+func _on_stay_button_pressed():
+	$"../AudioFiles/Endings/stayEnding".play()
+	$"UIControl/Stay Button".visible = false
+	$"UIControl/Stay Button".disabled = true
+	$UIControl/LeaveButton.visible = false
+	$UIControl/LeaveButton.disabled = true
+	#fade out code

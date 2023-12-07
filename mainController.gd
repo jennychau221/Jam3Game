@@ -30,6 +30,7 @@ var frameCount = 0
 
 signal solvedPuzzle
 signal notBlind
+signal buttonSelect
 
 #Flags
 var fileFlag = false
@@ -169,8 +170,31 @@ func _on_player_item_check(objectID):
 		player.SPEED = 6
 		$Autopsy2/Lung.queue_free()
 	if (objectID == 25):
-		pass
-		#Transition
+		endCutscene()
+
+#This section controls casette tape playing
+	if (objectID == 26):
+		if (!$CasetteTapes/CasetteTape1/Casette1Player.is_playing()):
+			$CasetteTapes/CasetteTape1/Casette1Player.play()
+		else: $CasetteTapes/CasetteTape1/Casette1Player.stop()
+	if (objectID == 27):
+		if (!$CasetteTapes/CasetteTape2/Casette2Player.is_playing()):
+			$CasetteTapes/CasetteTape2/Casette1Player.play()
+		else: $CasetteTapes/CasetteTape2/Casette2Player.stop()
+	if (objectID == 28):
+		if (!$CasetteTapes/CasetteTape3/Casette3Player.is_playing()):
+			$CasetteTapes/CasetteTape3/Casette1Player.play()
+		else: $CasetteTapes/CasetteTape3/Casette3Player.stop()
+	if (objectID == 29):
+		if (!$CasetteTapes/CasetteTape4/Casette4Player.is_playing()):
+			$CasetteTapes/CasetteTape4/Casette4Player.play()
+		else: $CasetteTapes/CasetteTape4/Casette4Player.stop()
+
+#This is called for the heart and shit, yo
+func endCutscene():
+	$AudioFiles/Endings/takenAudio.play()
+	await get_tree().create_timer(52).timeout
+	emit_signal("buttonSelect")
 
 #INDEX:
 #1 - FileCabinet
@@ -198,3 +222,7 @@ func _on_player_item_check(objectID):
 #23 - Autopsy2Corpse
 #24 - Lung
 #25 - Heart
+#26 - Casette Courtyard Table (003)
+#27 - Casette Office (Doctor)
+#28 - Casette Autopsy2 (?)
+#29 - Casette Autopsy1 (001)

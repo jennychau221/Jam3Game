@@ -64,3 +64,29 @@ texture = SubResource("PlaceholderTexture2D_07jqo")
 position = Vector2(783, 497)
 scale = Vector2(2.71869, 2.08397)
 texture = ExtResource("2_otogr")
+
+[node name="Stay Button" type="Button" parent="UIControl"]
+visible = false
+layout_mode = 0
+offset_left = 143.0
+offset_top = 432.0
+offset_right = 495.0
+offset_bottom = 530.0
+theme_override_font_sizes/font_size = 38
+disabled = true
+action_mode = 0
+text = "KILL, SCORN, HATE"
+
+[node name="LeaveButton" type="Button" parent="UIControl"]
+visible = false
+layout_mode = 0
+offset_left = 831.0
+offset_top = 426.0
+offset_right = 1184.0
+offset_bottom = 524.0
+theme_override_font_sizes/font_size = 38
+disabled = true
+text = "LIVE, LAUGH, LOVE"
+
+[connection signal="pressed" from="UIControl/Stay Button" to="." method="_on_stay_button_pressed"]
+[connection signal="pressed" from="UIControl/LeaveButton" to="." method="_on_leave_button_pressed"]
