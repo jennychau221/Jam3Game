@@ -12,16 +12,18 @@ config_version=5
 
 config/name="Patient 004"
 run/main_scene="res://title.tscn"
-config/features=PackedStringArray("4.1", "Forward Plus")
+config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://iconPNG.png"
 config/windows_native_icon="res://icon.ico"
 
 [display]
 
-window/size/viewport_width=1280
-window/size/viewport_height=960
+window/size/viewport_width=320
+window/size/viewport_height=240
+window/size/resizable=false
 window/size/window_width_override=1280
 window/size/window_height_override=960
+window/stretch/mode="viewport"
 
 [dotnet]
 

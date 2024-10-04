@@ -13,6 +13,12 @@ height = 1.5
 [node name="player" type="CharacterBody3D"]
 script = ExtResource("1_fyxnu")
 
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.262292, 0.182019)
+light_color = Color(0.784314, 0.8, 0.760784, 1)
+spot_range = 15.0
+spot_angle = 41.2196
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_n3i5p")
 
@@ -33,23 +39,24 @@ offset_bottom = 40.0
 [node name="LineEdit" type="LineEdit" parent="UIControl"]
 top_level = true
 layout_mode = 0
-offset_left = 381.0
-offset_top = 799.0
-offset_right = 947.0
-offset_bottom = 907.0
+offset_left = 90.0
+offset_top = 130.0
+offset_right = 353.0
+offset_bottom = 238.0
+scale = Vector2(0.55, 0.55)
 placeholder_text = "Type here, Press enter to submit"
 
 [node name="InfoText" type="Label" parent="UIControl"]
 top_level = true
 layout_mode = 0
-offset_left = 65.0
-offset_top = 661.0
-offset_right = 1220.0
-offset_bottom = 944.0
+offset_left = 11.0
+offset_top = 158.0
+offset_right = 611.0
+offset_bottom = 358.0
+scale = Vector2(0.5, 0.5)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 25
-text = "WASD to move
-E to interact
+text = "WASD to move. E to interact. 
 Escape to exit text"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -57,22 +64,23 @@ autowrap_mode = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="UIControl"]
 top_level = true
-position = Vector2(644, 481)
-scale = Vector2(4.75, 4.24997)
+position = Vector2(160, 120)
+scale = Vector2(3, 3)
 texture = SubResource("PlaceholderTexture2D_07jqo")
 
 [node name="Blind" type="Sprite2D" parent="UIControl"]
-position = Vector2(783, 497)
-scale = Vector2(2.71869, 2.08397)
+position = Vector2(166, 117)
+scale = Vector2(0.535937, 0.556409)
 texture = ExtResource("2_otogr")
 
 [node name="Stay Button" type="Button" parent="UIControl"]
 visible = false
 layout_mode = 0
-offset_left = 143.0
-offset_top = 432.0
-offset_right = 495.0
-offset_bottom = 530.0
+offset_left = 55.0
+offset_top = 99.0
+offset_right = 407.0
+offset_bottom = 197.0
+scale = Vector2(0.25, 0.25)
 theme_override_font_sizes/font_size = 38
 disabled = true
 action_mode = 0
@@ -81,10 +89,11 @@ text = "STAY"
 [node name="LeaveButton" type="Button" parent="UIControl"]
 visible = false
 layout_mode = 0
-offset_left = 831.0
-offset_top = 426.0
-offset_right = 1184.0
-offset_bottom = 524.0
+offset_left = 178.0
+offset_top = 99.0
+offset_right = 531.0
+offset_bottom = 197.0
+scale = Vector2(0.25, 0.25)
 theme_override_font_sizes/font_size = 38
 disabled = true
 text = "LEAVE"
