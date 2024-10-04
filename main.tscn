@@ -1944,7 +1944,7 @@ shape = SubResource("BoxShape3D_diq76")
 disabled = true
 
 [node name="Key" parent="Autopsy2" instance=ExtResource("47_2rvly")]
-transform = Transform3D(-5.18672e-09, -0.118658, 0.146997, 0.13735, -6.00375e-09, 0, 3.02372e-09, 0.0691746, 0.252151, -39.4231, 0.732847, 1.39394)
+transform = Transform3D(-1.85615e-09, -0.0424636, 0.277571, 0.13735, -6.00375e-09, 1.25966e-16, 5.70961e-09, 0.13062, 0.0902365, -38.5113, 0.840613, 8.20706)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Autopsy2/Key"]
 collision_layer = 8
@@ -1992,7 +1992,7 @@ shape = SubResource("BoxShape3D_16kow")
 stream = ExtResource("66_e0wi1")
 
 [node name="CasetteTape3" parent="CasetteTapes" instance=ExtResource("44_1mvty")]
-transform = Transform3D(-0.2942, 0, -0.421616, 0, 0.514115, 0, 0.421616, 0, -0.2942, -39.8595, 0.727337, -0.052649)
+transform = Transform3D(0.303016, 0, -0.415325, 0, 0.514115, 0, 0.415325, 0, 0.303016, -38.3472, 0.873111, 8.95404)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="CasetteTapes/CasetteTape3"]
 collision_layer = 8
