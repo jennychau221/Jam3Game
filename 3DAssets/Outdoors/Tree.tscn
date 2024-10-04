@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://d045a3gxr7y3c"]
+
+[ext_resource type="PackedScene" uid="uid://b4o7ea8x3ws56" path="res://3DAssets/Outdoors/Tree.glb" id="1_pb08l"]
+
+[node name="Tree" type="Node3D"]
+
+[node name="Tree" parent="." instance=ExtResource("1_pb08l")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tree"]
+skeleton = NodePath("../..")

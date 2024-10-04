@@ -1,4 +1,4 @@
-[gd_scene load_steps=185 format=3 uid="uid://cq81es0qf4r30"]
+[gd_scene load_steps=190 format=3 uid="uid://cq81es0qf4r30"]
 
 [ext_resource type="PackedScene" uid="uid://tn2wk1umidam" path="res://3DAssets/Room.glb" id="1_5ojr2"]
 [ext_resource type="Script" path="res://mainController.gd" id="1_hc5gj"]
@@ -84,6 +84,8 @@
 [ext_resource type="AudioStream" uid="uid://m37gdu8482kf" path="res://Audio/VoiceOver/patient3_line_2.wav" id="78_jajom"]
 [ext_resource type="AudioStream" uid="uid://yrc3xky3wt3x" path="res://Audio/door_open.mp3" id="82_2rbo4"]
 [ext_resource type="AudioStream" uid="uid://7up0l5shk3n3" path="res://Audio/key_get.mp3" id="83_5cxqq"]
+[ext_resource type="Texture2D" uid="uid://cwb07si3pejr0" path="res://3DAssets/Outdoors/MudFloor.png" id="85_b380h"]
+[ext_resource type="MeshLibrary" uid="uid://vunj3fca8rhe" path="res://3DAssets/Outdoors/Tree_Mesh.tres" id="86_1rvsu"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_qav67"]
 panorama = ExtResource("52_xiuh2")
@@ -95,13 +97,13 @@ sky_material = SubResource("PanoramaSkyMaterial_qav67")
 background_mode = 2
 sky = SubResource("Sky_grgge")
 sky_rotation = Vector3(0, -1.39626, 0)
-ambient_light_color = Color(0.784314, 0.8, 0.760784, 1)
+ambient_light_color = Color(0.788235, 0.796078, 0.611765, 1)
 ambient_light_sky_contribution = 0.0
 ambient_light_energy = 0.02
 fog_enabled = true
-fog_light_color = Color(0.784314, 0.8, 0.760784, 1)
+fog_light_color = Color(0.788235, 0.796078, 0.611765, 1)
 fog_light_energy = 0.02
-fog_density = 0.35
+fog_density = 0.3
 fog_sky_affect = 0.9
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_3y1ub"]
@@ -490,6 +492,18 @@ size = Vector3(2, 2, 2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_16kow"]
 size = Vector3(0.5, 0.2, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sx7qf"]
+albedo_texture = ExtResource("85_b380h")
+uv1_scale = Vector3(50, 50, 50)
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vuuyw"]
+material = SubResource("StandardMaterial3D_sx7qf")
+size = Vector2(100, 100)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ma6h1"]
+data = PackedVector3Array(50, 0, 50, -50, 0, 50, 50, 0, -50, -50, 0, 50, -50, 0, -50, 50, 0, -50)
 
 [node name="Main" type="Node"]
 script = ExtResource("1_hc5gj")
@@ -1512,7 +1526,7 @@ transform = Transform3D(1.03606, -1.04308e-07, 4.47035e-08, 1.49012e-08, 1.03606
 shape = SubResource("BoxShape3D_idini")
 
 [node name="Eyeball" parent="Morgue" instance=ExtResource("48_o5vms")]
-transform = Transform3D(-0.019334, -0.00336182, -0.00030914, -0.00245514, 0.0127677, 0.0147023, -0.00231725, 0.0145219, -0.012998, 1.53226, 1.38152, 27.2201)
+transform = Transform3D(-0.0203138, -0.0170194, 0.0140602, -0.00656446, 0.0228996, 0.018235, -0.0210774, 0.00927079, -0.01923, 1.64855, 0.989783, 26.8076)
 visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Morgue/Eyeball"]
@@ -1944,7 +1958,7 @@ shape = SubResource("BoxShape3D_diq76")
 disabled = true
 
 [node name="Key" parent="Autopsy2" instance=ExtResource("47_2rvly")]
-transform = Transform3D(-1.85615e-09, -0.0424636, 0.277571, 0.13735, -6.00375e-09, 1.25966e-16, 5.70961e-09, 0.13062, 0.0902365, -38.5113, 0.840613, 8.20706)
+transform = Transform3D(-5.18672e-09, -0.118658, 0.146997, 0.13735, -6.00375e-09, 0, 3.02372e-09, 0.0691746, 0.252151, -39.4231, 0.732847, 1.39394)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Autopsy2/Key"]
 collision_layer = 8
@@ -1992,7 +2006,7 @@ shape = SubResource("BoxShape3D_16kow")
 stream = ExtResource("66_e0wi1")
 
 [node name="CasetteTape3" parent="CasetteTapes" instance=ExtResource("44_1mvty")]
-transform = Transform3D(0.303016, 0, -0.415325, 0, 0.514115, 0, 0.415325, 0, 0.303016, -38.3472, 0.873111, 8.95404)
+transform = Transform3D(-0.2942, 0, -0.421616, 0, 0.514115, 0, 0.421616, 0, -0.2942, -39.8595, 0.727337, -0.052649)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="CasetteTapes/CasetteTape3"]
 collision_layer = 8
@@ -2078,6 +2092,26 @@ transform = Transform3D(0.0203736, -0.00138357, 6.0478e-11, 0, -8.92609e-10, -0.
 
 [node name="Clue4Pos" type="Marker3D" parent="."]
 transform = Transform3D(-8.92609e-10, 0, 0.0204205, -0.0165394, 0.0119769, -7.22959e-10, -0.0119769, -0.0165394, -5.23528e-10, 1.056, 1.245, 16.027)
+
+[node name="Outdoors" type="Node" parent="."]
+
+[node name="Ground" type="MeshInstance3D" parent="Outdoors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.215414, 0)
+mesh = SubResource("PlaneMesh_vuuyw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Outdoors/Ground"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Outdoors/Ground/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_ma6h1")
+
+[node name="Trees" type="GridMap" parent="Outdoors"]
+mesh_library = ExtResource("86_1rvsu")
+cell_size = Vector3(1, 2, 1)
+cell_center_y = false
+cell_scale = 0.25
+data = {
+"cells": PackedInt32Array(65530, 65531, 0, 5, 65531, 0, 5, 6, 0, 65530, 6, 0, 5, 65521, 0, 2, 65523, 0, 65535, 65520, 0, 65531, 65522, 0, 65528, 65521, 0, 65529, 65519, 0, 65532, 65517, 0, 1, 65517, 0, 65525, 65523, 0, 65535, 65523, 0, 5, 65517, 0, 7, 65514, 0, 0, 65513, 0, 65532, 65513, 0, 65521, 65521, 0, 65521, 65516, 0, 65525, 65513, 0, 65525, 65517, 0, 65516, 65519, 0, 65518, 65513, 0, 65523, 65510, 0, 65530, 65508, 0, 10, 65515, 0, 9, 65511, 0, 6, 65509, 0, 2, 65507, 0, 65532, 65510, 0, 3, 65513, 0, 65534, 65505, 0, 65527, 65503, 0, 65524, 65504, 0, 65514, 65510, 0, 65516, 65506, 0, 12, 65508, 0, 7, 65502, 0, 0, 65499, 0, 65528, 65497, 0, 65532, 65503, 0, 8, 65507, 0, 1, 65503, 0)
+}
 
 [connection signal="buttonSelect" from="." to="player" method="_on_main_button_select"]
 [connection signal="notBlind" from="." to="player" method="_on_main_not_blind"]

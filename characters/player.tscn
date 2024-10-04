@@ -24,6 +24,8 @@ shape = SubResource("CapsuleShape3D_n3i5p")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.587713, 0)
+fov = 85.0
+far = 250.0
 
 [node name="lookDetect" type="RayCast3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -0.010059, 0)
@@ -65,7 +67,6 @@ autowrap_mode = 3
 [node name="Sprite2D" type="Sprite2D" parent="UIControl"]
 top_level = true
 position = Vector2(160, 120)
-scale = Vector2(3, 3)
 texture = SubResource("PlaceholderTexture2D_07jqo")
 
 [node name="Blind" type="Sprite2D" parent="UIControl"]
