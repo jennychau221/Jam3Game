@@ -16,6 +16,11 @@ var camera_sens = 23
 var lookedObject
 @onready var footSounds = $footSounds
 
+# Zoom variables
+var default_fov = 75
+var zoom_fov = 40
+var current_fov = default_fov
+
 #Main scene references + signals
 @onready var scene = $".."
 signal passInput(objectID, inputString)
@@ -34,6 +39,7 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	#descUI.visible = false
 	inputUI.visible = false
+	camera.fov = default_fov
 	
 func _physics_process(delta):
 	# Add the gravity.
@@ -54,6 +60,12 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 		footSounds.stop()
+		
+	# Handle zoom
+	if Input.is_action_pressed("zoom"):
+		camera.fov = lerpf(camera.fov, zoom_fov, 0.1)
+	else:
+		camera.fov = lerpf(camera.fov, default_fov, 0.1)
 		
 	#Interact function: runs when the raycast is colliding with a properly layered object and "enter" is pressed
 	if  aim.is_colliding() && Input.is_action_just_pressed("interact") && !inputting:
