@@ -1,4 +1,4 @@
-[gd_scene load_steps=190 format=3 uid="uid://cq81es0qf4r30"]
+[gd_scene load_steps=191 format=3 uid="uid://cq81es0qf4r30"]
 
 [ext_resource type="PackedScene" uid="uid://tn2wk1umidam" path="res://3DAssets/Room.glb" id="1_5ojr2"]
 [ext_resource type="Script" path="res://mainController.gd" id="1_hc5gj"]
@@ -100,11 +100,25 @@ sky_rotation = Vector3(0, -1.39626, 0)
 ambient_light_color = Color(0.788235, 0.796078, 0.611765, 1)
 ambient_light_sky_contribution = 0.0
 ambient_light_energy = 0.02
+reflected_light_source = 1
+tonemap_mode = 3
+ssao_enabled = true
+ssao_sharpness = 0.34
+sdfgi_enabled = true
+sdfgi_use_occlusion = true
 fog_enabled = true
 fog_light_color = Color(0.788235, 0.796078, 0.611765, 1)
 fog_light_energy = 0.02
 fog_density = 0.3
-fog_sky_affect = 0.9
+fog_sky_affect = 0.889
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.1564
+volumetric_fog_albedo = Color(0.788235, 0.796078, 0.611765, 1)
+volumetric_fog_emission = Color(0.12549, 0.0666667, 0.0196078, 1)
+volumetric_fog_anisotropy = -0.03
+volumetric_fog_sky_affect = 0.479
+adjustment_enabled = true
+adjustment_contrast = 1.1
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_3y1ub"]
 data = PackedVector3Array(3.9822, 0, -4.0201, 3.9822, 2.5741, -2.03, 3.9822, 0, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 4.6039, -4.0201, 3.9822, 4.6039, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 0, -4.0201, 3.9822, 4.6039, -4.0201, -3.9822, 0, -4.0201, -3.9822, 4.6039, 4.0201, -3.9822, 4.6039, -4.0201, -3.9822, 0, -4.0201, -3.9822, 0, 4.0201, -3.9822, 4.6039, 4.0201, 3.9822, 0, -4.0201, -3.9822, 4.6039, -4.0201, 3.9822, 4.6039, -4.0201, 3.9822, 0, -4.0201, -3.9822, 0, -4.0201, -3.9822, 4.6039, -4.0201, -3.9822, 0, 4.0201, 3.9822, 4.6039, 4.0201, -3.9822, 4.6039, 4.0201, -3.9822, 0, 4.0201, 3.9822, 0, 4.0201, 3.9822, 4.6039, 4.0201, 3.9822, 0, -0.2757, 3.9822, 4.6039, 4.0201, 3.9822, 0, 4.0201, 3.9822, 4.6039, 4.0201, 3.9822, 2.5741, -0.2757, 3.9822, 4.6039, -0.2757, 3.9822, 4.6039, 4.0201, 3.9822, 0, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 3.9822, 4.6039, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 3.9822, 4.6039, -2.03, 3.9822, 4.6039, -0.2757, 3.9822, 2.5741, -0.2757, 3.8769, 2.5741, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 2.5741, -0.2757, 3.8769, 2.5741, -0.2757, 3.8769, 2.5741, -2.03, 3.9822, 0, -0.2757, 3.8769, 2.5741, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 0, -0.2757, 3.8769, 0, -0.2757, 3.8769, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 3.8769, 0, -2.03, 3.9822, 0, -2.03, 3.9822, 2.5741, -2.03, 3.8769, 2.5741, -2.03, 3.8769, 0, -2.03, 3.9822, 2.5741, -2.03, 4.0875, 2.5741, -0.2757, 3.9822, 2.5741, -0.2757, 3.9822, 2.5741, -2.03, 4.0875, 2.5741, -2.03, 4.0875, 2.5741, -0.2757, 3.9822, 2.5741, -0.2757, 4.0875, 0, -0.2757, 3.9822, 0, -0.2757, 3.9822, 2.5741, -0.2757, 4.0875, 2.5741, -0.2757, 4.0875, 0, -0.2757, 3.9822, 0, -2.03, 4.0875, 2.5741, -2.03, 3.9822, 2.5741, -2.03, 3.9822, 0, -2.03, 4.0875, 0, -2.03, 4.0875, 2.5741, -2.03, 4.0875, 2.5741, -2.03, 4.0875, 2.498, -0.3484, 4.0875, 2.5741, -0.2757, 4.0875, 2.5741, -2.03, 4.0875, 2.498, -1.9573, 4.0875, 2.498, -0.3484, 4.0875, 0, -2.03, 4.0875, 2.498, -1.9573, 4.0875, 2.5741, -2.03, 4.0875, 0, -2.03, 4.0875, 0, -1.9573, 4.0875, 2.498, -1.9573, 3.8769, 0, -0.2757, 3.8769, 2.498, -0.3484, 3.8769, 2.5741, -0.2757, 3.8769, 0, -0.2757, 3.8769, 0, -0.3484, 3.8769, 2.498, -0.3484, 4.0875, 2.5741, -0.2757, 4.0875, 0, -0.3484, 4.0875, 0, -0.2757, 4.0875, 2.5741, -0.2757, 4.0875, 2.498, -0.3484, 4.0875, 0, -0.3484, 3.8769, 2.5741, -0.2757, 3.8769, 2.498, -1.9573, 3.8769, 2.5741, -2.03, 3.8769, 2.5741, -0.2757, 3.8769, 2.498, -0.3484, 3.8769, 2.498, -1.9573, 3.8769, 2.5741, -2.03, 3.8769, 0, -1.9573, 3.8769, 0, -2.03, 3.8769, 2.5741, -2.03, 3.8769, 2.498, -1.9573, 3.8769, 0, -1.9573, 3.8769, 0, -0.3484, 4.0875, 2.498, -0.3484, 3.8769, 2.498, -0.3484, 3.8769, 0, -0.3484, 4.0875, 0, -0.3484, 4.0875, 2.498, -0.3484, 3.8769, 2.498, -1.9573, 4.0875, 2.498, -0.3484, 4.0875, 2.498, -1.9573, 3.8769, 2.498, -1.9573, 3.8769, 2.498, -0.3484, 4.0875, 2.498, -0.3484, 3.8769, 0, -1.9573, 4.0875, 2.498, -1.9573, 4.0875, 0, -1.9573, 3.8769, 0, -1.9573, 3.8769, 2.498, -1.9573, 4.0875, 2.498, -1.9573)
@@ -206,6 +220,8 @@ size = Vector3(0.1, 4, 12.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fdiam"]
 size = Vector3(7, 4, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_uxsfe"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4vf4k"]
 size = Vector3(1, 5.6, 2.7)
@@ -511,8 +527,11 @@ script = ExtResource("1_hc5gj")
 [node name="Lights+Skybox" type="Node" parent="."]
 
 [node name="MoonLight" type="DirectionalLight3D" parent="Lights+Skybox"]
-transform = Transform3D(-1, 6.75016e-14, -8.74228e-08, -6.863e-08, 0.61945, 0.785036, 5.41541e-08, 0.785036, -0.61945, 0, 10.6751, 0)
-light_energy = 0.02
+transform = Transform3D(-0.791419, 0.582779, -0.184458, 0.353122, 0.682191, 0.64025, 0.49896, 0.44157, -0.745691, 0, 5.99854, 0)
+light_color = Color(0.286275, 0.670588, 0.713726, 1)
+light_energy = 0.35
+light_volumetric_fog_energy = 2.029
+shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Lights+Skybox"]
 environment = SubResource("Environment_cppl4")
@@ -857,7 +876,7 @@ metadata/interactText = "test"
 shape = SubResource("BoxShape3D_lun8f")
 
 [node name="LampLight" type="OmniLight3D" parent="Office"]
-transform = Transform3D(-0.000680648, 0, -1, 0, 1, 0, 1, 0, -0.000680648, -1.65291, -6.55495, 2.02503)
+transform = Transform3D(-0.000680648, 0, -1, 0, 1, 0, 1, 0, -0.000680648, -1.65291, -6.67106, 2.02503)
 light_color = Color(1, 0.909804, 0.509804, 1)
 omni_range = 8.0
 
@@ -1069,7 +1088,7 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0, -0.35
 shape = SubResource("BoxShape3D_tdib0")
 
 [node name="player" parent="." instance=ExtResource("14_jctlq")]
-transform = Transform3D(-1.3903, 0, -1.21544e-07, 0, 1.3903, 0, 1.21544e-07, 0, -1.3903, 7.10354, 1.80665, 25.1678)
+transform = Transform3D(-1.3903, 0, -1.21544e-07, 0, 1.3903, 0, 1.21544e-07, 0, -1.3903, 5.8781, 1.77237, 26.1699)
 
 [node name="Autopsy1" type="Node" parent="."]
 
@@ -1111,6 +1130,10 @@ shape = SubResource("BoxShape3D_fdiam")
 [node name="WallShort2" type="CollisionShape3D" parent="Autopsy1/AutopsyRoom1/AutopsyRoomCollision"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.45347, 6.03347)
 shape = SubResource("BoxShape3D_fdiam")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Autopsy1/AutopsyRoom1/AutopsyRoomCollision"]
+transform = Transform3D(8, 0, -4.19095e-09, 0, 0.2, 0, 3.25963e-09, 0, 14, -0.333328, 4.66547, -0.0765133)
+mesh = SubResource("BoxMesh_uxsfe")
 
 [node name="Autopsy1Door" parent="Autopsy1" instance=ExtResource("24_36aba")]
 transform = Transform3D(0.00027932, 0, -0.704028, 0, 0.704, 0, 0.615387, 0, 0.000319553, 2.90738, 0.596485, 12.0961)
@@ -1162,12 +1185,14 @@ transform = Transform3D(0.000137962, 0, -0.72, 0, 0.16, 0, 0.304, 0, 0.000326782
 [node name="A2C3" type="OmniLight3D" parent="Autopsy1/Autopsy2CielingLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2995, -2.03592, -3.97119)
 light_energy = 0.25
+shadow_enabled = true
 omni_range = 5.44
 omni_attenuation = 0.0796603
 
 [node name="A2C4" type="OmniLight3D" parent="Autopsy1/Autopsy2CielingLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.672108, -2.03592, 4.37169)
 light_energy = 0.25
+shadow_enabled = true
 omni_range = 5.44
 omni_attenuation = 0.0796603
 
@@ -1177,12 +1202,14 @@ transform = Transform3D(0.000137962, 0, -0.72, 0, 0.16, 0, 0.304, 0, 0.000326782
 [node name="A2C1" type="OmniLight3D" parent="Autopsy1/Autopsy2CielingLight2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7522, -2.03592, -3.97119)
 light_energy = 0.25
+shadow_enabled = true
 omni_range = 5.44
 omni_attenuation = 0.0796603
 
 [node name="A2C2" type="OmniLight3D" parent="Autopsy1/Autopsy2CielingLight2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1907, -2.03592, 3.92909)
 light_energy = 0.25
+shadow_enabled = true
 omni_range = 5.44
 omni_attenuation = 0.0796603
 
@@ -1590,6 +1617,8 @@ transform = Transform3D(-0.000285909, 0, 0.546083, 0, 0.546083, 0, -0.546083, 0,
 transform = Transform3D(1, 0, 7.94655e-12, 0, 1, 0, -7.94655e-12, 0, 1, 0, 0, 0)
 light_color = Color(1, 1, 0.772549, 1)
 light_energy = 0.25
+light_volumetric_fog_energy = 5.0
+shadow_enabled = true
 omni_range = 14.905
 omni_attenuation = 1.1487
 
@@ -1748,15 +1777,16 @@ shape = SubResource("BoxShape3D_2c0xs")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.10295, 7.11109, 9.32944)
 light_color = Color(0.678431, 0.54902, 0.137255, 1)
 light_energy = 0.75
-omni_range = 5.44
-omni_attenuation = 0.0796603
+shadow_enabled = true
+omni_range = 35.0
+omni_attenuation = 0.554787
 
 [node name="Lamp2" type="OmniLight3D" parent="Courtyard/Courtyard"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.63316, 6.74893, -3.9562)
+transform = Transform3D(2.45098, 0, 0, 0, 2.45098, 0, 0, 0, 2.45098, -8.64141, 6.74894, -3.95907)
 light_color = Color(0.678431, 0.54902, 0.137255, 1)
 light_energy = 0.75
-omni_range = 5.44
-omni_attenuation = 0.0796603
+omni_range = 35.0
+omni_attenuation = 0.554
 
 [node name="StairBody" type="StaticBody3D" parent="Courtyard/Courtyard"]
 collision_layer = 9
@@ -1793,7 +1823,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.68946, 0.656397, -12.5083)
 shape = SubResource("BoxShape3D_1qjpx")
 
 [node name="Nurse1" parent="Courtyard" instance=ExtResource("47_ej0ne")]
-transform = Transform3D(-0.156259, -0.00198553, 0.181497, 0.00304304, -0.239484, -1.65766e-10, 0.181482, 0.00230603, 0.156272, -4.17121, 0.0115921, 0.91013)
+transform = Transform3D(-0.166362, -0.00787995, -0.172115, 0.000780893, 0.239216, -0.0117069, 0.172293, -0.00869291, -0.166137, -3.9709, 0.047494, -0.921379)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Courtyard/Nurse1"]
 transform = Transform3D(1, -9.31323e-10, 0, -9.31323e-10, 1, -1.86265e-09, 0, 9.31323e-10, 1, 0.00303459, -0.238821, 0)
@@ -1803,7 +1833,7 @@ metadata/objectID = 20
 metadata/interactText = "Even the nurses didn't get out alive."
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Courtyard/Nurse1/StaticBody3D"]
-transform = Transform3D(1, -4.65661e-09, 0, 5.58794e-09, 1, -1.39698e-09, 0, 0, 1, 0.020793, -1.70714, -4)
+transform = Transform3D(1, -3.72529e-09, 2.98023e-08, 1.11759e-08, 1, -2.98023e-08, 0, -1.86265e-09, 1, 0.0252161, -0.352142, -4.06631)
 shape = SubResource("BoxShape3D_si16v")
 
 [node name="Nurse2" parent="Courtyard" instance=ExtResource("48_hsa5k")]

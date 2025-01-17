@@ -11,19 +11,14 @@ height = 1.5
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_07jqo"]
 
 [node name="player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.762579, 0)
 script = ExtResource("1_fyxnu")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.262292, 0.182019)
-light_color = Color(0.784314, 0.8, 0.760784, 1)
-spot_range = 15.0
-spot_angle = 41.2196
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_n3i5p")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.587713, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 fov = 85.0
 far = 250.0
 
@@ -31,6 +26,15 @@ far = 250.0
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -0.010059, 0)
 target_position = Vector3(0, -1.7, 0)
 collision_mask = 14
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.337708, 0.182019)
+light_color = Color(0.784314, 0.8, 0.760784, 1)
+light_energy = 0.5
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 15.0
+spot_angle = 41.2196
 
 [node name="UIControl" type="Control" parent="."]
 layout_mode = 3
@@ -101,7 +105,7 @@ text = "LEAVE"
 
 [node name="footSounds" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_jsuqf")
-volume_db = 8.0
+volume_db = 5.0
 
 [connection signal="pressed" from="UIControl/Stay Button" to="." method="_on_stay_button_pressed"]
 [connection signal="pressed" from="UIControl/LeaveButton" to="." method="_on_leave_button_pressed"]
