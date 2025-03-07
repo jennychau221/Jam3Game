@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bd6r8sffjatsu"]
 
-[ext_resource type="Script" path="res://characters/player.gd" id="1_fyxnu"]
+[ext_resource type="Script" uid="uid://vgdjxvmq75r1" path="res://characters/player.gd" id="1_fyxnu"]
 [ext_resource type="Texture2D" uid="uid://sroqctdivhx8" path="res://characters/Half_blind.png" id="2_otogr"]
 [ext_resource type="AudioStream" uid="uid://dbyjklv5lrl7k" path="res://Audio/Steps on Wood Floor.mp3" id="3_jsuqf"]
 

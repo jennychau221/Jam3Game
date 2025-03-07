@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vbyb0mhi8mmx"
+uid="uid://dg5tglukhd617"
 path.s3tc="res://.godot/imported/morgueBed_Image_0.png-3b30664a78313963b87aefc3b9239f6f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

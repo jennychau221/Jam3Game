@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nvv01c3atgkp"
+uid="uid://bmdj162twjm32"
 path.s3tc="res://.godot/imported/Patient004_courtyard_draft2_HallwayTile_BaseColor.png-fdc039ea001fa9083b562bf306eaa25d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

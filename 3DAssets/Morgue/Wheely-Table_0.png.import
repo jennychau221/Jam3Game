@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cplvlvjhhg38c"
+uid="uid://bsnrjlfhf1vf3"
 path.s3tc="res://.godot/imported/Wheely-Table_0.png-b82ce49be8cb33154bff22ebab5ced70.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

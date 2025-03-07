@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qwkwdkjbao62"
+uid="uid://bsslrgago6iam"
 path.s3tc="res://.godot/imported/Tree_Pineneedle.png-dae107401d07c3a30d89a6e3e91f23c7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

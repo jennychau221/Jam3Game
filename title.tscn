@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dnn10y4hj7luu"]
 
-[ext_resource type="Script" path="res://titleScreen.gd" id="1_x8pvu"]
-[ext_resource type="VideoStream" path="res://Audio/Sequence_01.ogv" id="2_5auqq"]
+[ext_resource type="Script" uid="uid://jow1g33kiifq" path="res://titleScreen.gd" id="1_x8pvu"]
+[ext_resource type="VideoStream" uid="uid://b8j5kl76qqp3j" path="res://Audio/Sequence_01.ogv" id="2_5auqq"]
 [ext_resource type="AudioStream" uid="uid://dq1m0pkadx5go" path="res://Audio/Collin_PS2_Horror_Game_Take_1.mp3" id="3_hijgv"]
 [ext_resource type="Texture2D" uid="uid://cr6i2nir6vde3" path="res://Credits.png" id="4_g6opc"]
 
